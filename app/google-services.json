@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "147450873098",
+    "project_id": "tfg-kotlin",
+    "storage_bucket": "tfg-kotlin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147450873098:android:40f2bb52b0b07cc3b4a6f3",
+        "android_client_info": {
+          "package_name": "com.example.tfgsportpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXheDEyJTbwb2O4rWeC3QqH1dd_exbbMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

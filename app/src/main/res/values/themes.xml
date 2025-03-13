@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TFGSportPro" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Aquí puedes personalizar el tema base si lo necesitas -->
+    </style>
+
+    <!-- Tema para el Splash -->
+    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>  <!-- Fondo del Splash -->
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- Barra de estado transparente -->
+    </style>
+
+    <!-- Tema para MainActivity -->
+    <style name="Theme.TFGSportPro" parent="Base.Theme.TFGSportPro">
+        <item name="android:windowBackground">@android:color/white</item>  <!-- Fondo blanco para MainActivity -->
+    </style>
+</resources>
