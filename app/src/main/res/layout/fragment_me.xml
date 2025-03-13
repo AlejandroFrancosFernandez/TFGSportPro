@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/homegrey"
-    tools:context=".MeFragment">
+    tools:context=".features.f03_profile.fragments.MeFragment">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
