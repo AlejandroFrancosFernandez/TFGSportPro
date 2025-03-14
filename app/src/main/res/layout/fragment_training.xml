@@ -86,7 +86,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 1"
+                    android:text="@string/Day1"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -97,7 +97,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 2"
+                    android:text="@string/Day2"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -108,7 +108,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 3"
+                    android:text="@string/Day3"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -119,7 +119,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 4"
+                    android:text="@string/Day4"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -130,7 +130,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 5"
+                    android:text="@string/Day5"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -141,7 +141,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 6"
+                    android:text="@string/Day6"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -152,7 +152,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 7"
+                    android:text="@string/Day7"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -163,7 +163,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 8"
+                    android:text="@string/Day8"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -174,7 +174,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 9"
+                    android:text="@string/Day9"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -185,7 +185,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 10"
+                    android:text="@string/Day10"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -196,7 +196,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 11"
+                    android:text="@string/Day11"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -207,7 +207,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 12"
+                    android:text="@string/Day12"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -218,7 +218,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 13"
+                    android:text="@string/Day13"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -229,7 +229,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 14"
+                    android:text="@string/Day14"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -240,7 +240,7 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/gray"
-                    android:text="Day 15"
+                    android:text="@string/Day15"
                     android:textAlignment="textStart" />
             </LinearLayout>
         </ScrollView>

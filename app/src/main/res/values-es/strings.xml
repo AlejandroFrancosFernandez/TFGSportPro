@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">TFGSportPro</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Traducciones de la página inicio sesion (activity-main)-->
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+
+    <!--Traducciones de la página registro (activity-register)-->
+    <string name="confirmPassword">Confirma Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="age">Edad</string>
+    <string name="infoPhysicalLevel">Selecciona tu nivel de actividad física :</string>
+
+    <!--Traducciones de la página training (fragment-training)-->
+    <string name="Day1">Día 1</string>
+    <string name="Day2">Día 2</string>
+    <string name="Day3">Día 3</string>
+    <string name="Day4">Día 4</string>
+    <string name="Day5">Día 5</string>
+    <string name="Day6">Día 6</string>
+    <string name="Day7">Día 7</string>
+    <string name="Day8">Día 8</string>
+    <string name="Day9">Día 9</string>
+    <string name="Day10">Día 10</string>
+    <string name="Day11">Día 11</string>
+    <string name="Day12">Día 12</string>
+    <string name="Day13">Día 13</string>
+    <string name="Day14">Día 14</string>
+    <string name="Day15">Día 15</string>
+    <!--Traducciones del menu de navegacion (activity-home)-->
+    <string name="Training">Entrenamiento</string>
+    <string name="Resume">Resumen</string>
+    <string name="Me">Yo</string>
+
+</resources>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Training"
+    <item android:title="@string/Training"
         android:id="@+id/navTraining"
         android:icon="@drawable/trainingicon"/>
-    <item android:title="Resume"
+    <item android:title="@string/Resume"
         android:id="@+id/navResume"
         android:icon="@drawable/resumeicon"/>
-    <item android:title="Me"
+    <item android:title="@string/Me"
         android:id="@+id/navMe"
         android:icon="@drawable/meicon"/>
 </menu>
