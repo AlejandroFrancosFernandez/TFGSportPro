@@ -66,8 +66,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     //Añadir el usuario a la base de datos de firestore
-    private fun insertUser(){
-
+    private fun insertUser() {
         val user = hashMapOf(
             "Email" to email,
             "Name" to name,
@@ -75,15 +74,22 @@ class RegisterActivity : AppCompatActivity() {
             "PhysicalLevel" to physicalLevel
         )
 
-        baseDatos.collection("User")
-            .add(user)
-            .addOnSuccessListener { documentReference ->
-                Log.d("depurando", "DocumentSnapshot added with ID: ${documentReference.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w("depurando", "Error adding document", e)
-            }
+        // Obtener el uid del usuario autenticado
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+        if (userId != null) {
+            // Usar el uid como ID del documento en Firestore
+            baseDatos.collection("User").document(userId)  // Usamos el uid de Firebase como ID del documento
+                .set(user)  // Guardamos los datos con el ID del documento
+                .addOnSuccessListener {
+                    Log.d("depurando", "User document successfully added with UID: $userId")
+                }
+                .addOnFailureListener { e ->
+                    Log.w("depurando", "Error adding document", e)
+                }
+        }
     }
+
 
     //Validar los inputs
     private fun validateInputs(email: String, password: String, confirmPassword: String, name: String, age: String): Boolean {

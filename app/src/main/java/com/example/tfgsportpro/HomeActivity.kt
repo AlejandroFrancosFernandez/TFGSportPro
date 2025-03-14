@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.databinding.ActivityHomeBinding
 import com.example.tfgsportpro.features.f03_profile.fragments.MeFragment
+import com.example.tfgsportpro.features.f03_profile.fragments.TrainingFragment
 
 class HomeActivity : AppCompatActivity() {
 

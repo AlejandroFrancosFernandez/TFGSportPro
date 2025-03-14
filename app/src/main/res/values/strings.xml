@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TFGSportPro</string>
 
+    <string name="prefs_file">com.alejandro.TFGSportPro.REFERENCE_FILE_KEY</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -36,5 +37,8 @@
     <string name="Training">Training</string>
     <string name="Resume">Resume</string>
     <string name="Me">Me</string>
+
+    <!--Traducciones de la página me (fragment-me)-->
+    <string name="Logout">LogOut</string>
 
 </resources>
