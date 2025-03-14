@@ -24,7 +24,7 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".features.f00_login_register.activity.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity> <!-- MainActivity después del Splash -->
         <activity
-            android:name=".MainActivity"
+            android:name=".features.f00_login_register.activity.MainActivity"
             android:theme="@style/Theme.TFGSportPro" />
     </application>
 

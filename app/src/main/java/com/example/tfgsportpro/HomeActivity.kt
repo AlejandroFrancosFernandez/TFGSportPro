@@ -1,11 +1,9 @@
 package com.example.tfgsportpro
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.tfgsportpro.databinding.ActivityHomeBinding
+import com.example.tfgsportpro.features.f03_profile.fragments.MeFragment
 
 class HomeActivity : AppCompatActivity() {
 
