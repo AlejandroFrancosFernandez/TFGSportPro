@@ -40,5 +40,14 @@
 
     <!--Traducciones de la página me (fragment-me)-->
     <string name="Logout">LogOut</string>
+    <string name="infoEmail">Email : </string>
+    <string name="infoName">Name : </string>
+    <string name="infoAge">Age : </string>
+    <string name="infoPhysicalActivity">Physical Activity : </string>
+    <!--Cargandos-->
+    <string name="loadingEmail">Loading Email... </string>
+    <string name="loadingName">Loading Name... </string>
+    <string name="loadingAge">Loading Age...</string>
+    <string name="loadingPhysicalActivity">Loading Physical Activity...</string>
 
 </resources>

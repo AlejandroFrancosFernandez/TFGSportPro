@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             apply()
         }
 
-        // Crear un Intent para ir a la actividad RegisterActivity
         binding.bRegisterenviar.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)

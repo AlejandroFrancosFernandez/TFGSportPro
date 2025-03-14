@@ -54,7 +54,6 @@ class RegisterActivity : AppCompatActivity() {
                             // Usuario creado exitosamente
                             val firebaseUser = task.result?.user
                             if (firebaseUser != null) {
-                                // Opcional: Actualiza el displayName en Firebase Auth
                                 val profileUpdates = UserProfileChangeRequest.Builder()
                                     .setDisplayName(name)
                                     .build()
@@ -66,8 +65,6 @@ class RegisterActivity : AppCompatActivity() {
                                             Log.w("RegisterActivity", "Error updating profile.", updateTask.exception)
                                         }
                                     }
-
-                                // Inserta los datos del usuario en Firestore usando el UID del usuario recién creado
                                 insertUser(firebaseUser.uid)
                             }
                             showMainActivity()
@@ -152,7 +149,7 @@ class RegisterActivity : AppCompatActivity() {
         return !hasError
     }
 
-    // Mostrar alerta en caso de error
+    // Mostrar alerta en caso de error, nunca deberia de llegar a este ounto
     private fun showAlert(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
