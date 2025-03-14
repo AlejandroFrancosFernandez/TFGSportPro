@@ -7,9 +7,10 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.databinding.ActivityRegisterBinding
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.firestore
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -35,7 +36,6 @@ class RegisterActivity : AppCompatActivity() {
         binding.PhysicalActivityLevel.adapter = adapter
 
         binding.bRegister.setOnClickListener {
-
             email = binding.tietEmail.text.toString()
             password = binding.tietPassword.text.toString()
             confirmPassword = binding.tietConfirmPassword.text.toString()
@@ -45,56 +45,70 @@ class RegisterActivity : AppCompatActivity() {
 
             if (!validateInputs(email, password, confirmPassword, name, age)) {
                 return@setOnClickListener
-            }else{
-                insertUser()
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password).addOnCompleteListener{
-                    if (it.isSuccessful){
-                        showMainActivity()
-                    }else{
-                        showAlert()
+            } else {
+                // Primero, crea el usuario en Firebase Auth
+                FirebaseAuth.getInstance()
+                    .createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            // Usuario creado exitosamente
+                            val firebaseUser = task.result?.user
+                            if (firebaseUser != null) {
+                                // Opcional: Actualiza el displayName en Firebase Auth
+                                val profileUpdates = UserProfileChangeRequest.Builder()
+                                    .setDisplayName(name)
+                                    .build()
+                                firebaseUser.updateProfile(profileUpdates)
+                                    .addOnCompleteListener { updateTask ->
+                                        if (updateTask.isSuccessful) {
+                                            Log.d("RegisterActivity", "Profile updated successfully.")
+                                        } else {
+                                            Log.w("RegisterActivity", "Error updating profile.", updateTask.exception)
+                                        }
+                                    }
+
+                                // Inserta los datos del usuario en Firestore usando el UID del usuario recién creado
+                                insertUser(firebaseUser.uid)
+                            }
+                            showMainActivity()
+                        } else {
+                            showAlert()
+                        }
                     }
-                }
             }
         }
 
-        //Volver a la pagina Main, para el login
+        // Volver a la página Main para el login
         binding.bComeback.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            // Iniciar la actividad
             startActivity(intent)
         }
     }
 
-    //Añadir el usuario a la base de datos de firestore
-    private fun insertUser() {
-        val user = hashMapOf(
+    // Añadir el usuario a la base de datos de Firestore usando el UID del usuario
+    private fun insertUser(uid: String) {
+        val userData = hashMapOf(
             "Email" to email,
             "Name" to name,
             "Age" to age,
             "PhysicalLevel" to physicalLevel
         )
 
-        // Obtener el uid del usuario autenticado
-        val userId = FirebaseAuth.getInstance().currentUser?.uid
-
-        if (userId != null) {
-            // Usar el uid como ID del documento en Firestore
-            baseDatos.collection("User").document(userId)  // Usamos el uid de Firebase como ID del documento
-                .set(user)  // Guardamos los datos con el ID del documento
-                .addOnSuccessListener {
-                    Log.d("depurando", "User document successfully added with UID: $userId")
-                }
-                .addOnFailureListener { e ->
-                    Log.w("depurando", "Error adding document", e)
-                }
-        }
+        baseDatos.collection("User")
+            .document(uid) // Usamos el UID del usuario como ID del documento
+            .set(userData)
+            .addOnSuccessListener {
+                Log.d("RegisterActivity", "User document successfully added with UID: $uid")
+            }
+            .addOnFailureListener { e ->
+                Log.w("RegisterActivity", "Error adding document", e)
+            }
     }
 
-
-    //Validar los inputs
+    // Validar los inputs
     private fun validateInputs(email: String, password: String, confirmPassword: String, name: String, age: String): Boolean {
         var hasError = false
-        // Validar que el email no esté vacío y tenga formato válido
+
         if (email.isBlank()) {
             binding.tietEmail.error = "Email cannot be empty."
             hasError = true
@@ -105,7 +119,6 @@ class RegisterActivity : AppCompatActivity() {
             binding.tietEmail.error = null
         }
 
-        // Validar que las contraseñas coinciden
         if (password != confirmPassword) {
             binding.InputPassword.error = "Passwords do not match."
             binding.InputConfirmPassword.error = "Passwords do not match."
@@ -115,7 +128,6 @@ class RegisterActivity : AppCompatActivity() {
             binding.InputConfirmPassword.error = null
         }
 
-        // Validar que la contraseña tenga al menos 4 caracteres
         if (password.length < 6) {
             binding.InputPassword.error = "Password must be at least 6 characters."
             hasError = true
@@ -123,7 +135,6 @@ class RegisterActivity : AppCompatActivity() {
             binding.InputPassword.error = null
         }
 
-        // Validar que el nombre no esté vacío
         if (name.isBlank()) {
             binding.tietName.error = "Name cannot be empty."
             hasError = true
@@ -131,7 +142,6 @@ class RegisterActivity : AppCompatActivity() {
             binding.tietName.error = null
         }
 
-        // Validar que la edad no esté vacía
         if (age.isBlank()) {
             binding.tietAge.error = "Age cannot be empty."
             hasError = true
@@ -142,7 +152,7 @@ class RegisterActivity : AppCompatActivity() {
         return !hasError
     }
 
-    //Si ocurre algun error
+    // Mostrar alerta en caso de error
     private fun showAlert(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
@@ -152,19 +162,16 @@ class RegisterActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    //Ir a la página de login(MainActivity) si ha funcionado el register
+    // Ir a la página de login (MainActivity) si el registro ha funcionado
     private fun showMainActivity(){
         val intent = Intent(this, MainActivity::class.java)
-
         startActivity(intent)
         finish()
     }
 
-    //Verificar que se esté introduciendo un email
+    // Verificar que se esté introduciendo un email
     private fun isValidEmail(email: String): Boolean {
-        // Expresión regular para validar un email
-        val emailRegex =
-            "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+        val emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
         return email.matches(emailRegex.toRegex())
     }
 }
