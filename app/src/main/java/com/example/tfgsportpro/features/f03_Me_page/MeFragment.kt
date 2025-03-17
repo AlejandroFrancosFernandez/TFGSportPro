@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f03_profile.fragments
+package com.example.tfgsportpro.features.f03_Me_page
 
 import android.content.Intent
 import android.os.Bundle

@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:background="@color/homegrey"
     android:padding="16dp"
-    tools:context=".features.f03_profile.fragments.MeFragment">
+    tools:context=".features.f03_Me_page.MeFragment">
 
     <!-- Título de la pantalla -->
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/tv_infoProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Mi Perfil"
+        android:text="@string/infoProfile"
         android:textColor="@color/dark_blue"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -27,108 +27,122 @@
         android:id="@+id/iv_profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@id/tv_infoProfile"
+        app:srcCompat="@drawable/personaperfil" />
 
-    <!-- Email -->
-
-    <TextView
-        android:id="@+id/tv_infoEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/infoEmail"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
-
-    <TextView
-        android:id="@+id/tv_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/loadingEmail"
-        android:textColor="@color/dark_blue"
-        android:textSize="20sp"
+    <!-- Contenedor con Info de Perfil (Utilizando ScrollView para evitar desbordes) -->
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_infoEmail" />
+        app:layout_constraintTop_toBottomOf="@id/iv_profile">
 
-    <!-- Nombre -->
-    <TextView
-        android:id="@+id/tv_infoName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/infoName"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        <LinearLayout
+            android:id="@+id/LinearLayout_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/loadingName"
-        android:textColor="@color/dark_blue"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_infoName" />
+            <!-- Email -->
+            <TextView
+                android:id="@+id/tv_infoEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="@string/infoEmail"
+                android:textColor="@color/black" />
 
-    <!-- Edad -->
-    <TextView
-        android:id="@+id/tv_infoAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/infoAge"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="@string/loadingEmail"
+                android:textColor="@color/dark_blue" />
 
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/loadingAge"
-        android:textColor="@color/dark_blue"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_infoAge" />
+            <!-- Nombre -->
+            <TextView
+                android:id="@+id/tv_infoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="@string/infoName"
+                android:textColor="@color/black" />
 
-    <!-- Nivel físico -->
-    <TextView
-        android:id="@+id/tv_infoPhysicalLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/infoPhysicalActivity"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="@string/loadingName"
+                android:textColor="@color/dark_blue" />
 
-    <TextView
-        android:id="@+id/tv_physicallevel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/loadingPhysicalActivity"
-        android:textColor="@color/dark_blue"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_infoPhysicalLevel" />
+            <!-- Edad -->
+            <TextView
+                android:id="@+id/tv_infoAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="@string/infoAge"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="@string/loadingAge"
+                android:textColor="@color/dark_blue" />
+
+            <!-- Nivel físico -->
+            <TextView
+                android:id="@+id/tv_infoPhysicalLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="@string/infoPhysicalActivity"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_physicallevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="@string/loadingPhysicalActivity"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
+    </ScrollView>
 
     <!-- Botón de Logout -->
     <Button
@@ -136,19 +150,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="24dp"
         android:backgroundTint="@color/gray"
         android:text="@string/Logout"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_physicallevel" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
+        app:layout_constraintGuide_begin="20dp"
+        android:background="@drawable/border"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

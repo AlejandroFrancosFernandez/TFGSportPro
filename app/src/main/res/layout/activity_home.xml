@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/homegrey"
-    tools:context=".HomeActivity">
+    tools:context=".features.f01_home_page.HomeActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.tfgsportpro.features.f03_profile.fragments.TrainingFragment"
+        android:name="com.example.tfgsportpro.features.f04_Training_Page.TrainingFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b_navigation"

@@ -1,10 +1,11 @@
-package com.example.tfgsportpro
+package com.example.tfgsportpro.features.f01_home_page
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityHomeBinding
-import com.example.tfgsportpro.features.f03_profile.fragments.MeFragment
-import com.example.tfgsportpro.features.f03_profile.fragments.TrainingFragment
+import com.example.tfgsportpro.features.f03_Me_page.MeFragment
+import com.example.tfgsportpro.features.f04_Training_Page.TrainingFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -17,8 +18,8 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bNavigation.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.navTraining->supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, TrainingFragment()).commit()
-                R.id.navMe->supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, MeFragment()).commit()
+                R.id.navTraining ->supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, TrainingFragment()).commit()
+                R.id.navMe ->supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, MeFragment()).commit()
             }
             true
         }

@@ -21,13 +21,13 @@
             android:name=".MeActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".features.f01_home_page.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".features.f00_login_register.activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".features.f0_splash_screen.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Splash">
             <intent-filter>

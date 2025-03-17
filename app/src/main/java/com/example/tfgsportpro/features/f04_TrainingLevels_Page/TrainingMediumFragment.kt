@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f03_profile.fragments
+package com.example.tfgsportpro.features.f04_TrainingLevels_Page
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,20 +6,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.tfgsportpro.R
+import com.example.tfgsportpro.databinding.FragmentTrainingMediumBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [TrainingFragment.newInstance] factory method to
+ * Use the [TrainingMediumFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TrainingFragment : Fragment() {
+class TrainingMediumFragment : Fragment() {
+
+    lateinit var binding: FragmentTrainingMediumBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_training, container, false)
+        return binding.root
     }
 
 }

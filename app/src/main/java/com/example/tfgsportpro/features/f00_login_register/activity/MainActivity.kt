@@ -4,17 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tfgsportpro.HomeActivity
+import com.example.tfgsportpro.features.f01_home_page.HomeActivity
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import androidx.core.content.edit
-import androidx.credentials.GetCredentialRequest
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
-import com.google.firebase.Firebase
-import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.auth
 
 class MainActivity : AppCompatActivity() {
 
