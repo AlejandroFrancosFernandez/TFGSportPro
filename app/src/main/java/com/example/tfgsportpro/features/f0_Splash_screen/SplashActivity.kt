@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f0_splash_screen
+package com.example.tfgsportpro.features.f0_Splash_screen
 
 import android.content.Intent
 import android.os.Bundle

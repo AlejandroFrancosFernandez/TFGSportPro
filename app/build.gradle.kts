@@ -20,7 +20,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -44,6 +45,11 @@ dependencies {
     // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
 
+    //Google
+    implementation (libs.androidx.credentials.v150)
+    implementation (libs.androidx.credentials.play.services.auth.v150)
+    implementation (libs.googleid)
+
     // Add the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation(libs.firebase.auth)
@@ -52,9 +58,6 @@ dependencies {
     implementation(libs.firebase.firestore.ktx)
 
     implementation ("androidx.viewpager2:viewpager2:1.1.0")
-    implementation ("me.relex:circleindicator:2.1.6")
-
-    implementation ("androidx.cardview:cardview:1.0.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

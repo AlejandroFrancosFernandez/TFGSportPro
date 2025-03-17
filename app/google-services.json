@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "147450873098",
+    "firebase_url": "https://tfg-kotlin-default-rtdb.firebaseio.com",
     "project_id": "tfg-kotlin",
     "storage_bucket": "tfg-kotlin.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.tfgsportpro"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "147450873098-rnd27u62e9k74ubebo0fbpau8ml22dov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tfgsportpro",
+            "certificate_hash": "6cc18e8987d59ee255cc46090aa461b01f3b4e1c"
+          }
+        },
+        {
+          "client_id": "147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDXheDEyJTbwb2O4rWeC3QqH1dd_exbbMs"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

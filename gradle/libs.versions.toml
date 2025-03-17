@@ -1,5 +1,7 @@
 [versions]
 agp = "8.9.0"
+credentialsPlayServicesAuthVersion = "1.5.0"
+credentialsVersion = "1.5.0"
 firebaseFirestore = "25.1.2"
 kotlin = "2.0.21"
 coreKtx = "1.15.0"
@@ -19,6 +21,8 @@ navigationUiKtx = "2.8.9"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-credentials-play-services-auth-v150 = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentialsPlayServicesAuthVersion" }
+androidx-credentials-v150 = { module = "androidx.credentials:credentials", version.ref = "credentialsVersion" }
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestore" }

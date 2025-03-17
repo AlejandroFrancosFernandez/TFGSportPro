@@ -1,11 +1,14 @@
 package com.example.tfgsportpro.features.f03_Me_page
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.tfgsportpro.R
+import android.content.SharedPreferences
 import com.example.tfgsportpro.databinding.FragmentMeBinding
 import com.example.tfgsportpro.features.f00_login_register.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -19,15 +22,15 @@ class MeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMeBinding.inflate(inflater, container, false)
+        binding = FragmentMeBinding.inflate(layoutInflater)
 
         // Obtener el usuario autenticado
         val user = FirebaseAuth.getInstance().currentUser
 
         if (user != null) {
             // Mostrar algunos datos desde FirebaseAuth
-            binding.tvEmail.text = user.email ?: "Email no disponible"
-            binding.tvName.text = user.displayName ?: "Nombre no disponible"
+            binding.tvEmail.text = user.email ?: "Email Not Found"
+            binding.tvName.text = user.displayName ?: "Nombre Not Found"
 
             // Recuperar datos adicionales (Edad y Nivel físico) desde Firestore
             val db = FirebaseFirestore.getInstance()
@@ -38,23 +41,29 @@ class MeFragment : Fragment() {
                     binding.tvAge.text = document.getString("Age") ?: "Edad no disponible"
                     binding.tvPhysicallevel.text = document.getString("PhysicalLevel") ?: "Nivel físico no disponible"
                 } else {
-                    binding.tvAge.text = "Datos del usuario no encontrados"
-                    binding.tvPhysicallevel.text = "Datos del usuario no encontrados"
+                    binding.tvAge.text = "Not found"
+                    binding.tvPhysicallevel.text = "Not found"
                 }
             }.addOnFailureListener { exception ->
                 binding.tvAge.text = "Error al cargar datos"
                 binding.tvPhysicallevel.text = "Error al cargar datos"
             }
         } else {
-            binding.tvName.text = "No autenticado"
-            binding.tvEmail.text = "No autenticado"
-            binding.tvAge.text = "No autenticado"
-            binding.tvPhysicallevel.text = "No autenticado"
+            binding.tvName.text = getString(R.string.infoNotauthenticated)
+            binding.tvEmail.text = getString(R.string.infoNotauthenticated)
+            binding.tvAge.text = getString(R.string.infoNotauthenticated)
+            binding.tvPhysicallevel.text = getString(R.string.infoNotauthenticated)
         }
 
-        // Botón de logout: al presionar, cierra la sesión y vuelve a MainActivity
         binding.bLogOut.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
+
+            // Limpiar SharedPreferences del MainActivity
+            requireActivity().getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit().apply {
+                remove("email")
+            }.apply()
+
+            //Volver al Main para volver a logerase/registrarse
             val intent = Intent(requireActivity(), MainActivity::class.java)
             startActivity(intent)
             requireActivity().finish()

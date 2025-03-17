@@ -1,11 +1,11 @@
-package com.example.tfgsportpro.features.f02_resume_page
+package com.example.tfgsportpro.features.f02_Resume_page
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tfgsportpro.R
+import com.example.tfgsportpro.databinding.FragmentMeBinding
 import com.example.tfgsportpro.databinding.FragmentResumeBinding
 
 /**
@@ -22,6 +22,9 @@ class ResumeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+        binding = FragmentResumeBinding.inflate(layoutInflater)
+
         return binding.root
     }
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/homegrey"
-    tools:context=".features.f01_home_page.HomeActivity">
+    tools:context=".features.f01_Home_page.HomeActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"

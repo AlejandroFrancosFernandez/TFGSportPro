@@ -45,10 +45,12 @@
     <string name="infoAge">Age : </string>
     <string name="infoPhysicalActivity">Physical Activity : </string>
     <string name="infoProfile">Profile</string>
+    <string name="infoNotauthenticated">Not authenticated</string>
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Loading Email... </string>
     <string name="loadingName">Loading Name... </string>
     <string name="loadingAge">Loading Age...</string>
     <string name="loadingPhysicalActivity">Loading Physical Activity...</string>
 
+    <string name="web_client">147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com</string>
 </resources>
