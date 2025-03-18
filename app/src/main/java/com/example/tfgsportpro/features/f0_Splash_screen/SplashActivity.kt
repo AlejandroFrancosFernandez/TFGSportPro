@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.R
-import com.example.tfgsportpro.features.f00_login_register.activity.MainActivity
+import com.example.tfgsportpro.features.Auth.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f00_login_register.activity
+package com.example.tfgsportpro.features.Auth
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.GetCredentialResponse
-import com.example.tfgsportpro.features.f01_Home_page.HomeActivity
+import com.example.tfgsportpro.features.Home.HomeActivity
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Si el usuario existe y coincide con los datos, te lleva a la página Home
         binding.bLogin.setOnClickListener {
             loginWithEmailAndPassword()
         }

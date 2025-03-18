@@ -4,45 +4,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.f03_profile.incognita.TrainingLowFragment">
+    tools:context=".features.f04_Training_Page.TrainingFragment">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/b_day1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/gray"
-                android:text="@string/Day1"
-                android:textAlignment="textStart" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/b_day2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/gray"
-                android:text="@string/Day2"
-                android:textAlignment="textStart" />
+                <Button
+                    android:id="@+id/b_day1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day1"
+                    android:textAlignment="textStart" />
 
-            <Button
-                android:id="@+id/b_day3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/gray"
-                android:text="@string/Day3"
-                android:textAlignment="textStart" />
+                <Button
+                    android:id="@+id/b_day2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day2"
+                    android:textAlignment="textStart" />
 
-            <!-- Agrega más días según sea necesario -->
+                <Button
+                    android:id="@+id/b_day3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day3"
+                    android:textAlignment="textStart" />
 
-        </LinearLayout>
-    </ScrollView>
+                <Button
+                    android:id="@+id/b_day4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day4"
+                    android:textAlignment="textStart" />
 
+                <Button
+                    android:id="@+id/b_day5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day5"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day6"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day7"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day8"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day9"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day10"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day11"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day12"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day13"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day14"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/b_day15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="@string/Day15"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

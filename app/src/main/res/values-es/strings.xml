@@ -38,6 +38,11 @@
     <string name="Resume">Resumen</string>
     <string name="Me">Yo</string>
 
+    <!--Traducciones del menu de niveles de dificultad-->
+    <string name="Low">Básico</string>
+    <string name="Medium">Medio</string>
+    <string name="High">Alto</string>
+
     <!--Traducciones de la página me (fragment-me)-->
     <string name="Logout">Cerrar Sesión</string>
     <string name="infoEmail">Email : </string>

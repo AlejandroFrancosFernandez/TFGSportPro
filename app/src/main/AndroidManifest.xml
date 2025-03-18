@@ -17,10 +17,10 @@
         android:theme="@style/Theme.TFGSportPro"
         tools:targetApi="31">
         <activity
-            android:name=".features.f01_Home_page.HomeActivity"
+            android:name=".features.Home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".features.f00_login_register.activity.RegisterActivity"
+            android:name=".features.Auth.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".features.f0_Splash_screen.SplashActivity"
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity> <!-- MainActivity después del Splash -->
         <activity
-            android:name=".features.f00_login_register.activity.MainActivity"
+            android:name=".features.Auth.MainActivity"
             android:theme="@style/Theme.TFGSportPro" />
     </application>
 

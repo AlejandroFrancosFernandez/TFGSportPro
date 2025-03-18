@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores básicos -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="light_blue">#A7D8FF</color>
+
+    <!-- Colores destacados -->
+    <color name="light_blue">#A7D8FF</color> <!-- Para texto destacado -->
     <color name="dark_blue">#4F8AA1</color>
     <color name="green">#B4E9B0</color>
 
-    <!-- Colores aplicacion oscura -->
+    <!-- Colores de modo oscuro -->
+    <color name="DarkGrey">#181818</color> <!-- Fondo principal -->
+    <color name="gray">#2B2B2B</color> <!-- Alternativa fondo -->
+    <color name="homegrey">#262626</color> <!-- Fondo de tarjetas/perfil -->
+    <color name="navigationgrey">#222222</color> <!-- Barra de navegación -->
+    <color name="peach">#FFCC99</color> <!-- Para resaltar elementos -->
 
-    <color name="DarkGrey">#181818</color>
-    <color name="gray">#2B2B2B</color>
+    <!-- Propuestas mejoradas -->
+    <color name="text_primary">#FFFFFF</color> <!-- Texto principal -->
+    <color name="text_secondary">#A7D8FF</color> <!-- Texto destacado -->
+    <color name="button_bg">#222222</color> <!-- Fondo de botones -->
+    <color name="sesionButton_bg">#2C2C2C</color>
+    <color name="logoutButton_bg">#121212</color> <!-- Color más oscuro para el botón de logout -->
+    <color name="button_border">#A7D8FF</color> <!-- Borde de botones -->
+    <color name="icon_unselected">#808080</color> <!-- Iconos inactivos -->
 
-    <color name="homegrey">#262626</color>
-    <color name="navigationgrey">#222222</color>
-    <color name="peach">#FFCC99</color>
+    <!-- Color de texto no seleccionado -->
+    <color name="item_text_unselected">#B0BEC5</color>
+    <!-- Color de texto seleccionado -->
+    <color name="item_text_selected">#FF4081</color>
+
+    <!-- Otros colores para los íconos -->
+    <color name="item_icon_unselected">#B0BEC5</color>
+    <color name="item_icon_selected">#FF4081</color>
 </resources>

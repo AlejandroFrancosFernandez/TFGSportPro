@@ -1,27 +1,29 @@
-package com.example.tfgsportpro.features.f04_TrainingLevels_Page
+package com.example.tfgsportpro.features.Home.Fragments
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.example.tfgsportpro.R
-import com.example.tfgsportpro.databinding.FragmentTrainingMediumBinding
+import com.example.tfgsportpro.databinding.FragmentResumeBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [TrainingMediumFragment.newInstance] factory method to
+ * Use the [ResumeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TrainingMediumFragment : Fragment() {
+class ResumeFragment : Fragment() {
 
-    lateinit var binding: FragmentTrainingMediumBinding
+    lateinit var binding: FragmentResumeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+        binding = FragmentResumeBinding.inflate(layoutInflater)
+
         return binding.root
     }
 

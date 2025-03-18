@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+
+    <!-- Fondo oscuro con un color sutil para el LinearLayout -->
+    <solid android:color="#2C2C2C"/> <!-- Fondo oscuro para que resalte -->
+
+    <!-- Bordes redondeados -->
+    <corners android:radius="20dp" />
+</shape>

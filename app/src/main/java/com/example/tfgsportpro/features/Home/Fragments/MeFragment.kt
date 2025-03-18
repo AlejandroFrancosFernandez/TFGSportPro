@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f03_Me_page
+package com.example.tfgsportpro.features.Home.Fragments
 
 import android.content.Context
 import android.content.Intent
@@ -8,9 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.tfgsportpro.R
-import android.content.SharedPreferences
 import com.example.tfgsportpro.databinding.FragmentMeBinding
-import com.example.tfgsportpro.features.f00_login_register.activity.MainActivity
+import com.example.tfgsportpro.features.Auth.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -28,16 +27,13 @@ class MeFragment : Fragment() {
         val user = FirebaseAuth.getInstance().currentUser
 
         if (user != null) {
-            // Mostrar algunos datos desde FirebaseAuth
             binding.tvEmail.text = user.email ?: "Email Not Found"
             binding.tvName.text = user.displayName ?: "Nombre Not Found"
 
-            // Recuperar datos adicionales (Edad y Nivel físico) desde Firestore
             val db = FirebaseFirestore.getInstance()
             val userDocRef = db.collection("User").document(user.uid)
             userDocRef.get().addOnSuccessListener { document ->
                 if (document.exists()) {
-                    // Cargar edad y nivel físico
                     binding.tvAge.text = document.getString("Age") ?: "Edad no disponible"
                     binding.tvPhysicallevel.text = document.getString("PhysicalLevel") ?: "Nivel físico no disponible"
                 } else {
@@ -45,8 +41,8 @@ class MeFragment : Fragment() {
                     binding.tvPhysicallevel.text = "Not found"
                 }
             }.addOnFailureListener { exception ->
-                binding.tvAge.text = "Error al cargar datos"
-                binding.tvPhysicallevel.text = "Error al cargar datos"
+                binding.tvAge.text = "Error loading data"
+                binding.tvPhysicallevel.text = "Error loading data"
             }
         } else {
             binding.tvName.text = getString(R.string.infoNotauthenticated)

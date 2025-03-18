@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1D1D1D"
-    tools:context=".features.f00_login_register.activity.MainActivity">
+    tools:context=".features.Auth.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"

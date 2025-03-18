@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/Low"
+        android:id="@+id/navTrainingLow" />
+
+    <item android:title="@string/Medium"
+        android:id="@+id/navTrainingMedium" />
+
+    <item android:title="@string/High"
+        android:id="@+id/navTrainingHigh" />
+
+</menu>

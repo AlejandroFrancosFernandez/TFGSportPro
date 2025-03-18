@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f00_login_register.activity
+package com.example.tfgsportpro.features.Auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -46,7 +46,6 @@ class RegisterActivity : AppCompatActivity() {
             if (!validateInputs(email, password, confirmPassword, name, age)) {
                 return@setOnClickListener
             } else {
-                // Primero, crea el usuario en Firebase Auth
                 FirebaseAuth.getInstance()
                     .createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
