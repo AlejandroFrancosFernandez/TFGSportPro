@@ -10,10 +10,15 @@ import com.example.tfgsportpro.databinding.FragmentTrainingBinding
 import com.example.tfgsportpro.features.Home.Fragments.Training.TrainingHighFragment
 import com.example.tfgsportpro.features.Home.Fragments.Training.TrainingLowFragment
 import com.example.tfgsportpro.features.Home.Fragments.Training.TrainingMediumFragment
+import com.example.tfgsportpro.features.f03_profile.incognita.ViewPagerAdapter
 
 class TrainingFragment : Fragment() {
 
     lateinit var binding: FragmentTrainingBinding
+
+    companion object{
+        private const val ARG_OBJECT = "object"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,18 +26,16 @@ class TrainingFragment : Fragment() {
     ): View {
         binding = FragmentTrainingBinding.inflate(inflater, container, false)
 
-        binding.bNavigationLevels.setOnItemSelectedListener { item ->
-            val fragment = when (item.itemId) {
-                R.id.navTrainingLow -> TrainingLowFragment()    // Nivel bajo
-                R.id.navTrainingMedium -> TrainingMediumFragment()  // Nivel medio
-                R.id.navTrainingHigh -> TrainingHighFragment()   // Nivel alto
-                else -> null
-            }
+        // Configurar el ViewPager2 con el adaptador
+        val pagerAdapter = ViewPagerAdapter(requireActivity()) // Usar el fragment activity actual
+        binding.viewPager.adapter = pagerAdapter // Asignar el adaptador al ViewPager2
 
-            if (fragment != null) {
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, fragment)
-                    .commit()
+        // Configurar el BottomNavigationView para cambiar entre fragmentos del ViewPager2
+        binding.bNavigationLevels.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navTrainingLow -> binding.viewPager.setCurrentItem(0, true) // Nivel Bajo
+                R.id.navTrainingMedium -> binding.viewPager.setCurrentItem(1, true) // Nivel Medio
+                R.id.navTrainingHigh -> binding.viewPager.setCurrentItem(2, true) // Nivel Alto
             }
             true
         }
