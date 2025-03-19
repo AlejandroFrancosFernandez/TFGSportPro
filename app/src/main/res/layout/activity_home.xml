@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/homegrey"
-    tools:context=".features.Home.HomeActivity">
+    tools:context=".features.f01_Home.HomeActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,35 +14,53 @@
         android:layout_height="wrap_content"
         android:background="@color/navigationgrey"
         android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Botón para salir de la aplicación -->
         <ImageButton
             android:id="@+id/b_comeback"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:background="@color/gray"
-            android:contentDescription="TODO"
+            android:contentDescription="Salir"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/comebackicon"
             tools:ignore="TouchTargetSizeCheck" />
 
+        <!-- Nombre de la aplicación centrado -->
         <TextView
             android:id="@+id/textViewInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="SportPro"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <!-- Icono para ir a la página de "mi cuenta" -->
+        <ImageButton
+            android:id="@+id/b_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/gray"
+            android:contentDescription="Ir a mi cuenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/meicon" />
 
     </LinearLayout>
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.tfgsportpro.features.Home.Fragments.Training.TrainingLowFragment"
+        android:name="com.example.tfgsportpro.features.f01_Home.Fragments.Training.TrainingLowFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/b_navigation"

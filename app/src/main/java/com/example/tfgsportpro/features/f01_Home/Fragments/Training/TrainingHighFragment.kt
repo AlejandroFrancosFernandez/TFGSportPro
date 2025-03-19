@@ -1,30 +1,28 @@
-package com.example.tfgsportpro.features.Home.Fragments
+package com.example.tfgsportpro.features.f01_Home.Fragments.Training
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tfgsportpro.databinding.FragmentResumeBinding
+import androidx.fragment.app.Fragment
+import com.example.tfgsportpro.databinding.FragmentTrainingHighBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ResumeFragment.newInstance] factory method to
+ * Use the [TrainingHighFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ResumeFragment : Fragment() {
+class TrainingHighFragment : Fragment() {
 
-    lateinit var binding: FragmentResumeBinding
+    lateinit var binding: FragmentTrainingHighBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        binding = FragmentResumeBinding.inflate(layoutInflater)
+        binding = FragmentTrainingHighBinding.inflate(inflater, container, false)
 
         return binding.root
     }
-
 }

@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.Home.Fragments
+package com.example.tfgsportpro.features.f01_Home.Fragments
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.FragmentMeBinding
-import com.example.tfgsportpro.features.Auth.MainActivity
+import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -60,7 +60,7 @@ class MeFragment : Fragment() {
             }.apply()
 
             //Volver al Main para volver a logerase/registrarse
-            val intent = Intent(requireActivity(), MainActivity::class.java)
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
         }

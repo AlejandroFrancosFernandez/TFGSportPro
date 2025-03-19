@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.Home.Fragments.ResumeFragment">
+    tools:context=".features.f01_Home.Fragments.ResumeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

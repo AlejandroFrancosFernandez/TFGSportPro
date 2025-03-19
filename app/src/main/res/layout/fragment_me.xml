@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/homegrey"
     android:padding="16dp"
-    tools:context=".features.Home.Fragments.MeFragment">
+    tools:context=".features.f01_Home.Fragments.MeFragment">
 
     <!-- Título de la pantalla -->
     <TextView

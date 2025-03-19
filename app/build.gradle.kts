@@ -56,7 +56,7 @@ dependencies {
     //Implementacion a la base de datos
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.firestore.ktx)
-
+    //Para poder deslizarse entre los niveles de dificultad
     implementation ("androidx.viewpager2:viewpager2:1.1.0")
 
     implementation(libs.androidx.core.ktx)

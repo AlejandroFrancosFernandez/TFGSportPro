@@ -39,9 +39,9 @@
     <string name="Me">Yo</string>
 
     <!--Traducciones del menu de niveles de dificultad-->
-    <string name="Low">Básico</string>
-    <string name="Medium">Medio</string>
-    <string name="High">Alto</string>
+    <string name="Low">Nivel Básico</string>
+    <string name="Medium">Nivel Medio</string>
+    <string name="High">Nivel Alto</string>
 
     <!--Traducciones de la página me (fragment-me)-->
     <string name="Logout">Cerrar Sesión</string>
@@ -58,4 +58,6 @@
     <string name="loadingPhysicalActivity">Cargando Physical Activity...</string>
 
     <string name="web_client">822139675954-mrsfojbrgg27u5sgtvvh6enic2u3hoo8.apps.googleusercontent.com</string>
+
+    <string name="errormessage">Credenciales invalidas</string>
 </resources>

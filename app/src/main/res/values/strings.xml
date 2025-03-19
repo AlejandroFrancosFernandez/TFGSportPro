@@ -39,9 +39,9 @@
     <string name="Me">Me</string>
 
     <!--Traducciones del menu de niveles de dificultad-->
-    <string name="Low">Low</string>
-    <string name="Medium">Medium</string>
-    <string name="High">High</string>
+    <string name="Low">Low Level</string>
+    <string name="Medium">Medium Level</string>
+    <string name="High">High Level</string>
 
     <!--Traducciones de la página me (fragment-me)-->
     <string name="Logout">LogOut</string>
@@ -57,5 +57,8 @@
     <string name="loadingAge">Loading Age...</string>
     <string name="loadingPhysicalActivity">Loading Physical Activity...</string>
 
+    <!--Token Google para el login-->
     <string name="web_client">147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com</string>
+
+    <string name="errormessage">Invalid login credentials</string>
 </resources>

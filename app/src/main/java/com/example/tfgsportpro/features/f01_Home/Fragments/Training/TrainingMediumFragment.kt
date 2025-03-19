@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.Home.Fragments.Training
+package com.example.tfgsportpro.features.f01_Home.Fragments.Training
 
 import android.os.Bundle
 import android.view.LayoutInflater

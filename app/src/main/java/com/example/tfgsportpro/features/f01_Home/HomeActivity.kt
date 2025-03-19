@@ -1,13 +1,12 @@
-package com.example.tfgsportpro.features.Home
+package com.example.tfgsportpro.features.f01_Home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityHomeBinding
-import com.example.tfgsportpro.features.Home.Fragments.ResumeFragment
-import com.example.tfgsportpro.features.Home.Fragments.MeFragment
-import com.example.tfgsportpro.features.Home.Fragments.Training.TrainingLowFragment
-import com.example.tfgsportpro.features.Home.Fragments.TrainingFragment
+import com.example.tfgsportpro.features.f01_Home.Fragments.ResumeFragment
+import com.example.tfgsportpro.features.f01_Home.Fragments.MeFragment
+import com.example.tfgsportpro.features.f01_Home.Fragments.TrainingFragment
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
@@ -36,6 +35,10 @@ class HomeActivity : AppCompatActivity() {
 
         //Configurar el boton este
         binding.bComeback.setOnClickListener {
+
+        }
+
+        binding.bProfile.setOnClickListener{
 
         }
 

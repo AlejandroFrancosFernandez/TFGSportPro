@@ -4,19 +4,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Colores destacados -->
-    <color name="light_blue">#A7D8FF</color> <!-- Para texto destacado -->
-    <color name="dark_blue">#4F8AA1</color>
-    <color name="green">#B4E9B0</color>
+    <!-- Fondos -->
+    <color name="background_dark">#121212</color>
 
     <!-- Colores de modo oscuro -->
     <color name="DarkGrey">#181818</color> <!-- Fondo principal -->
     <color name="gray">#2B2B2B</color> <!-- Alternativa fondo -->
     <color name="homegrey">#262626</color> <!-- Fondo de tarjetas/perfil -->
     <color name="navigationgrey">#222222</color> <!-- Barra de navegación -->
-    <color name="peach">#FFCC99</color> <!-- Para resaltar elementos -->
 
-    <!-- Propuestas mejoradas -->
+    <!-- Otros colores -->
     <color name="text_primary">#FFFFFF</color> <!-- Texto principal -->
     <color name="text_secondary">#A7D8FF</color> <!-- Texto destacado -->
     <color name="button_bg">#222222</color> <!-- Fondo de botones -->
@@ -25,12 +22,30 @@
     <color name="button_border">#A7D8FF</color> <!-- Borde de botones -->
     <color name="icon_unselected">#808080</color> <!-- Iconos inactivos -->
 
-    <!-- Color de texto no seleccionado -->
-    <color name="item_text_unselected">#B0BEC5</color>
-    <!-- Color de texto seleccionado -->
-    <color name="item_text_selected">#FF4081</color>
+    <!--Colores diferentes niveles-->
+    <!-- Colores Low Level -->
+    <color name="card_low">#A0D2F7</color> <!-- Un tono más claro de #74BFE6 -->
+    <color name="light_blue">#B9E4FF</color> <!-- Un tono más claro de #A7D8FF -->
+    <color name="bluePastel">#B9E4FF</color> <!-- Un tono más claro de #A7D8FF (igual) -->
+    <color name="dayButtonBlueOdd">#8AC9E4</color> <!-- Un tono más claro de #6FA8D4 -->
+    <color name="dayButtonBlueEven">#A3D4F3</color> <!-- Un tono más claro de #85C1E9 -->
+    <color name="green">#C9F6C1</color> <!-- Un tono más claro de #B4E9B0 -->
 
-    <!-- Otros colores para los íconos -->
-    <color name="item_icon_unselected">#B0BEC5</color>
-    <color name="item_icon_selected">#FF4081</color>
+
+    <!-- Colores Medium Level -->
+    <color name="card_medium">#F39C12</color>
+    <color name="light_orange">#FFCC80</color>
+    <color name="dayButtonOrangeOdd">#F1A94D</color>
+    <color name="dayButtonOrangeEven">#F8C471</color>
+    <color name="peach">#FFCC99</color>
+
+    <!-- Colores High Level -->
+    <color name="card_high">#FF7043</color>
+    <color name="dark_blue">#4F8AA1</color>
+    <color name="dayButtonRedOdd">#E14B2D</color>
+    <color name="dayButtonRedEven">#FF5733</color>
+
+    <color name="firstColorButtonHigh">#FF5733</color>
+    <color name="secondColorButtonHigh">#262626</color>
+
 </resources>

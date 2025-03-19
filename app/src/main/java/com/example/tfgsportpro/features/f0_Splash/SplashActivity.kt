@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f0_Splash_screen
+package com.example.tfgsportpro.features.f0_Splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.R
-import com.example.tfgsportpro.features.Auth.MainActivity
+import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
         //Poner 2 segundos de SplashScreen
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, 2000)
     }
