@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f01_Home.Fragments
+package com.example.tfgsportpro.features.f01_Home.Fragments.ResumePage
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

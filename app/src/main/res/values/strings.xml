@@ -60,5 +60,6 @@
     <!--Token Google para el login-->
     <string name="web_client">147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com</string>
 
-    <string name="errormessage">Invalid login credentials</string>
+    <string name="errorloginmessage">Invalid login credentials</string>
+    <string name="errorloginGooglemessage">Google login failed.</string>
 </resources>

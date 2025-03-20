@@ -20,7 +20,7 @@
             android:name=".features.f01_Home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".features.f00_Auth.Register.RegisterActivity"
+            android:name=".features.f00_Auth.Register.UI.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".features.f0_Splash.SplashActivity"

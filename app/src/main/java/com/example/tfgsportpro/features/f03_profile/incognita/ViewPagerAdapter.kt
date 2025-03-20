@@ -3,9 +3,9 @@ package com.example.tfgsportpro.features.f03_profile.incognita
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.tfgsportpro.features.f01_Home.Fragments.Training.TrainingHighFragment
-import com.example.tfgsportpro.features.f01_Home.Fragments.Training.TrainingLowFragment
-import com.example.tfgsportpro.features.f01_Home.Fragments.Training.TrainingMediumFragment
+import com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.TrainingLevels.TrainingHighFragment
+import com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.TrainingLevels.TrainingLowFragment
+import com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.TrainingLevels.TrainingMediumFragment
 
 class ViewPagerAdapter(fa: FragmentActivity): FragmentStateAdapter(fa) {
 

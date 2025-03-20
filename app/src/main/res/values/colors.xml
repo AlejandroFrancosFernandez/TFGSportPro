@@ -21,31 +21,31 @@
     <color name="logoutButton_bg">#121212</color> <!-- Color más oscuro para el botón de logout -->
     <color name="button_border">#A7D8FF</color> <!-- Borde de botones -->
     <color name="icon_unselected">#808080</color> <!-- Iconos inactivos -->
+    <color name="dark_blue">#4F8AA1</color>
+
 
     <!--Colores diferentes niveles-->
     <!-- Colores Low Level -->
-    <color name="card_low">#A0D2F7</color> <!-- Un tono más claro de #74BFE6 -->
-    <color name="light_blue">#B9E4FF</color> <!-- Un tono más claro de #A7D8FF -->
-    <color name="bluePastel">#B9E4FF</color> <!-- Un tono más claro de #A7D8FF (igual) -->
-    <color name="dayButtonBlueOdd">#8AC9E4</color> <!-- Un tono más claro de #6FA8D4 -->
-    <color name="dayButtonBlueEven">#A3D4F3</color> <!-- Un tono más claro de #85C1E9 -->
-    <color name="green">#C9F6C1</color> <!-- Un tono más claro de #B4E9B0 -->
+    <color name="card_low">#4F8AA1</color>
+    <!--Degradado colores botones-->
+    <color name="firstColorButtonOddLow">#7AB4D3</color>
+    <color name="firstColorButtonEvenLow">#92C8E2</color>
+    <color name="secondColorButtonLow">#003D59</color>
 
 
-    <!-- Colores Medium Level -->
-    <color name="card_medium">#F39C12</color>
-    <color name="light_orange">#FFCC80</color>
-    <color name="dayButtonOrangeOdd">#F1A94D</color>
-    <color name="dayButtonOrangeEven">#F8C471</color>
-    <color name="peach">#FFCC99</color>
+    <!-- Colores MEDIUM Level -->
+    <color name="card_medium">#D77C10</color>
+    <!--Degradado colores botones-->
+    <color name="firstColorButtonOddMedium">#F39C12</color>
+    <color name="firstColorButtonEvenMedium">#F49B2A</color>
+    <color name="secondColorButtonMedium">#4A2C00</color>
 
-    <!-- Colores High Level -->
-    <color name="card_high">#FF7043</color>
-    <color name="dark_blue">#4F8AA1</color>
-    <color name="dayButtonRedOdd">#E14B2D</color>
-    <color name="dayButtonRedEven">#FF5733</color>
 
-    <color name="firstColorButtonHigh">#FF5733</color>
-    <color name="secondColorButtonHigh">#262626</color>
+    <!-- Colores HIGH Level -->
+    <color name="card_high">#D24D2A</color>
+    <!--Degradado colores botones-->
+    <color name="firstColorButtonOddHigh">#FF5733</color>
+    <color name="firstColorButtonEvenHigh">#FF6F4D </color>
+    <color name="secondColorButtonHigh">#5D0000</color>
 
 </resources>

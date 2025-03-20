@@ -13,24 +13,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- CardView with content -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardLevelLow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="8dp"
             android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/card_low">
+            app:cardBackgroundColor="@color/card_low"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="16dp"
-                android:gravity="center_vertical">
+                android:padding="16dp">
 
                 <!-- Ícono que representa la dificultad -->
                 <ImageView
@@ -38,7 +38,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:contentDescription="Ícono de dificultad"
-                    android:src="@drawable/difficultylowicon" />
+                    android:src="@drawable/difficultyicon" />
 
                 <!-- Texto que muestra el nivel -->
                 <TextView
@@ -67,197 +67,212 @@
                     android:id="@+id/b_day1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day1"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day2"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day3"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day4"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day5"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day6"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day7"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day8"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day9"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day10"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day11"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day12"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day13"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueEven"
+                    android:background="@drawable/btn_loweven_color"
                     android:text="@string/Day14"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
 
                 <Button
                     android:id="@+id/b_day15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:backgroundTint="@color/dayButtonBlueOdd"
+                    android:background="@drawable/btn_lowodd_color"
                     android:text="@string/Day15"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
             </LinearLayout>
         </ScrollView>
 

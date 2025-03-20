@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.credentials.CredentialManager
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.features.f01_Home.HomeActivity
-import com.example.tfgsportpro.features.f00_Auth.Register.RegisterActivity
+import com.example.tfgsportpro.features.f00_Auth.Register.UI.RegisterActivity
 import com.example.tfgsportpro.features.f00_Auth.Login.UseCase.LoginManager
 import com.example.tfgsportpro.databinding.ActivityLoginBinding
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
@@ -22,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Inicializar el LoginManager
         loginManager = LoginManager(this)
 
         // Verificar si el usuario ya está autenticado
@@ -43,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 if (success) {
                     showHomeActivity()
                 } else {
-                    val message = getString(R.string.errormessage)
+                    val message = getString(R.string.errorloginmessage)
                     showAlert(message)
                 }
             }
@@ -59,7 +60,8 @@ class LoginActivity : AppCompatActivity() {
                 if (success) {
                     showHomeActivity()
                 } else {
-                    showAlert("Google login failed.")
+                    val message = getString(R.string.errorloginGooglemessage)
+                    showAlert(message)
                 }
             }
         }

@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f01_Home.Fragments
+package com.example.tfgsportpro.features.f01_Home.Fragments.MePage
 
 import android.content.Context
 import android.content.Intent
@@ -36,6 +36,11 @@ class MeFragment : Fragment() {
                 if (document.exists()) {
                     binding.tvAge.text = document.getString("Age") ?: "Edad no disponible"
                     binding.tvPhysicallevel.text = document.getString("PhysicalLevel") ?: "Nivel físico no disponible"
+
+                    // Obtener la racha
+                    val streak = document.getLong("streak") ?: 0
+                    // Mostrar la racha en el TextView
+                    binding.RachaDias.text = "Racha de días consecutivos: $streak"
                 } else {
                     binding.tvAge.text = "Not found"
                     binding.tvPhysicallevel.text = "Not found"

@@ -59,5 +59,6 @@
 
     <string name="web_client">822139675954-mrsfojbrgg27u5sgtvvh6enic2u3hoo8.apps.googleusercontent.com</string>
 
-    <string name="errormessage">Credenciales invalidas</string>
+    <string name="errorloginmessage">Credenciales invalidas</string>
+    <string name="errorloginGooglemessage">Error al logear con Google.</string>
 </resources>

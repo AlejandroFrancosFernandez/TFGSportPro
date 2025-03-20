@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/homegrey"
     android:padding="16dp"
-    tools:context=".features.f01_Home.Fragments.MeFragment">
+    tools:context=".features.f01_Home.Fragments.MePage.MeFragment">
 
     <!-- Título de la pantalla -->
     <TextView
         android:id="@+id/tv_infoProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:text="@string/infoProfile"
         android:textColor="@color/text_primary"
         android:textSize="24sp"
@@ -27,7 +27,7 @@
         android:id="@+id/iv_profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:scaleType="centerCrop"
         android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_profile">
@@ -145,17 +145,33 @@
     </ScrollView>
 
     <!-- Botón de Logout -->
+    <TextView
+        android:id="@+id/RachaDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="0"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/b_logOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView2" />
+
     <Button
         android:id="@+id/b_logOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/logoutButton_bg"
         android:text="@string/Logout"
         android:textColor="@color/text_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toBottomOf="@+id/RachaDias" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
