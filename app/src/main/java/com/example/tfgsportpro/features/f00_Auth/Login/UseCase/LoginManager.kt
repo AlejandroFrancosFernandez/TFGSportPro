@@ -120,13 +120,11 @@ class LoginManager(private val context: Context) {
                 val streak = document.getLong("streak") ?: 0L
                 val currentDate = Calendar.getInstance().time
 
-                // Si ya es el mismo día, actualizamos lastLoginDate sin cambiar la racha
                 if (isSameDay(lastLoginDate, currentDate)) {
                     userDocRef.update("lastLoginDate", currentDate)
                     return@addOnSuccessListener
                 }
 
-                // Si es el día siguiente, incrementamos; de lo contrario, reiniciamos
                 val updatedStreak = if (isNextDay(lastLoginDate, currentDate)) {
                     streak + 1
                 } else {
@@ -149,14 +147,14 @@ class LoginManager(private val context: Context) {
         }
     }
 
-    // Funciones auxiliares
+    //Verifica si es el mismo dia (no suma al streak)
     private fun isSameDay(date1: Date, date2: Date): Boolean {
         val calendar1 = Calendar.getInstance().apply { time = date1 }
         val calendar2 = Calendar.getInstance().apply { time = date2 }
         return calendar1.get(Calendar.YEAR) == calendar2.get(Calendar.YEAR) &&
                 calendar1.get(Calendar.DAY_OF_YEAR) == calendar2.get(Calendar.DAY_OF_YEAR)
     }
-
+    //Verifica si es otro dia (suma +1 al streak)
     private fun isNextDay(date1: Date, date2: Date): Boolean {
         val calendar1 = Calendar.getInstance().apply { time = date1 }
         val calendar2 = Calendar.getInstance().apply { time = date2 }

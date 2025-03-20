@@ -34,8 +34,23 @@ class MeFragment : Fragment() {
             val userDocRef = db.collection("User").document(user.uid)
             userDocRef.get().addOnSuccessListener { document ->
                 if (document.exists()) {
-                    binding.tvAge.text = document.getString("Age") ?: "Edad no disponible"
-                    binding.tvPhysicallevel.text = document.getString("PhysicalLevel") ?: "Nivel físico no disponible"
+                    // Si displayName es null, intentamos obtenerlo desde Firestore con la clave correcta "Name"
+                    val displayName = document.getString("Name") ?: document.getString("name") ?: "Nombre no disponible"
+                    binding.tvName.text = displayName
+
+                    val age = document.getString("Age")
+                    if (age != null) {
+                        binding.tvAge.text = age
+                    } else {
+                        binding.tvAge.text = "Edad no disponible"
+                    }
+
+                    val physicalLevel = document.getString("PhysicalLevel")
+                    if (physicalLevel != null) {
+                        binding.tvPhysicallevel.text = physicalLevel
+                    } else {
+                        binding.tvPhysicallevel.text = "Nivel físico no disponible"
+                    }
 
                     // Obtener la racha
                     val streak = document.getLong("streak") ?: 0
@@ -49,6 +64,7 @@ class MeFragment : Fragment() {
                 binding.tvAge.text = "Error loading data"
                 binding.tvPhysicallevel.text = "Error loading data"
             }
+
         } else {
             binding.tvName.text = getString(R.string.infoNotauthenticated)
             binding.tvEmail.text = getString(R.string.infoNotauthenticated)
@@ -59,12 +75,12 @@ class MeFragment : Fragment() {
         binding.bLogOut.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
 
-            // Limpiar SharedPreferences del MainActivity
+            // Limpiar SharedPreferences del LoginActivity
             requireActivity().getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit().apply {
                 remove("email")
             }.apply()
 
-            //Volver al Main para volver a logerase/registrarse
+            // Volver al Login para volver a logarse/registrarse
             val intent = Intent(requireActivity(), LoginActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
@@ -73,3 +89,5 @@ class MeFragment : Fragment() {
         return binding.root
     }
 }
+
+

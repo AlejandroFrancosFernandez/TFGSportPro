@@ -22,7 +22,9 @@ class HomeActivity : AppCompatActivity() {
         // Inicializar el LoginManager
         loginManager = LoginManager(this)
 
-        // Por si no aprieta al login, y se inicia desde el sharedPreferences
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, TrainingFragment()).commit()
+
+        // Incrementa o actualiza el lastlogindate desde sharedpreferences
         if (FirebaseAuth.getInstance().currentUser != null) {
             loginManager.updateStreakOnAutoLogin()
         }
