@@ -31,6 +31,7 @@ class RoutineSummaryActivity : AppCompatActivity() {
         // Se decide qué rutina usar según el nivel
         val routine = when (level) {
             "low" -> getRoutineForDayLow(day)
+            "medium" -> getRoutineForDayMedium(day)
             "high" -> getRoutineForDayHigh(day)
             else -> getRoutineForDayLow(day)
         }
@@ -194,6 +195,152 @@ class RoutineSummaryActivity : AppCompatActivity() {
                 "Superman con brazos extendidos",
                 "Rotaciones de torso",
                 "Saltos de lado a lado"
+            )
+            else -> listOf("No hay rutina para este día.")
+        }
+    }
+
+    private fun getRoutineForDayMedium(day: Int): List<String> {
+        return when (day) {
+            1 -> listOf(
+                "Jumping Jacks (Calentamiento)",
+                "Arm Circles (Calentamiento)",
+                "Sentadillas",
+                "Flexiones normales",
+                "Zancadas alternas",
+                "Plancha frontal",
+                "Abdominales bicicleta",
+                "Superman",
+                "Step-ups",
+                "Puente de glúteos",
+                "Levantamiento de rodillas en plancha",
+                "Elevación de talones"
+            )
+            2 -> listOf(
+                "Jump Rope (Calentamiento)",
+                "Shoulder Rolls (Calentamiento)",
+                "Abdominales en V",
+                "Elevaciones de pierna lateral",
+                "Sentadilla isométrica",
+                "Rotación de cintura",
+                "Plancha con toques de hombros",
+                "Flexiones inclinadas",
+                "Giros rusos",
+                "Elevación de caderas",
+                "Zancadas con salto",
+                "Puente de glúteos con una pierna"
+            )
+            3 -> listOf(
+                "Rodillas arriba (Calentamiento)",
+                "Saltos tijera (Calentamiento)",
+                "Estocadas con pausa",
+                "Extensión de piernas sentado",
+                "Step-ups",
+                "Plancha con apoyo de codos",
+                "Superman con brazos extendidos",
+                "Crunches con piernas elevadas",
+                "Elevaciones de talones",
+                "Saltos de lado a lado",
+                "Flexiones de tríceps en banco",
+                "Abdominales cruzados"
+            )
+            4 -> listOf(
+                "Jump Rope (Calentamiento)",
+                "Shoulder Rolls (Calentamiento)",
+                "Elevaciones de pierna a gatas",
+                "Puente de glúteos con apertura de rodillas",
+                "Plancha lateral",
+                "Flexiones normales",
+                "Giros de torso",
+                "Zancadas hacia atrás",
+                "Elevación de caderas",
+                "Rotaciones de torso",
+                "Sentadillas con pausa abajo",
+                "Superman con patada de rana"
+            )
+            5 -> listOf(
+                "Jumping Jacks (Calentamiento)",
+                "Arm Circles (Calentamiento)",
+                "Plancha con movimiento lateral",
+                "Sentadillas sumo",
+                "Flexiones con apoyo de rodillas",
+                "Step-ups",
+                "Puente de glúteos",
+                "Abdominales cortos",
+                "Elevación de piernas acostado",
+                "Elevación de talones con apoyo",
+                "Superman",
+                "Zancadas laterales"
+            )
+            6 -> listOf(
+                "Jump Rope (Calentamiento)",
+                "Rodillas arriba (Calentamiento)",
+                "Zancadas con salto",
+                "Flexiones inclinadas",
+                "Abdominales en V",
+                "Plancha con movimientos laterales",
+                "Crunches con piernas flexionadas",
+                "Elevaciones de pierna lateral",
+                "Superman con brazos extendidos",
+                "Saltos laterales",
+                "Sentadilla isométrica",
+                "Levantamiento de rodillas en plancha"
+            )
+            7 -> listOf(
+                "Jumping Jacks (Calentamiento)",
+                "Shoulder Rolls (Calentamiento)",
+                "Estocadas con pausa",
+                "Flexiones normales",
+                "Rotaciones de torso",
+                "Sentadilla con salto",
+                "Elevación de caderas",
+                "Plancha",
+                "Superman",
+                "Elevación de piernas acostado",
+                "Giros rusos",
+                "Abdominales bicicleta"
+            )
+            8 -> listOf(
+                "Rodillas arriba (Calentamiento)",
+                "Saltos tijera (Calentamiento)",
+                "Zancadas alternas",
+                "Elevaciones de pierna lateral",
+                "Abdominales en V",
+                "Flexiones de tríceps en banco",
+                "Plancha con apoyo de codos",
+                "Elevación de caderas",
+                "Superman con brazos extendidos",
+                "Crunches con piernas flexionadas",
+                "Sentadillas con pausa abajo",
+                "Saltos de lado a lado"
+            )
+            9 -> listOf(
+                "Jump Rope (Calentamiento)",
+                "Arm Circles (Calentamiento)",
+                "Step-ups",
+                "Flexiones inclinadas",
+                "Plancha lateral",
+                "Rotación de cintura",
+                "Elevación de talones",
+                "Abdominales bicicleta",
+                "Zancadas hacia atrás",
+                "Sentadilla isométrica",
+                "Giros rusos",
+                "Superman con patada de rana"
+            )
+            10 -> listOf(
+                "Jumping Jacks (Calentamiento)",
+                "Rodillas arriba (Calentamiento)",
+                "Elevación de talones con apoyo",
+                "Superman",
+                "Plancha frontal",
+                "Flexiones con apoyo de rodillas",
+                "Crunches con piernas flexionadas",
+                "Rotaciones de torso",
+                "Step-ups",
+                "Elevaciones de pierna lateral",
+                "Abdominales cortos",
+                "Saltos laterales"
             )
             else -> listOf("No hay rutina para este día.")
         }

@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f03_profile.incognita
+package com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.ViewPager2
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
