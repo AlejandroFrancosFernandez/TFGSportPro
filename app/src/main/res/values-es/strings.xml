@@ -61,4 +61,23 @@
 
     <string name="errorloginmessage">Credenciales invalidas</string>
     <string name="errorloginGooglemessage">Error al logear con Google.</string>
+
+    <!--Traducciones de los ejercicios nivel low-->
+    <!--Calentamientos-->
+    <string name="high_Knees">Rodillas arriba (Calentamiento)</string>
+    <string name="jumping_Jacks">Saltos tijera (Calentamiento)</string>
+    <string name="jumping_Squats">Sentadilla con salto (Calentamiento)</string>
+    <string name="low_Skipping">Skipping bajo (Calentamiento)</string>
+    <string name="on_the_Spot_Jumps">Saltos en el sitio (Calentamiento)</string>
+    <!--Ejercicios-->
+    <string name="alternating_lunges">Zancadas Alternas</string>
+    <string name="heel_Raises">Elevación de talones</string>
+    <string name="push_Ups">Flexiones</string>
+    <string name="torso_Twists">Giros de torso</string>
+    <string name="front_Plank">Plancha frontal</string>
+    <string name="crunches">Abdominales crunch</string>
+    <string name="superman">Superman</string>
+    <string name="squats">Sentadillas</string>
+    <string name="step_Ups">Step-Ups</string>
+    <string name="glute_Bridge">Puente de glúteos</string>
 </resources>

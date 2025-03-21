@@ -2,6 +2,7 @@ package com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.Trainin
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineSummaryBinding
 
 class RoutineSummaryActivity : AppCompatActivity() {
@@ -57,92 +58,92 @@ class RoutineSummaryActivity : AppCompatActivity() {
     private fun getRoutineForDayLow(day: Int): List<String> {
         return when (day) {
             1 -> listOf(
-                "Rodillas arriba (Calentamiento)",
-                "Saltos tijera (Calentamiento)",
-                "Zancadas alternas",
-                "Elevación de talones (pantorrillas)",
-                "Flexiones normales",
-                "Giros de torso",
-                "Plancha frontal",
-                "Abdominales crunch",
-                "Superman",
-                "Sentadillas",
-                "Step-ups",
-                "Puente de glúteos"
+                getString(R.string.high_Knees),
+                getString(R.string.jumping_Jacks),
+                getString(R.string.alternating_lunges),
+                getString(R.string.heel_Raises),
+                getString(R.string.push_Ups),
+                getString(R.string.torso_Twists),
+                getString(R.string.front_Plank),
+                getString(R.string.crunches),
+                getString(R.string.superman),
+                getString(R.string.squats),
+                getString(R.string.step_Ups),
+                getString(R.string.glute_Bridge)
             )
             2 -> listOf(
-                "Saltos tijera (Calentamiento)",
-                "Jumping squats (Calentamiento)",
+                getString(R.string.jumping_Squats),
+                getString(R.string.high_Knees),
                 "Subir escaleras",
                 "Plancha con apoyo de codos",
                 "Levantamiento de rodillas en plancha",
                 "Rotación de cintura",
                 "Puente de glúteos a una pierna",
                 "Abdominales bicicleta",
-                "Sentadilla isométrica",
+                getString(R.string.squats),
                 "Elevación de caderas",
                 "Flexiones apoyando rodillas",
                 "Elevación de pierna lateral"
             )
             3 -> listOf(
-                "Rodillas arriba (Calentamiento)",
-                "Skipping bajo (Calentamiento)",
+                getString(R.string.low_Skipping),
+                getString(R.string.jumping_Squats),
                 "Abdominales en V",
                 "Extensión de piernas sentado",
                 "Puente de glúteos con apertura de rodillas",
                 "Elevaciones de talones en un escalón",
                 "Flexiones inclinadas (apoyadas en superficie elevada)",
-                "Superman",
-                "Sentadillas con pausa abajo",
+                getString(R.string.superman),
+                getString(R.string.squats),
                 "Saltos laterales",
                 "Zancadas laterales",
                 "Plancha con toques de hombros"
             )
             4 -> listOf(
-                "Saltos tijera (Calentamiento)",
-                "Rodillas arriba (Calentamiento)",
+                getString(R.string.on_the_Spot_Jumps),
+                getString(R.string.low_Skipping),
                 "Elevaciones de pierna a gatas",
                 "Plancha lateral (15 seg por lado)",
                 "Giros rusos",
                 "Jumping jacks lentos",
                 "Abdominales cruzados",
-                "Sentadillas sumo",
+                getString(R.string.squats),
                 "Estocadas hacia atrás",
                 "Flexiones normales",
                 "Pasos laterales en sentadilla",
                 "Elevación de caderas con una pierna extendida"
             )
             5 -> listOf(
-                "Rodillas arriba (Calentamiento)",
-                "Jumping jacks (Calentamiento)",
+                getString(R.string.high_Knees),
+                getString(R.string.on_the_Spot_Jumps),
                 "Zancadas con salto",
                 "Plancha",
-                "Superman",
+                getString(R.string.superman),
                 "Elevación de talones con apoyo",
                 "Crunches con piernas elevadas",
-                "Sentadillas con toque de talón",
+                getString(R.string.squats),
                 "Step-ups",
                 "Flexiones",
                 "Abdominales",
                 "Elevación de pierna lateral"
             )
             6 -> listOf(
-                "Jumping jacks (Calentamiento)",
-                "Saltos en el sitio (Calentamiento)",
-                "Superman",
+                getString(R.string.jumping_Jacks),
+                getString(R.string.high_Knees),
+                getString(R.string.superman),
                 "Abdominales",
                 "Step-ups",
                 "Flexiones",
                 "Elevación de pierna lateral",
-                "Sentadillas",
+                getString(R.string.squats),
                 "Plancha",
                 "Zancadas con salto",
                 "Crunches con piernas elevadas",
                 "Elevación de talones con apoyo"
             )
             7 -> listOf(
-                "Rodillas arriba (Calentamiento)",
-                "Saltos tijera (Calentamiento)",
+                getString(R.string.jumping_Squats),
+                getString(R.string.jumping_Jacks),
                 "Abdominales en V",
                 "Flexiones con apoyo de rodillas",
                 "Sentadilla con salto",
@@ -155,11 +156,11 @@ class RoutineSummaryActivity : AppCompatActivity() {
                 "Crunches con piernas flexionadas"
             )
             8 -> listOf(
-                "Jumping jacks (Calentamiento)",
-                "Rodillas arriba (Calentamiento)",
+                getString(R.string.low_Skipping),
+                getString(R.string.jumping_Squats),
                 "Estocadas con pausa",
                 "Flexiones normales",
-                "Sentadilla isométrica",
+                getString(R.string.squats),
                 "Plancha con movimientos laterales",
                 "Abdominales cortos",
                 "Elevación de piernas",
@@ -169,29 +170,29 @@ class RoutineSummaryActivity : AppCompatActivity() {
                 "Saltos de lado a lado"
             )
             9 -> listOf(
-                "Rodillas arriba (Calentamiento)",
-                "Saltos tijera (Calentamiento)",
+                getString(R.string.on_the_Spot_Jumps),
+                getString(R.string.low_Skipping),
                 "Abdominales en V",
                 "Flexiones con apoyo de rodillas",
                 "Sentadilla con salto",
                 "Plancha con movimiento lateral",
                 "Zancadas hacia atrás",
                 "Elevación de piernas acostado",
-                "Superman con patada de rana",
+                getString(R.string.superman),
                 "Elevación de caderas",
                 "Step-ups",
                 "Crunches con piernas flexionadas"
             )
             10 -> listOf(
-                "Jumping jacks (Calentamiento)",
-                "Rodillas arriba (Calentamiento)",
+                getString(R.string.jumping_Squats),
+                getString(R.string.on_the_Spot_Jumps),
                 "Estocadas con pausa",
                 "Flexiones normales",
-                "Sentadilla isométrica",
+                getString(R.string.squats),
                 "Plancha con movimientos laterales",
                 "Abdominales cortos",
                 "Elevación de piernas",
-                "Puente de glúteos",
+                getString(R.string.glute_Bridge),
                 "Superman con brazos extendidos",
                 "Rotaciones de torso",
                 "Saltos de lado a lado"

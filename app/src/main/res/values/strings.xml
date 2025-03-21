@@ -62,4 +62,23 @@
 
     <string name="errorloginmessage">Invalid login credentials</string>
     <string name="errorloginGooglemessage">Google login failed.</string>
+
+    <!--Traducciones de los ejercicios nivel low-->
+    <!--Calentamientos-->
+    <string name="high_Knees">High Knees (Warm-up)</string>
+    <string name="jumping_Jacks">Jumping Jacks (Warm-up)</string>
+    <string name="jumping_Squats">Jumping Squats (Warm-up)</string>
+    <string name="low_Skipping">Low Skipping (Warm-up)</string>
+    <string name="on_the_Spot_Jumps">On-the-Spot Jumps (Warm-up)</string>
+    <!--Ejercicios-->
+    <string name="alternating_lunges">Alternating lunges</string>
+    <string name="heel_Raises">Heel Raises</string>
+    <string name="push_Ups">Push-Ups</string>
+    <string name="torso_Twists">Torso Twists</string>
+    <string name="front_Plank">Front plank</string>
+    <string name="crunches">Crunches</string>
+    <string name="superman">Superman</string>
+    <string name="squats">Squats</string>
+    <string name="step_Ups">Step-Ups</string>
+    <string name="glute_Bridge">Glute Bridge</string>
 </resources>
