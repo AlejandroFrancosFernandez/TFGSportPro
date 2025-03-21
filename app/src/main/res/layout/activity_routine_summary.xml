@@ -1,30 +1,125 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvRoutineDetails"
-        android:layout_width="wrap_content"
+    <!-- Bloque superior: Header -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detalles de la rutina"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="@color/navigationgrey"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tvExercise1"
-        android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/b_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/gray"
+            app:srcCompat="@drawable/comebackicon" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SportPro"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_infoday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:text="Day X"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Bloque 1: Resumen de la rutina -->
+    <LinearLayout
+        android:id="@+id/generalInfo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 1: Sentadillas"
-        android:textSize="16sp" />
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/ivExerciseGif"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tvRoutineDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resumen de la rutina"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvExerciseList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Bloque 2: Ejercicios de Calentamiento -->
+    <LinearLayout
+        android:id="@+id/warmUpExercises"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/meicon" /> <!-- GIF o imagen de ejemplo -->
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/generalInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp">
 
-    <!-- Más TextViews para cada ejercicio -->
+        <TextView
+            android:id="@+id/tvWarmUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios de Calentamiento"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvWarmUpDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Bloque 3: Ejercicios posteriores (hasta el ejercicio 12) -->
+    <LinearLayout
+        android:id="@+id/otherExercises"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/warmUpExercises"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvOtherExercises"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios siguientes"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOtherExerciseDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

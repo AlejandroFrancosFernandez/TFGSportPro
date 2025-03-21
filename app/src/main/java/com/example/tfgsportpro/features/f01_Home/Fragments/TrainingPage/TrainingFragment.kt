@@ -22,9 +22,8 @@ class TrainingFragment : Fragment() {
     ): View {
         binding = FragmentTrainingBinding.inflate(inflater, container, false)
 
-        // Configurar el ViewPager2 con el adaptador
-        val pagerAdapter = ViewPagerAdapter(requireActivity()) // Usar el fragment activity actual
-        binding.viewPager.adapter = pagerAdapter // Asignar el adaptador al ViewPager2
+        val pagerAdapter = ViewPagerAdapter(requireActivity())
+        binding.viewPager.adapter = pagerAdapter
 
         return binding.root
     }
