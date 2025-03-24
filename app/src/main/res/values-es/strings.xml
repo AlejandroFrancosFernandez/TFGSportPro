@@ -64,20 +64,81 @@
 
     <!--Traducciones de los ejercicios nivel low-->
     <!--Calentamientos-->
-    <string name="high_Knees">Rodillas arriba (Calentamiento)</string>
-    <string name="jumping_Jacks">Saltos tijera (Calentamiento)</string>
-    <string name="jumping_Squats">Sentadilla con salto (Calentamiento)</string>
-    <string name="low_Skipping">Skipping bajo (Calentamiento)</string>
-    <string name="on_the_Spot_Jumps">Saltos en el sitio (Calentamiento)</string>
+    <string name="high_Knees">Rodillas Arriba (Calentamiento)</string>
+    <string name="jumping_Jacks">Saltos Tijera (Calentamiento)</string>
+    <string name="jumping_Squats">Sentadilla con Salto (Calentamiento)</string>
+    <string name="low_Skipping">Skipping Bajo (Calentamiento)</string>
+    <string name="jumping_In_Place">Saltos en el Sitio (Calentamiento)</string>
+    <string name="intense_Jumping_Jacks">Saltos Tijera Intensos (Calentamiento)</string>
+    <string name="high_Skipping">Skipping Elevado (Calentamiento)</string>
+    <string name="dynamic_Squats">Sentadilla Dinámica (Calentamiento)</string>
+
     <!--Ejercicios-->
-    <string name="alternating_lunges">Zancadas Alternas</string>
-    <string name="heel_Raises">Elevación de talones</string>
+    <string name="lunges">Zancadas</string>
+    <string name="lateral_Lunges">Zancadas Laterales</string>
+    <string name="jumping_Lunges">Zancadas con Salto</string>
+    <string name="crossover_Lunges">Zancadas Cruzadas</string>
+    <string name="fast_Lunges">Zancadas Rápidas</string>
+    <string name="reverse_Lunges">Estocadas hacia atrás</string>
+
+    <string name="heel_Raises">Elevación de Talones</string>
+    <string name="hip_Raise">Elevación de Cadera</string>
+    <string name="lateral_Leg_Raise">Elevacion Lateral de Pierna</string>
+    <string name="lying_Leg_Raise">Elevacion de Piernas Tumbado</string>
+    <string name="heel_Raises_On_Step">Elevaciones de Talones en Escalón</string>
+    <string name="cat_Leg_Raises">Elevaciones de Pierna a Gatas</string>
+    <string name="l_Leg_Raises">Elevación de piernas en L</string>
+
     <string name="push_Ups">Flexiones</string>
-    <string name="torso_Twists">Giros de torso</string>
-    <string name="front_Plank">Plancha frontal</string>
-    <string name="crunches">Abdominales crunch</string>
-    <string name="superman">Superman</string>
+    <string name="knee_Push_Ups">Flexiones Apoyo Rodillas</string>
+    <string name="controlled_Pushups_Slow">Flexiones controladas (Lentas)</string>
+    <string name="clap_Push_Ups">Flexion con Palmada</string>
+    <string name="explosive_Push_Ups">Flexion con Subida Explosiva</string>
+
+    <string name="plank">Plancha</string>
+    <string name="elbow_Plank">Plancha de Codos</string>
+    <string name="side_Plank">Plancha Lateral</string>
+    <string name="plank_With_Shoulder_Tap">Plancha con toque de hombros</string>
+    <string name="single_Leg_Plank">Plancha un Pie</string>
+    <string name="plank_Alternate_Knee_Taps">Plancha con Toque de Rodillas</string>
+    <string name="lateral_Plank_Walk">Plancha con Desplazamiento Lateral</string>
+    <string name="plank_Leg_Raises">Elevaciones de pierna en plancha</string>
+
+    <string name="crunches">Abdominales</string>
+    <string name="bicycle_Crunches">Abdominales Bicicleta</string>
+    <string name="short_Crunches">Abdominales Cortos</string>
+    <string name="cross_Body_crunches">Abdominales Cruzados</string>
+    <string name="heel_Tap_Crunches">Abdominales con Toque de Talones</string>
+    <string name="v_Crunches">Abdominales en V</string>
+    <string name="crunches_90_Degrees">Crunches con piernas en 90°</string>
+
+    <string name="glute_Bridge">Puente de Glúteos</string>
+    <string name="single_Leg_Glute_Bridge">Puente de Glúteos una Pierna</string>
+    <string name="heel_To_Glute">Talones al Glúteo</string>
+
     <string name="squats">Sentadillas</string>
+    <string name="lateral_Squat">Sentadilla Lateral</string>
+    <string name="jump_squats">Sentadillas con Salto</string>
+    <string name="bulgarian_split_squat">Sentadilla Búlgara</string>
+    <string name="isometric_squat">Sentadilla Isométrica</string>
+    <string name="sumo_squat">Sentadilla Sumo</string>
+    <string name="squat_with_pause">Sentadilla con Pausa</string>
+    <string name="single_leg_squat">Sentadilla a un Pie</string>
+    <string name="explosive_jump_squat">Sentadilla con Salto Explosivo</string>
+    <string name="intense_Jumping_Squats">Sentadilla</string>
+
+    <string name="russian_Twists">Giros Rusos</string>
+    <string name="weighted_Russian_Twists">Giros Rusos con Peso</string>
+
+    <string name="burpees">Burpees</string>
+    <string name="climbers">Escalador</string>
+    <string name="sprint_In_Place">Sprint en el Sitio</string>
+    <string name="lateral_Jumps">Saltos Laterales</string>
+    <string name="seated_Leg_Extension">Extensión de Piernas Sentado</string>
+    <string name="superman">Superman</string>
     <string name="step_Ups">Step-Ups</string>
-    <string name="glute_Bridge">Puente de glúteos</string>
+    <string name="stair_Climbing">Subir Escaleras</string>
+    <string name="knee_Raises_Plank">Levantamiento Rodillas Plancha</string>
+    <string name="waist_Rotation">Rotación de Cintura</string>
+
 </resources>

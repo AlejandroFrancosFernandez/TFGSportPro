@@ -69,16 +69,78 @@
     <string name="jumping_Jacks">Jumping Jacks (Warm-up)</string>
     <string name="jumping_Squats">Jumping Squats (Warm-up)</string>
     <string name="low_Skipping">Low Skipping (Warm-up)</string>
-    <string name="on_the_Spot_Jumps">On-the-Spot Jumps (Warm-up)</string>
+    <string name="jumping_In_Place">Jumping in Place (Warm-up)</string>
+    <string name="intense_Jumping_Jacks">Intense Jumping Jacks (Warm-up)</string>
+    <string name="high_Skipping">High Skipping (Warm-up)</string>
+    <string name="dynamic_Squats">Dynamic Squats (Warm-up)</string>
+
     <!--Ejercicios-->
-    <string name="alternating_lunges">Alternating lunges</string>
+    <string name="lunges">Lunges</string>
+    <string name="lateral_Lunges">Lateral Lunges</string>
+    <string name="jumping_Lunges">Jumping Lunges</string>
+    <string name="crossover_Lunges">Crossover Lunges</string>
+    <string name="fast_Lunges">Fast Lunges</string>
+    <string name="reverse_Lunges">Reverse lunges</string>
+
     <string name="heel_Raises">Heel Raises</string>
+    <string name="hip_Raise">Hip Raise</string>
+    <string name="lateral_Leg_Raise">Lateral Leg Raise</string>
+    <string name="lying_Leg_Raise">Lying Leg Raise</string>
+    <string name="heel_Raises_On_Step">Heel Raises on a Step</string>
+    <string name="cat_Leg_Raises">Cat Leg Raises</string>
+    <string name="l_Leg_Raises">L Leg Raises</string>
+
     <string name="push_Ups">Push-Ups</string>
-    <string name="torso_Twists">Torso Twists</string>
-    <string name="front_Plank">Front plank</string>
+    <string name="knee_Push_Ups">Knee Push-Ups</string>
+    <string name="controlled_Pushups_Slow">Controlled Push-ups (Slow)</string>
+    <string name="clap_Push_Ups">Clap Push-Ups</string>
+    <string name="explosive_Push_Ups">Explosive Push-Ups</string>
+
+    <string name="plank">Plank</string>
+    <string name="elbow_Plank">Elbow Plank</string>
+    <string name="side_Plank">Side Plank</string>
+    <string name="plank_With_Shoulder_Tap">Plank with Shoulder Tap</string>
+    <string name="single_Leg_Plank">Single Leg Plank</string>
+    <string name="plank_Alternate_Knee_Taps">Plank with Alternate Knee Taps</string>
+    <string name="lateral_Plank_Walk">Lateral Plank Walk</string>
+    <string name="plank_Leg_Raises">Plank Leg Raises</string>
+
     <string name="crunches">Crunches</string>
-    <string name="superman">Superman</string>
-    <string name="squats">Squats</string>
-    <string name="step_Ups">Step-Ups</string>
+    <string name="bicycle_Crunches">Bicycle Crunches</string>
+    <string name="short_Crunches">Short crunches</string>
+    <string name="cross_Body_crunches">Cross-body Crunches</string>
+    <string name="heel_Tap_Crunches">Heel Tap Crunches</string>
+    <string name="v_Crunches">V Crunches</string>
+    <string name="crunches_90_Degrees">90° Leg Crunches</string>
+
     <string name="glute_Bridge">Glute Bridge</string>
+    <string name="single_Leg_Glute_Bridge">Single-leg Glute Bridge</string>
+    <string name="heel_To_Glute">Heel to Glute</string>
+
+    <string name="squats">Squats</string>
+    <string name="lateral_Squat">Lateral Squat</string>
+    <string name="jump_squats">Jump squats</string>
+    <string name="bulgarian_split_squat">Bulgarian split squat</string>
+    <string name="isometric_squat">Isometric squat</string>
+    <string name="sumo_squat">Sumo squat</string>
+    <string name="squat_with_pause">Squat with pause</string>
+    <string name="single_leg_squat">Single-leg squat</string>
+    <string name="explosive_jump_squat">Explosive jump squat</string>
+    <string name="intense_Jumping_Squats">Intense Jumping Squats</string>
+    <string name="single_Leg_Squats">Single Leg Squats</string>
+
+    <string name="russian_Twists">Russian Twists</string>
+    <string name="weighted_Russian_Twists">Weighted Russian Twists</string>
+
+    <string name="burpees">Burpees</string>
+    <string name="climbers">Climbers</string>
+    <string name="sprint_In_Place">Sprint in Place</string>
+    <string name="lateral_Jumps">Lateral Jumps</string>
+    <string name="seated_Leg_Extension">Seated Leg Extension</string>
+    <string name="superman">Superman</string>
+    <string name="step_Ups">Step-Ups</string>
+    <string name="stair_Climbing">Stair Climbing</string>
+    <string name="knee_Raises_Plank">Knee Raises Plank</string>
+    <string name="waist_Rotation">Waist Rotation</string>
+
 </resources>
