@@ -54,12 +54,10 @@ class LoginManager(private val context: Context) {
         }
     }
 
-    // Guardar el email del usuario en SharedPreferences
     private fun saveEmailInPreferences(email: String) {
         sharedPreferences.saveEmail(email)
     }
 
-    // Iniciar sesión con Google
     fun loginWithGoogle(
         credentialManager: CredentialManager,
         signInOption: GetSignInWithGoogleOption,
@@ -81,7 +79,6 @@ class LoginManager(private val context: Context) {
         }
     }
 
-    // Manejar el inicio de sesión con Google
     private fun handleGoogleSignIn(result: GetCredentialResponse, onComplete: (Boolean) -> Unit) {
         val credential = result.credential
 
@@ -138,10 +135,8 @@ class LoginManager(private val context: Context) {
 
                 userDocRef.update(updates)
                     .addOnSuccessListener {
-                        // Actualización exitosa
                     }
                     .addOnFailureListener { e ->
-                        // Manejo de errores
                     }
             }
         }

@@ -49,28 +49,28 @@ class RegisterActivity : AppCompatActivity() {
         var isValid = true
 
         if (email.isBlank() || !isValidEmail(email)) {
-            binding.tietEmail.error = "Email inválido."
+            binding.tietEmail.error = getString(R.string.Error_invalid_Email)
             isValid = false
         }
 
         if (password.length < 6) {
-            binding.InputPassword.error = "Debe tener al menos 6 caracteres."
+            binding.InputPassword.error = getString(R.string.Error_at_Least_6_Characters)
             isValid = false
         }
 
         if (password != confirmPassword) {
-            binding.InputPassword.error = "Las contraseñas no coinciden."
-            binding.InputConfirmPassword.error = "Las contraseñas no coinciden."
+            binding.InputPassword.error = getString(R.string.Error_passwords_Dont_Match)
+            binding.InputConfirmPassword.error = getString(R.string.Error_passwords_Dont_Match)
             isValid = false
         }
 
         if (name.isBlank()) {
-            binding.tietName.error = "El nombre no puede estar vacío."
+            binding.tietName.error = getString(R.string.Error_name_cannot_be_empty)
             isValid = false
         }
 
         if (age.isBlank()) {
-            binding.tietAge.error = "La edad no puede estar vacía."
+            binding.tietAge.error = getString(R.string.Error_age_cannot_be_empty)
             isValid = false
         }
 
@@ -82,7 +82,7 @@ class RegisterActivity : AppCompatActivity() {
             if (success) {
                 navigateToLogin()
             } else {
-                showAlert("Error al crear el usuario.")
+                showAlert(getString(R.string.Error_creating_user))
             }
         }
     }

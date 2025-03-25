@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:text="SportPro"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@color/material_dynamic_neutral90"
             android:textSize="18sp" />
 
         <!-- Icono para ir a la página de "mi cuenta" -->
@@ -74,9 +74,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/navigationgrey"
-        app:itemIconTint="@color/material_dynamic_neutral100"
+        app:itemIconTint="@color/material_dynamic_neutral90"
         app:itemRippleColor="@color/dark_blue"
-        app:itemTextColor="@color/white"
+        app:itemTextColor="@color/material_dynamic_neutral90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

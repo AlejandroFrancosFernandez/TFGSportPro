@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textColor="@color/white" />
+            android:textColor="@color/material_dynamic_neutral90" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColor="@color/white" />
+            android:textColor="@color/material_dynamic_neutral90" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/confirmPassword"
             android:inputType="textPassword"
-            android:textColor="@color/white" />
+            android:textColor="@color/material_dynamic_neutral90" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="hint"
-            android:textColor="@color/white" />
+            android:textColor="@color/material_dynamic_neutral90" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -121,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/age"
-            android:textColor="@color/white"/>
+            android:textColor="@color/material_dynamic_neutral90" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView

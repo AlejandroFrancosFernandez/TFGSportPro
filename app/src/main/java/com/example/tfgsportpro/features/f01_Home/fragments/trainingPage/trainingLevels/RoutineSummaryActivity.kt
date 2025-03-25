@@ -1,6 +1,7 @@
 package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels
 
 import MediumRoutine
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.R
@@ -33,6 +34,10 @@ class RoutineSummaryActivity : AppCompatActivity() {
         }
 
         binding.btnStartRoutine.setOnClickListener {
+            val intent = Intent(this, RoutineExerciseActivity::class.java)
+            intent.putExtra("level", level)
+            intent.putExtra("day", day)
+            startActivity(intent)
         }
     }
 

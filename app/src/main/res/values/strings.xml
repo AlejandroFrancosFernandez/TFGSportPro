@@ -16,6 +16,13 @@
     <string name="name">Name</string>
     <string name="age">Age</string>
     <string name="infoPhysicalLevel">Select your physical activity :</string>
+    <!--Errores-->
+    <string name="Error_invalid_Email">Invalid email</string>
+    <string name="Error_at_Least_6_Characters">Password must be at least 6 characters long.</string>
+    <string name="Error_passwords_Dont_Match">Passwords do not match.</string>
+    <string name="Error_name_cannot_be_empty">Name cannot be empty.</string>
+    <string name="Error_age_cannot_be_empty">Age cannot be empty.</string>
+    <string name="Error_creating_user">Error creating user.</string>
 
     <!--Traducciones de la página training (fragment-training)-->
     <string name="Day1">Day 1</string>

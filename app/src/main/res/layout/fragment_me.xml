@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/infoProfile"
-        android:textColor="@color/text_primary"
+        android:textColor="@color/material_dynamic_neutral90"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,11 +58,11 @@
                 android:id="@+id/tv_infoEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:textSize="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/infoEmail"
-                android:textColor="@color/text_primary" />
+                android:textColor="@color/material_dynamic_neutral90"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/tv_email"
@@ -80,11 +80,11 @@
                 android:id="@+id/tv_infoName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:textSize="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/infoName"
-                android:textColor="@color/text_primary" />
+                android:textColor="@color/material_dynamic_neutral90"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/tv_name"
@@ -102,11 +102,11 @@
                 android:id="@+id/tv_infoAge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:textSize="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/infoAge"
-                android:textColor="@color/text_primary" />
+                android:textColor="@color/material_dynamic_neutral90"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/tv_age"
@@ -124,11 +124,11 @@
                 android:id="@+id/tv_infoPhysicalLevel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:textSize="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/infoPhysicalActivity"
-                android:textColor="@color/text_primary" />
+                android:textColor="@color/material_dynamic_neutral90"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/tv_physicallevel"
