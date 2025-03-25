@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.TrainingLevels
+package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels
 
 import android.content.Intent
 import android.os.Bundle

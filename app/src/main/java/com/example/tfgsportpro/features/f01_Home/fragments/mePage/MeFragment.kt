@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f01_Home.Fragments.MePage
+package com.example.tfgsportpro.features.f01_Home.fragments.mePage
 
 import android.content.Context
 import android.content.Intent
@@ -34,7 +34,6 @@ class MeFragment : Fragment() {
             val userDocRef = db.collection("User").document(user.uid)
             userDocRef.get().addOnSuccessListener { document ->
                 if (document.exists()) {
-                    // Si displayName es null, intentamos obtenerlo desde Firestore con la clave correcta "Name"
                     val displayName = document.getString("Name") ?: document.getString("name") ?: "Nombre no disponible"
                     binding.tvName.text = displayName
 
@@ -52,9 +51,7 @@ class MeFragment : Fragment() {
                         binding.tvPhysicallevel.text = "Nivel físico no disponible"
                     }
 
-                    // Obtener la racha
                     val streak = document.getLong("streak") ?: 0
-                    // Mostrar la racha en el TextView
                     binding.RachaDias.text = "Racha de días consecutivos: $streak"
                 } else {
                     binding.tvAge.text = "Not found"
@@ -85,7 +82,6 @@ class MeFragment : Fragment() {
             startActivity(intent)
             requireActivity().finish()
         }
-
         return binding.root
     }
 }

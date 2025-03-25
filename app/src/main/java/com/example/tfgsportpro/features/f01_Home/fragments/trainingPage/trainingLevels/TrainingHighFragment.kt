@@ -1,33 +1,29 @@
-package com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.TrainingLevels
+package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tfgsportpro.R
-import com.example.tfgsportpro.databinding.FragmentTrainingLowFragmnetBinding
+import androidx.fragment.app.Fragment
+import com.example.tfgsportpro.databinding.FragmentTrainingHighBinding
 
-class TrainingLowFragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ * Use the [TrainingHighFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class TrainingHighFragment : Fragment() {
 
-    lateinit var binding: FragmentTrainingLowFragmnetBinding
+    lateinit var binding: FragmentTrainingHighBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentTrainingLowFragmnetBinding.inflate(inflater, container, false)
+    ): View {
+        binding = FragmentTrainingHighBinding.inflate(inflater, container, false)
 
-        // Llamamos a setupButtons para configurar los botones
-        setupButtons()
-
-        // Devolvemos la vista inflada
-        return binding.root
-    }
-
-    private fun setupButtons() {
+        // Configuramos los botones para cada día
         for (i in 1..15) {
             val button = when (i) {
                 1 -> binding.bDay1
@@ -49,12 +45,13 @@ class TrainingLowFragment : Fragment() {
             }
 
             button?.setOnClickListener {
-                // Crear el intent para abrir la actividad de resumen con el día y nivel
+                // Al hacer clic, pasamos "high" como nivel y el día correspondiente
                 val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
-                intent.putExtra("level", "low")  // Cambia según el nivel
-                intent.putExtra("day", i)       // El día del botón
+                intent.putExtra("level", "high")
+                intent.putExtra("day", i)
                 startActivity(intent)
             }
         }
+        return binding.root
     }
 }

@@ -62,7 +62,9 @@
     <string name="errorloginmessage">Credenciales invalidas</string>
     <string name="errorloginGooglemessage">Error al logear con Google.</string>
 
-    <!--Traducciones de los ejercicios nivel low-->
+    <!--Traducciones de los ejercicios-->
+    <!--Descanso-->
+    <string name="BREAK">DESCANSO</string>
     <!--Calentamientos-->
     <string name="high_Knees">Rodillas Arriba (Calentamiento)</string>
     <string name="jumping_Jacks">Saltos Tijera (Calentamiento)</string>
@@ -141,4 +143,5 @@
     <string name="knee_Raises_Plank">Levantamiento Rodillas Plancha</string>
     <string name="waist_Rotation">Rotación de Cintura</string>
 
+    <!--Pagina RoutineSummary-->
 </resources>

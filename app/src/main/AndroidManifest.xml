@@ -17,7 +17,7 @@
         android:theme="@style/Theme.TFGSportPro"
         tools:targetApi="31">
         <activity
-            android:name=".features.f01_Home.Fragments.TrainingPage.TrainingLevels.RoutineSummaryActivity"
+            android:name=".features.f01_Home.fragments.trainingPage.trainingLevels.RoutineSummaryActivity"
             android:exported="false" />
         <activity
             android:name=".features.f01_Home.HomeActivity"

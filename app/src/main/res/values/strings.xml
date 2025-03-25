@@ -64,6 +64,8 @@
     <string name="errorloginGooglemessage">Google login failed.</string>
 
     <!--Traducciones de los ejercicios nivel low-->
+    <!--Descanso-->
+    <string name="BREAK">BREAK</string>
     <!--Calentamientos-->
     <string name="high_Knees">High Knees (Warm-up)</string>
     <string name="jumping_Jacks">Jumping Jacks (Warm-up)</string>

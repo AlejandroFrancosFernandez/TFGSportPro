@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage
+package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tfgsportpro.databinding.FragmentTrainingBinding
-import com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.ViewPager2.ViewPagerAdapter
+import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.viewPager2.ViewPagerAdapter
 
 class TrainingFragment : Fragment() {
 

@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityHomeBinding
-import com.example.tfgsportpro.features.f01_Home.Fragments.ResumePage.ResumeFragment
-import com.example.tfgsportpro.features.f01_Home.Fragments.MePage.MeFragment
-import com.example.tfgsportpro.features.f01_Home.Fragments.TrainingPage.TrainingFragment
+import com.example.tfgsportpro.features.f01_Home.fragments.resumePage.ResumeFragment
+import com.example.tfgsportpro.features.f01_Home.fragments.mePage.MeFragment
+import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.TrainingFragment
 import com.example.tfgsportpro.features.f00_Auth.Login.UseCase.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 
