@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/homegrey"
+    android:background="@color/fondoAplicacion"
     tools:context=".features.f01_Home.HomeActivity">
 
     <LinearLayout
@@ -23,29 +23,28 @@
             android:id="@+id/b_comeback"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/gray"
+            android:backgroundTint="@color/navigationgrey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/comebackicon"
-            tools:ignore="TouchTargetSizeCheck" />
+            app:srcCompat="@drawable/comebackicon" />
 
         <TextView
-            android:id="@+id/textViewInfo"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="SportPro"
-            android:textAlignment="center"
-            android:textColor="@color/material_dynamic_neutral90"
-            android:textSize="18sp" />
+            android:textColor="@color/colorLetra"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/b_profile"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/gray"
+            android:backgroundTint="@color/navigationgrey"
             android:contentDescription="Ir a mi cuenta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +71,7 @@
         android:layout_height="wrap_content"
         android:background="@color/navigationgrey"
         app:itemIconTint="@color/plata"
-        app:itemRippleColor="@color/dark_blue"
+        app:itemRippleColor="@color/plata"
         app:itemTextColor="@color/plata"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

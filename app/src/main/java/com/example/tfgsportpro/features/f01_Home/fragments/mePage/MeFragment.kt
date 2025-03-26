@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.FragmentMeBinding
@@ -22,6 +23,11 @@ class MeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMeBinding.inflate(layoutInflater)
+
+        val sharedPref = requireActivity().getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isDarkMode = sharedPref.getBoolean("dark_mode", false)
+        // Aplicar estado del switch según la preferencia guardada
+        binding.switchTheme.isChecked = isDarkMode
 
         // Obtener el usuario autenticado
         val user = FirebaseAuth.getInstance().currentUser
@@ -82,6 +88,20 @@ class MeFragment : Fragment() {
             startActivity(intent)
             requireActivity().finish()
         }
+
+        binding.switchTheme.setOnCheckedChangeListener { _, isChecked ->
+            val editor = sharedPref.edit()
+            editor.putBoolean("dark_mode", isChecked)
+            editor.apply()
+
+            // Aplicar el modo oscuro o claro
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+
         return binding.root
     }
 }

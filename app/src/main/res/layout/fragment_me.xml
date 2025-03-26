@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/homegrey"
+    android:background="@color/fondoAplicacion"
     android:padding="16dp"
     tools:context=".features.f01_Home.fragments.mePage.MeFragment">
 
@@ -12,9 +12,9 @@
         android:id="@+id/tv_infoProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="@string/infoProfile"
-        android:textColor="@color/material_dynamic_neutral90"
+        android:textColor="@color/colorLetra"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,9 +25,9 @@
         android:id="@+id/iv_profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="15dp"
-        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
         android:background="@drawable/border"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_infoProfile"
@@ -37,7 +37,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_profile">
@@ -57,7 +57,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/infoEmail"
-                android:textColor="@color/material_dynamic_neutral90"
+                android:textColor="@color/colorLetra"
                 android:textSize="20dp" />
 
             <TextView
@@ -78,7 +78,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/infoName"
-                android:textColor="@color/material_dynamic_neutral90"
+                android:textColor="@color/colorLetra"
                 android:textSize="20dp" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/infoAge"
-                android:textColor="@color/material_dynamic_neutral90"
+                android:textColor="@color/colorLetra"
                 android:textSize="20dp" />
 
             <TextView
@@ -120,7 +120,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/infoPhysicalActivity"
-                android:textColor="@color/material_dynamic_neutral90"
+                android:textColor="@color/colorLetra"
                 android:textSize="20dp" />
 
             <TextView
@@ -155,8 +155,8 @@
         android:id="@+id/b_logOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/logoutButton_bg"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorBoton"
         android:text="@string/Logout"
         android:textColor="@color/text_primary"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -165,12 +165,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RachaDias" />
 
+    <Switch
+        android:id="@+id/switchTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/darkMode"
+        android:textColor="@color/text_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_logOut"
+        app:layout_constraintTop_toBottomOf="@+id/RachaDias" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
         android:background="@drawable/border"
-        />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

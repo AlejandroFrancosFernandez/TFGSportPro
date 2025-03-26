@@ -1,8 +1,10 @@
 package com.example.tfgsportpro.features.f00_Auth.Login.UI
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.credentials.CredentialManager
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.features.f01_Home.HomeActivity
@@ -14,15 +16,25 @@ import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
     private lateinit var loginManager: LoginManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val sharedPref = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val isDarkMode = sharedPref.getBoolean("dark_mode", false)
+
+        if (isDarkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Inicializar el LoginManager
+        // Inicializar el LoginManager
         loginManager = LoginManager(this)
 
         // Verificar si el usuario ya está autenticado
@@ -50,10 +62,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-
         binding.bGoogle.setOnClickListener {
             val credentialManager = CredentialManager.create(this)
-            val signInOption = GetSignInWithGoogleOption.Builder(getString(R.string.web_client)).setNonce("nonce")
+            val signInOption = GetSignInWithGoogleOption.Builder(getString(R.string.web_client))
+                .setNonce("nonce")
                 .build()
 
             loginManager.loginWithGoogle(credentialManager, signInOption) { success ->

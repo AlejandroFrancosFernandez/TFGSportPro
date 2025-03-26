@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores básicos -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Fondos -->
+    <color name="background_dark">#121212</color>
+
+    <!-- Colores de modo oscuro -->
+    <color name="DarkGrey">#181818</color>
+    <color name="plata">#C0C0C0</color>
+
+    <!-- Otros colores -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A7D8FF</color>
+    <color name="button_bg">#222222</color>
+    <color name="sesionButton_bg">#2C2C2C</color>
+    <color name="button_border">#A7D8FF</color>
+    <color name="icon_unselected">#808080</color>
+    <color name="dark_blue">#4F8AA1</color>
+
+
+    <!--Colores diferentes niveles-->
+    <!-- Colores Low Level -->
+    <color name="card_low">#4F8AA1</color>
+    <!--Degradado colores botones-->
+    <color name="firstColorButtonOddLow">#7AB4D3</color>
+    <color name="firstColorButtonEvenLow">#92C8E2</color>
+    <color name="secondColorButtonLow">#003D59</color>
+
+
+    <!-- Colores MEDIUM Level -->
+    <color name="card_medium">#D77C10</color>
+    <!--Degradado colores botones-->
+    <color name="firstColorButtonOddMedium">#F39C12</color>
+    <color name="firstColorButtonEvenMedium">#F49B2A</color>
+    <color name="secondColorButtonMedium">#4A2C00</color>
+
+
+    <!-- Colores HIGH Level -->
+    <color name="card_high">#D24D2A</color>
+    <!--Degradado colores botones-->
+    <color name="firstColorButtonOddHigh">#FF5733</color>
+    <color name="firstColorButtonEvenHigh">#FF6F4D </color>
+    <color name="secondColorButtonHigh">#5D0000</color>
+
+
+
+    <color name="fondoAplicacion">#1D1D1D</color>
+    <color name="colorLetra">#E2E2E9</color>
+    <color name="colorBoton">#2B2B2B</color>
+    <color name="navigationgrey">#222222</color>
+</resources>

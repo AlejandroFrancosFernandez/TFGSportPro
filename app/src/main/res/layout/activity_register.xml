@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D1D1D"
+    android:background="@color/fondoAplicacion"
     tools:context=".features.f00_Auth.Login.LoginActivity">
 
     <ImageButton
@@ -13,7 +13,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"
-        android:background="@color/gray"
+        android:backgroundTint="@color/colorBoton"
         android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textColor="@color/material_dynamic_neutral90" />
+            android:textColor="@color/colorLetra" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColor="@color/material_dynamic_neutral90" />
+            android:textColor="@color/colorLetra" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/confirmPassword"
             android:inputType="textPassword"
-            android:textColor="@color/material_dynamic_neutral90" />
+            android:textColor="@color/colorLetra" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -100,8 +100,7 @@
             android:id="@+id/tiet_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint"
-            android:textColor="@color/material_dynamic_neutral90" />
+            android:textColor="@color/colorLetra" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -121,7 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/age"
-            android:textColor="@color/material_dynamic_neutral90" />
+            android:textColor="@color/colorLetra" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -130,6 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/infoPhysicalLevel"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InputAge" />
@@ -141,7 +141,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
-        android:background="@color/gray"
+        android:backgroundTint="@color/colorBoton"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,8 +152,9 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/colorBoton"
         android:text="@string/register"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PhysicalActivityLevel" />

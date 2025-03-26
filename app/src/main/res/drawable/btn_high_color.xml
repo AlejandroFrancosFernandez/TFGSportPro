@@ -6,7 +6,7 @@
 
     <!-- Fondo gris del botón con esquinas más redondeadas -->
     <path
-        android:fillColor="#313131"
+        android:fillColor="@color/colorBoton"
         android:pathData="M15,0 L185,0 A15,15 0 0,1 200,15 L200,35 A15,15 0 0,1 185,50 L15,50 A15,15 0 0,1 0,35 L0,15 A15,15 0 0,1 15,0 Z" />
 
     <!-- Banda diagonal roja más estrecha -->

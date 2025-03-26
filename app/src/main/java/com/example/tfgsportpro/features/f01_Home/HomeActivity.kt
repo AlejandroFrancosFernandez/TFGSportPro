@@ -1,7 +1,9 @@
 package com.example.tfgsportpro.features.f01_Home
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityHomeBinding
 import com.example.tfgsportpro.features.f01_Home.fragments.resumePage.ResumeFragment

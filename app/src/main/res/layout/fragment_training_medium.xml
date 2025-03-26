@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="@string/Medium"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -75,11 +75,11 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day1"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold" />
 
                 <Button
@@ -89,11 +89,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day2"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold" />
 
                 <Button
@@ -103,11 +103,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day3"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold" />
 
                 <Button
@@ -117,11 +117,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day4"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold" />
 
                 <Button
@@ -131,11 +131,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day5"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold" />
 
                 <Button
@@ -145,11 +145,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day6"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -159,11 +159,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day7"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -173,11 +173,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day8"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -187,11 +187,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day9"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -201,11 +201,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day10"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -215,11 +215,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day11"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -229,11 +229,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day12"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -243,11 +243,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day13"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -257,11 +257,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium1"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day14"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
 
                 <Button
@@ -271,11 +271,11 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_degradadomedium2"
+                    android:background="@drawable/btn_medium_color"
                     app:backgroundTint="@null"
                     android:text="@string/Day15"
                     android:textAlignment="textStart"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorLetra"
                     android:textStyle="bold"/>
             </LinearLayout>
         </ScrollView>

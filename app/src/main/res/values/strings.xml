@@ -23,7 +23,6 @@
     <string name="Error_name_cannot_be_empty">Name cannot be empty.</string>
     <string name="Error_age_cannot_be_empty">Age cannot be empty.</string>
     <string name="Error_creating_user">Error creating user.</string>
-
     <!--Traducciones de la página training (fragment-training)-->
     <string name="Day1">Day 1</string>
     <string name="Day2">Day 2</string>
@@ -58,6 +57,7 @@
     <string name="infoPhysicalActivity">Physical Activity : </string>
     <string name="infoProfile">Profile</string>
     <string name="infoNotauthenticated">Not authenticated</string>
+    <string name="darkMode">Dark Mode</string>
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Loading Email... </string>
     <string name="loadingName">Loading Name... </string>

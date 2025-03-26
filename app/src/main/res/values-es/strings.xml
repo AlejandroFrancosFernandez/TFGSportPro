@@ -58,6 +58,7 @@
     <string name="infoPhysicalActivity">Actividad Física : </string>
     <string name="infoProfile">Perfil</string>
     <string name="infoNotauthenticated">No autentificado</string>
+    <string name="darkMode">Modo Oscuro</string>
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Cargando Email... </string>
     <string name="loadingName">Cargando Name... </string>

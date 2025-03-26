@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D1D1D"
-    tools:context=".features.f00_Auth.Login.LoginActivity">
+    android:background="@color/fondoAplicacion"
+    tools:context=".features.f00_Auth.Login.UI.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginTop="52dp"
-        android:background="#1D1D1D"
+        android:background="@color/fondoAplicacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textColor="@color/material_dynamic_neutral90" />
+            android:textColor="@color/colorLetra" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,8 +57,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColor="@color/material_dynamic_neutral90" />
-
+            android:textColor="@color/colorLetra" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -68,8 +67,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/colorBoton"
         android:text="@string/login"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,12 +82,15 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/colorBoton"
         android:text="@string/register"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/InputPassword" />
+
+    <!-- Toggle para cambiar entre modo oscuro y claro -->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -120,11 +123,12 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
-            android:backgroundTint="@color/gray"
+            android:backgroundTint="@color/colorBoton"
             android:drawableLeft="@drawable/google2"
             android:drawablePadding="100dp"
             android:text="Google"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/colorLetra" />
 
         <Button
             android:id="@+id/b_facebook"
@@ -133,11 +137,12 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
-            android:backgroundTint="@color/gray"
+            android:backgroundTint="@color/colorBoton"
             android:drawableLeft="@drawable/facebook2"
             android:drawablePadding="100dp"
             android:text="Facebook"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/colorLetra" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
