@@ -6,8 +6,6 @@
     android:background="#1D1D1D"
     android:padding="16dp">
 
-    <!-- Si en el futuro dispones de imágenes para cada ejercicio, puedes usar esta ImageView.
-         Por ahora, se muestra un placeholder (puede ser un ícono o dejarlo para ampliarlo). -->
     <ImageView
         android:id="@+id/ivExercise"
         android:layout_width="200dp"
@@ -30,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivExercise" />
 
-    <!-- Cronómetro que muestra el tiempo restante -->
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
@@ -43,7 +40,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvExerciseName" />
 
-    <!-- Botón para retroceder -->
     <Button
         android:id="@+id/btnPrevious"
         android:layout_width="wrap_content"
@@ -55,7 +51,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
 
-    <!-- Botón para pausar/reanudar -->
     <Button
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
@@ -68,7 +63,6 @@
         app:layout_constraintStart_toEndOf="@id/btnPrevious"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
 
-    <!-- Botón para avanzar -->
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"

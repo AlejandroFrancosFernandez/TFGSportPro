@@ -8,19 +8,20 @@
     <color name="background_dark">#121212</color>
 
     <!-- Colores de modo oscuro -->
-    <color name="DarkGrey">#181818</color> <!-- Fondo principal -->
-    <color name="gray">#2B2B2B</color> <!-- Alternativa fondo -->
-    <color name="homegrey">#262626</color> <!-- Fondo de tarjetas/perfil -->
-    <color name="navigationgrey">#222222</color> <!-- Barra de navegación -->
+    <color name="DarkGrey">#181818</color>
+    <color name="gray">#2B2B2B</color>
+    <color name="homegrey">#262626</color>
+    <color name="navigationgrey">#222222</color>
+    <color name="plata">#C0C0C0</color>
 
     <!-- Otros colores -->
-    <color name="text_primary">#FFFFFF</color> <!-- Texto principal -->
-    <color name="text_secondary">#A7D8FF</color> <!-- Texto destacado -->
-    <color name="button_bg">#222222</color> <!-- Fondo de botones -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A7D8FF</color>
+    <color name="button_bg">#222222</color>
     <color name="sesionButton_bg">#2C2C2C</color>
-    <color name="logoutButton_bg">#121212</color> <!-- Color más oscuro para el botón de logout -->
-    <color name="button_border">#A7D8FF</color> <!-- Borde de botones -->
-    <color name="icon_unselected">#808080</color> <!-- Iconos inactivos -->
+    <color name="logoutButton_bg">#121212</color>
+    <color name="button_border">#A7D8FF</color>
+    <color name="icon_unselected">#808080</color>
     <color name="dark_blue">#4F8AA1</color>
 
 
@@ -47,5 +48,7 @@
     <color name="firstColorButtonOddHigh">#FF5733</color>
     <color name="firstColorButtonEvenHigh">#FF6F4D </color>
     <color name="secondColorButtonHigh">#5D0000</color>
+
+
 
 </resources>

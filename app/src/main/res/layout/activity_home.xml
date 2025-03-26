@@ -19,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Botón para salir de la aplicación -->
         <ImageButton
             android:id="@+id/b_comeback"
             android:layout_width="40dp"
@@ -31,7 +30,6 @@
             app:srcCompat="@drawable/comebackicon"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <!-- Nombre de la aplicación centrado -->
         <TextView
             android:id="@+id/textViewInfo"
             android:layout_width="wrap_content"
@@ -42,7 +40,6 @@
             android:textColor="@color/material_dynamic_neutral90"
             android:textSize="18sp" />
 
-        <!-- Icono para ir a la página de "mi cuenta" -->
         <ImageButton
             android:id="@+id/b_profile"
             android:layout_width="40dp"
@@ -74,9 +71,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/navigationgrey"
-        app:itemIconTint="@color/material_dynamic_neutral90"
+        app:itemIconTint="@color/plata"
         app:itemRippleColor="@color/dark_blue"
-        app:itemTextColor="@color/material_dynamic_neutral90"
+        app:itemTextColor="@color/plata"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

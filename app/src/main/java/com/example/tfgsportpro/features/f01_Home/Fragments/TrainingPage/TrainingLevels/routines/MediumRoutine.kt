@@ -11,14 +11,23 @@ class MediumRoutine {
                 LowIntensityExercises.jumpingJacks,
 
                 HighIntensityExercises.controlledPushupsSlowHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.jumpingLungesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.burpeesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.climbersHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.plankWithShoulderTapHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.superman
             )
             2 -> listOf(
@@ -26,14 +35,23 @@ class MediumRoutine {
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.clapPushUpsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.vCrunchesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.waistRotation,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.burpeesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.singleLegPlankHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.weightedRussianTwistsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.gluteBridge
             )
             3 -> listOf(
@@ -41,14 +59,23 @@ class MediumRoutine {
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.jumpingJacksHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.jumpingSquats,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.squatWithPauseHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lateralLegRaise,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.clapPushUpsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.sumoSquatHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.plankWithShoulderTapHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps
             )
             4 -> listOf(
@@ -56,14 +83,23 @@ class MediumRoutine {
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.jumpingInPlaceHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.controlledPushupsSlowHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.climbersHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.lateralJumpsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaisesOnStep,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.jumpingLungesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.russianTwists
             )
             5 -> listOf(
@@ -71,14 +107,23 @@ class MediumRoutine {
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.burpeesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.lungesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lateralLegRaise,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.weightedRussianTwistsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.highKneesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.intenseJumpingJacksHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats
             )
             6 -> listOf(
@@ -86,14 +131,23 @@ class MediumRoutine {
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.squatWithPauseHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.vCrunchesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.waistRotation,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.burpeesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.singleLegPlankHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.weightedRussianTwistsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.gluteBridge
             )
             7 -> listOf(
@@ -101,14 +155,23 @@ class MediumRoutine {
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.jumpingJacksHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.jumpingSquats,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.squatWithPauseHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lateralLegRaise,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.clapPushUpsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.sumoSquatHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.plankWithShoulderTapHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps
             )
             8 -> listOf(
@@ -116,14 +179,23 @@ class MediumRoutine {
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.jumpingInPlaceHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.controlledPushupsSlowHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.climbersHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.lateralJumpsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaisesOnStep,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.jumpingLungesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.russianTwists
             )
             9 -> listOf(
@@ -131,14 +203,23 @@ class MediumRoutine {
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.burpeesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.lungesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lateralLegRaise,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.weightedRussianTwistsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.highKneesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.intenseJumpingJacksHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats
             )
             10 -> listOf(
@@ -146,14 +227,23 @@ class MediumRoutine {
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.squatWithPauseHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.vCrunchesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.waistRotation,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.burpeesHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.singleLegPlankHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.crunches,
+                LowIntensityExercises.BREAK,
                 HighIntensityExercises.weightedRussianTwistsHigh,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.gluteBridge
             )
             else -> listOf()

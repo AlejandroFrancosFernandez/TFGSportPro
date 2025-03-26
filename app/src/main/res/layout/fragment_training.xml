@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".features.f01_Home.fragments.trainingPage.TrainingFragment">
 
-    <!-- ViewPager2 for Fragment Navigation -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="0dp"
