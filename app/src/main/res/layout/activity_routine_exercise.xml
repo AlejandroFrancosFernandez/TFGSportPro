@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivExercise"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
         android:layout_marginTop="10dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@id/tvExerciseName"
@@ -21,7 +21,7 @@
         android:id="@+id/tvExerciseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:text="Nombre del ejercicio"
         android:textColor="@color/colorLetra"
         android:textSize="24sp"
