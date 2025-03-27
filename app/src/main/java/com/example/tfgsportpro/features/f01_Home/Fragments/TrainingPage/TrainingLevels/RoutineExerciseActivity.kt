@@ -3,8 +3,10 @@ package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainin
 import MediumRoutine
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineExerciseBinding
 import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.LowRoutine
@@ -29,6 +31,9 @@ class RoutineExerciseActivity : AppCompatActivity() {
         binding = ActivityRoutineExerciseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Mostrar la animación de cuenta atrás antes de empezar la rutina
+        showCountdownAnimation()
+
         // Recuperar el nivel y el día desde el Intent
         val level = intent.getStringExtra("level") ?: "low"
         val day = intent.getIntExtra("day", 1)
@@ -40,8 +45,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
             "high" -> HighRoutine().getRoutineForDayHigh(day)
             else -> LowRoutine().getRoutineForDayLow(day)
         }
-        // Iniciar el primer ejercicio
-        startExercise(currentExerciseIndex)
 
         // Configurar botones
         binding.btnPause.setOnClickListener {
@@ -61,12 +64,49 @@ class RoutineExerciseActivity : AppCompatActivity() {
         }
     }
 
+    // Método para mostrar la animación de cuenta atrás
+    private fun showCountdownAnimation() {
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.cargarutina)  // Tu GIF de cuenta atrás
+            .into(binding.ivExercise)
+
+        // Configurar un timer para esperar antes de empezar la rutina
+        object : CountDownTimer(6000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                // Aquí podrías mostrar los segundos restantes si lo deseas
+            }
+
+            override fun onFinish() {
+                // Después de 5 segundos, ocultar la animación de cuenta atrás
+                binding.ivExercise.visibility = View.GONE  // Ocultar el ImageView con el GIF
+
+                // Iniciar el primer ejercicio
+                startExercise(currentExerciseIndex)
+            }
+        }.start()
+    }
+
     private fun startExercise(index: Int) {
         if (index in routine.indices) {
             val exercise = routine[index]
-            // Actualizar la UI: muestra el nombre del ejercicio.
-            // Cuando dispongas de imágenes, podrías actualizar la ImageView con un recurso adecuado.
+
+            // Actualizar el nombre del ejercicio en el TextView
             binding.tvExerciseName.text = getString(exercise.nombreResId)
+
+            // Asegurarse de que el ImageView sea visible antes de cargar el GIF del ejercicio
+            binding.ivExercise.visibility = View.VISIBLE
+
+            // Cargar el GIF en el ImageView si el GIF está disponible
+            if (exercise.gifResId != null) {
+                Glide.with(this)
+                    .load(exercise.gifResId)  // Cargar el GIF del ejercicio
+                    .into(binding.ivExercise)  // Establecer en el ImageView
+            } else {
+                // Si no hay GIF, puedes colocar una imagen predeterminada o dejar el ImageView vacío
+                Glide.with(this)
+                    .clear(binding.ivExercise)  // Limpiar la imagen si no hay GIF
+            }
 
             // Configurar la duración del ejercicio (convertir segundos a milisegundos)
             timeLeft = exercise.duracion * 1000L
@@ -88,13 +128,13 @@ class RoutineExerciseActivity : AppCompatActivity() {
                 nextExercise()
             }
         }.start()
-        binding.btnPause.text = "Pausa"
+        binding.btnPause.text = getString(R.string.b_pause)
     }
 
     private fun pauseTimer() {
         countDownTimer?.cancel()
         countDownTimer = null
-        binding.btnPause.text = "Reanudar"
+        binding.btnPause.text = getString(R.string.b_resume)
     }
 
     private fun resumeTimer() {

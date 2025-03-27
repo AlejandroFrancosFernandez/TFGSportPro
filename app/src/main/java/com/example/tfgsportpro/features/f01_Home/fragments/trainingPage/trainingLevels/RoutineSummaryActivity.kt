@@ -33,7 +33,7 @@ class RoutineSummaryActivity : AppCompatActivity() {
         } else {
         }
 
-        binding.btnStartRoutine.setOnClickListener {
+        binding.bStartRoutine.setOnClickListener {
             val intent = Intent(this, RoutineExerciseActivity::class.java)
             intent.putExtra("level", level)
             intent.putExtra("day", day)
@@ -72,7 +72,5 @@ class RoutineSummaryActivity : AppCompatActivity() {
         binding.tvWarmUpDetails.text = warmUpList.joinToString(separator = "\n") { "• $it" }
         binding.tvOtherExerciseDetails.text = mainList.joinToString(separator = "\n") { "• $it" }
 
-        // Si quieres ajustar el texto de "tvLevel" y las estrellas:
-        binding.tvLevel.text = level.replaceFirstChar { it.uppercase() }
     }
 }

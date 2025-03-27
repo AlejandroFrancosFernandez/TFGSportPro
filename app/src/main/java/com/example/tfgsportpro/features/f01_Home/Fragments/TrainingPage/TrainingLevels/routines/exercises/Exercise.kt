@@ -5,6 +5,7 @@ import com.example.tfgsportpro.R
 class Exercise(
     val nombreResId: Int,
     val duracion: Int = 30,
+    val gifResId: Int? = null
 )
 
 object LowIntensityExercises {
@@ -15,7 +16,7 @@ object LowIntensityExercises {
     val jumpingInPlace = Exercise(R.string.jumping_In_Place, 30)
     val lowSkipping = Exercise(R.string.low_Skipping, 30)
     //Ejercicios
-    val BREAK = Exercise(R.string.BREAK, 30)
+    val BREAK = Exercise(R.string.BREAK, 30, R.drawable.edescanso)
     val lunges = Exercise(R.string.lunges, 30)
     val heelRaises = Exercise(R.string.heel_Raises, 30)
     val kneePushUps = Exercise(R.string.knee_Push_Ups, 30)
@@ -41,7 +42,7 @@ object LowIntensityExercises {
     val plank = Exercise(R.string.plank, 30)
     val catLegRaises = Exercise(R.string.cat_Leg_Raises, 30)
     val reverseLunges = Exercise(R.string.reverse_Lunges, 30)
-    val pushUps = Exercise(R.string.push_Ups, 30)
+    val pushUps = Exercise(R.string.push_Ups, 30, R.drawable.eflexion)
     val lateralSquat = Exercise(R.string.lateral_Squat, 30)
     val jumpingLunges = Exercise(R.string.jumping_Lunges, 30)
     val crossBodyCrunches = Exercise(R.string.cross_Body_crunches, 30)
@@ -58,7 +59,7 @@ object HighIntensityExercises {
     val jumpingJacksHigh = Exercise(R.string.jumping_Jacks, 35)
     val dynamicSquatsHigh = Exercise(R.string.dynamic_Squats, 35)
     //Ejercicios
-    val BREAK = Exercise(R.string.BREAK, 30)
+    val BREAK = Exercise(R.string.BREAK, 30, R.drawable.edescanso)
     val intenseJumpingSquatsHigh = Exercise(R.string.intense_Jumping_Squats, 35)
     val jumpingSquatsHigh = Exercise(R.string.jumping_Squats, 35)
     val controlledPushupsSlowHigh = Exercise(R.string.controlled_Pushups_Slow, 35)

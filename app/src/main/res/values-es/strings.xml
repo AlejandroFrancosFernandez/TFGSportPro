@@ -8,8 +8,8 @@
     <!--Traducciones de la página inicio sesion (activity-main)-->
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
-    <string name="login">Iniciar Sesión</string>
-    <string name="register">Registrarse</string>
+    <string name="b_login">Iniciar Sesión</string>
+    <string name="b_register">Registrarse</string>
 
     <!--Traducciones de la página registro (activity-register)-->
     <string name="confirmPassword">Confirma Contraseña</string>
@@ -51,7 +51,7 @@
     <string name="High">Nivel Alto</string>
 
     <!--Traducciones de la página me (fragment-me)-->
-    <string name="Logout">Cerrar Sesión</string>
+    <string name="b_logout">Cerrar Sesión</string>
     <string name="infoEmail">Email : </string>
     <string name="infoName">Nombre : </string>
     <string name="infoAge">Edad : </string>
@@ -70,7 +70,14 @@
     <string name="errorloginmessage">Credenciales invalidas</string>
     <string name="errorloginGooglemessage">Error al logear con Google.</string>
 
-    <!--Traducciones de los ejercicios-->
+    <!--Traducciones RoutineSummary-->
+    <string name="b_start">Iniciar</string>
+
+    <!--Traducciones de los ejercicios RoutineExercise-->
+    <string name="b_previous">Anterior</string>
+    <string name="b_next">Siguiente</string>
+    <string name="b_pause">Pausar</string>
+    <string name="b_resume">Reanudar</string>
     <!--Descanso-->
     <string name="BREAK">DESCANSO</string>
     <!--Calentamientos-->

@@ -58,13 +58,14 @@ dependencies {
     implementation(libs.firebase.firestore.ktx)
     //Para poder deslizarse entre los niveles de dificultad
     implementation ("androidx.viewpager2:viewpager2:1.1.0")
+    //Para meter gifs
+    implementation ("com.github.bumptech.glide:glide:4.15.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
     implementation(libs.androidx.navigation.fragment.ktx)

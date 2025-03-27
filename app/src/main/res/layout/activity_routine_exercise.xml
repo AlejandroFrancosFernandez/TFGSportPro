@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D1D1D"
+    android:background="@color/fondoAplicacion"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/ivExercise"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@id/tvExerciseName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Nombre del ejercicio"
+        android:textColor="@color/colorLetra"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="00:00"
+        android:textColor="@color/colorLetra"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/colorBoton"
-        android:text="Anterior"
+        android:text="@string/b_previous"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toStartOf="@id/btnPause"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
@@ -58,7 +62,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/colorBoton"
-        android:text="Pausa"
+        android:text="@string/b_pause"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toStartOf="@id/btnNext"
         app:layout_constraintStart_toEndOf="@id/btnPrevious"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
@@ -70,7 +75,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/colorBoton"
-        android:text="Siguiente"
+        android:text="@string/b_next"
+        android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnPause"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />

@@ -157,7 +157,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/colorBoton"
-        android:text="@string/Logout"
+        android:text="@string/b_logout"
         android:textColor="@color/text_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

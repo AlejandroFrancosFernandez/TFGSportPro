@@ -93,17 +93,6 @@
                         android:layout_width="8dp"
                         android:layout_height="wrap_content" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <TextView
@@ -176,15 +165,15 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnStartRoutine"
+                android:id="@+id/b_startRoutine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/colorBoton"
-                android:text="bla"
+                android:text="@string/b_start"
                 android:textAllCaps="false"
-                android:textColor="@color/material_dynamic_neutral90"
+                android:textColor="@color/colorLetra"
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
