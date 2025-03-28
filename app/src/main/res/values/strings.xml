@@ -99,9 +99,7 @@
     <string name="reverse_Lunges">Reverse lunges</string>
 
     <string name="heel_Raises">Heel Raises</string>
-    <string name="hip_Raise">Hip Raise</string>
     <string name="lateral_Leg_Raise">Lateral Leg Raise</string>
-    <string name="lying_Leg_Raise">Lying Leg Raise</string>
     <string name="heel_Raises_On_Step">Heel Raises on a Step</string>
     <string name="cat_Leg_Raises">Cat Leg Raises</string>
     <string name="l_Leg_Raises">L Leg Raises</string>
@@ -143,16 +141,16 @@
     <string name="single_leg_squat">Single-leg squat</string>
     <string name="explosive_jump_squat">Explosive jump squat</string>
     <string name="intense_Jumping_Squats">Intense Jumping Squats</string>
-    <string name="single_Leg_Squats">Single Leg Squats</string>
 
     <string name="russian_Twists">Russian Twists</string>
     <string name="weighted_Russian_Twists">Weighted Russian Twists</string>
 
     <string name="burpees">Burpees</string>
     <string name="climbers">Climbers</string>
+    <string name="dead_Bug">Dead Bug</string>
     <string name="sprint_In_Place">Sprint in Place</string>
     <string name="lateral_Jumps">Lateral Jumps</string>
-    <string name="seated_Leg_Extension">Seated Leg Extension</string>
+    <string name="lying_Leg_Extension">Lying Leg Extension</string>
     <string name="superman">Superman</string>
     <string name="step_Ups">Step-Ups</string>
     <string name="stair_Climbing">Stair Climbing</string>

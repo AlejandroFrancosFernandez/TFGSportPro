@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="350dp"
         android:layout_marginTop="10dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@id/tvExerciseName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,19 +44,19 @@
         app:layout_constraintTop_toBottomOf="@id/tvExerciseName" />
 
     <Button
-        android:id="@+id/btnPrevious"
+        android:id="@+id/b_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/colorBoton"
         android:text="@string/b_previous"
         android:textColor="@color/colorLetra"
-        app:layout_constraintEnd_toStartOf="@id/btnPause"
+        app:layout_constraintEnd_toStartOf="@id/b_pause"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
 
     <Button
-        android:id="@+id/btnPause"
+        android:id="@+id/b_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -64,12 +64,12 @@
         android:backgroundTint="@color/colorBoton"
         android:text="@string/b_pause"
         android:textColor="@color/colorLetra"
-        app:layout_constraintEnd_toStartOf="@id/btnNext"
-        app:layout_constraintStart_toEndOf="@id/btnPrevious"
+        app:layout_constraintEnd_toStartOf="@id/b_next"
+        app:layout_constraintStart_toEndOf="@id/b_previous"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/b_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -78,7 +78,7 @@
         android:text="@string/b_next"
         android:textColor="@color/colorLetra"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btnPause"
+        app:layout_constraintStart_toEndOf="@id/b_pause"
         app:layout_constraintTop_toBottomOf="@id/tvTimer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

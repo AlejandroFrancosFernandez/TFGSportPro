@@ -99,9 +99,7 @@
     <string name="reverse_Lunges">Estocadas hacia atrás</string>
 
     <string name="heel_Raises">Elevación de Talones</string>
-    <string name="hip_Raise">Elevación de Cadera</string>
     <string name="lateral_Leg_Raise">Elevacion Lateral de Pierna</string>
-    <string name="lying_Leg_Raise">Elevacion de Piernas Tumbado</string>
     <string name="heel_Raises_On_Step">Elevaciones de Talones en Escalón</string>
     <string name="cat_Leg_Raises">Elevaciones de Pierna a Gatas</string>
     <string name="l_Leg_Raises">Elevación de piernas en L</string>
@@ -127,7 +125,7 @@
     <string name="cross_Body_crunches">Abdominales Cruzados</string>
     <string name="heel_Tap_Crunches">Abdominales con Toque de Talones</string>
     <string name="v_Crunches">Abdominales en V</string>
-    <string name="crunches_90_Degrees">Crunches con piernas en 90°</string>
+    <string name="crunches_90_Degrees">Abdominales con piernas en 90°</string>
 
     <string name="glute_Bridge">Puente de Glúteos</string>
     <string name="single_Leg_Glute_Bridge">Puente de Glúteos una Pierna</string>
@@ -149,9 +147,10 @@
 
     <string name="burpees">Burpees</string>
     <string name="climbers">Escalador</string>
+    <string name="dead_Bug">Insecto Muerto</string>
     <string name="sprint_In_Place">Sprint en el Sitio</string>
     <string name="lateral_Jumps">Saltos Laterales</string>
-    <string name="seated_Leg_Extension">Extensión de Piernas Sentado</string>
+    <string name="lying_Leg_Extension">Extensión de Piernas Tumbado</string>
     <string name="superman">Superman</string>
     <string name="step_Ups">Step-Ups</string>
     <string name="stair_Climbing">Subir Escaleras</string>

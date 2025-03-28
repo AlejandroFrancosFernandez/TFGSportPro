@@ -46,8 +46,7 @@ class RoutineExerciseActivity : AppCompatActivity() {
             else -> LowRoutine().getRoutineForDayLow(day)
         }
 
-        // Configurar botones
-        binding.btnPause.setOnClickListener {
+        binding.bPause.setOnClickListener {
             if (countDownTimer != null) {
                 pauseTimer()
             } else {
@@ -55,11 +54,11 @@ class RoutineExerciseActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnNext.setOnClickListener {
+        binding.bNext.setOnClickListener {
             nextExercise()
         }
 
-        binding.btnPrevious.setOnClickListener {
+        binding.bPrevious.setOnClickListener {
             previousExercise()
         }
     }
@@ -116,7 +115,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
     }
 
     private fun startTimer() {
-        // Cancelar el timer anterior si existe
         countDownTimer?.cancel()
         countDownTimer = object : CountDownTimer(timeLeft, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -124,17 +122,16 @@ class RoutineExerciseActivity : AppCompatActivity() {
                 updateTimerText()
             }
             override fun onFinish() {
-                // Al finalizar el tiempo del ejercicio, avanzar al siguiente
                 nextExercise()
             }
         }.start()
-        binding.btnPause.text = getString(R.string.b_pause)
+        binding.bPause.text = getString(R.string.b_pause)
     }
 
     private fun pauseTimer() {
         countDownTimer?.cancel()
         countDownTimer = null
-        binding.btnPause.text = getString(R.string.b_resume)
+        binding.bPause.text = getString(R.string.b_resume)
     }
 
     private fun resumeTimer() {
