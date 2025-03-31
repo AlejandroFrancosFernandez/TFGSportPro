@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val sharedPref = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+        val sharedPref = getSharedPreferences("preferences", Context.MODE_PRIVATE)
         val isDarkMode = sharedPref.getBoolean("dark_mode", false)
 
         if (isDarkMode) {

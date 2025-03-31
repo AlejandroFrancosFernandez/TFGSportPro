@@ -8,50 +8,43 @@
     android:background="@color/fondoAplicacion"
     tools:context=".features.f01_Home.HomeActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/navigationgrey"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/overflow">
 
-        <ImageButton
-            android:id="@+id/b_comeback"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/navigationgrey"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/comebackicon" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="SportPro"
-            android:textColor="@color/colorLetra"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:paddingTop="15dp"
+                android:id="@+id/b_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                app:srcCompat="@drawable/comebackicon" />
 
-        <ImageButton
-            android:id="@+id/b_profile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/navigationgrey"
-            android:contentDescription="Ir a mi cuenta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/meicon" />
-
-    </LinearLayout>
-
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SportPro"
+                android:textColor="@color/colorLetra"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
@@ -62,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -76,8 +69,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/botonnavigation">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/botonnavigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

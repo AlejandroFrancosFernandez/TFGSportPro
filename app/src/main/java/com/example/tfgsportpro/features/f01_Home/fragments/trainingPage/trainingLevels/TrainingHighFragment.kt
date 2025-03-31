@@ -47,7 +47,6 @@ class TrainingHighFragment : Fragment() {
             }
 
             button?.setOnClickListener {
-                // Al hacer clic, pasamos "high" como nivel y el día correspondiente
                 val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
                 intent.putExtra("level", "high")
                 intent.putExtra("day", i)

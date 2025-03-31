@@ -80,7 +80,7 @@ class LowRoutine {
                 LowIntensityExercises.plank
             )
             4 -> listOf(
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
                 LowIntensityExercises.lowSkipping,
 
                 LowIntensityExercises.catLegRaises,
@@ -105,7 +105,7 @@ class LowRoutine {
             )
             5 -> listOf(
                 LowIntensityExercises.highKnees,
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
 
                 LowIntensityExercises.jumpingLunges,
                 LowIntensityExercises.BREAK,
@@ -200,7 +200,7 @@ class LowRoutine {
                 LowIntensityExercises.lateralJumps
             )
             9 -> listOf(
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
                 LowIntensityExercises.lowSkipping,
 
                 LowIntensityExercises.basicCrunches,
@@ -209,7 +209,7 @@ class LowRoutine {
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.jumpingSquats,
                 LowIntensityExercises.BREAK,
-                LowIntensityExercises.plank,
+                LowIntensityExercises.elbowPlank,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.lunges,
                 LowIntensityExercises.BREAK,
@@ -225,7 +225,7 @@ class LowRoutine {
             )
             10 -> listOf(
                 LowIntensityExercises.jumpingSquats,
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
 
                 LowIntensityExercises.reverseLunges,
                 LowIntensityExercises.BREAK,
@@ -234,6 +234,126 @@ class LowRoutine {
                 LowIntensityExercises.squats,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.shortCrunches,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lateralLegRaise,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.gluteBridge,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.superman,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.russianTwists,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lateralJumps
+            )
+            11 -> listOf(
+                LowIntensityExercises.highKnees,
+                LowIntensityExercises.jumpingJacks,
+
+                LowIntensityExercises.lunges,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.kneePushUps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.russianTwists,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.sidePlank,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.basicCrunches,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.superman,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.stepUps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.gluteBridge
+            )
+            12 -> listOf(
+                LowIntensityExercises.jumpingSquats,
+                LowIntensityExercises.plyoJacks,
+
+                LowIntensityExercises.reverseLunges,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.elbowPlank,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.shortCrunches,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lyingLegExtension,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.gluteBridge,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.superman,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.russianTwists,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lateralJumps
+            )
+            13 -> listOf(
+                LowIntensityExercises.lowSkipping,
+                LowIntensityExercises.jumpingSquats,
+
+                LowIntensityExercises.basicCrunches,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lyingLegExtension,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.gluteBridge,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.heelRaises,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.kneePushUps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.superman,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lateralJumps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lateralLunges,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.plank
+            )
+            14 -> listOf(
+                LowIntensityExercises.plyoJacks,
+                LowIntensityExercises.lowSkipping,
+
+                LowIntensityExercises.catLegRaises,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.sidePlank,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.russianTwists,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.jumpingJacks,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.basicCrunches,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.reverseLunges,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.lateralSquat,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.deadBug
+            )
+            15 -> listOf(
+                LowIntensityExercises.jumpingSquats,
+                LowIntensityExercises.plyoJacks,
+
+                LowIntensityExercises.reverseLunges,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.pushUps,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.squats,
+                LowIntensityExercises.BREAK,
+                LowIntensityExercises.elbowPlank,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.shortCrunches,
                 LowIntensityExercises.BREAK,

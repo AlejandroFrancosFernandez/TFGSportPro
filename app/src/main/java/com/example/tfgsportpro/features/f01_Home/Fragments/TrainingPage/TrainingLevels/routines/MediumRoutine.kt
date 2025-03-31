@@ -40,6 +40,7 @@ class MediumRoutine {
                 LowIntensityExercises.BREAK,
                 HighIntensityExercises.vCrunchesHigh,
                 LowIntensityExercises.BREAK,
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.russianTwists,
                 LowIntensityExercises.BREAK,
                 HighIntensityExercises.burpeesHigh,
@@ -55,7 +56,7 @@ class MediumRoutine {
                 LowIntensityExercises.gluteBridge
             )
             3 -> listOf(
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.jumpingJacksHigh,
@@ -103,7 +104,7 @@ class MediumRoutine {
                 LowIntensityExercises.russianTwists
             )
             5 -> listOf(
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.burpeesHigh,
@@ -151,7 +152,7 @@ class MediumRoutine {
                 LowIntensityExercises.gluteBridge
             )
             7 -> listOf(
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.jumpingJacksHigh,
@@ -199,7 +200,7 @@ class MediumRoutine {
                 LowIntensityExercises.russianTwists
             )
             9 -> listOf(
-                LowIntensityExercises.jumpingInPlace,
+                LowIntensityExercises.plyoJacks,
                 HighIntensityExercises.intenseJumpingJacksHigh,
 
                 HighIntensityExercises.burpeesHigh,

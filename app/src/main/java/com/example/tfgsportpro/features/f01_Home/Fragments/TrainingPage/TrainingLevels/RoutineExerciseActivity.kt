@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineExerciseBinding
 import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.LowRoutine
@@ -67,7 +68,10 @@ class RoutineExerciseActivity : AppCompatActivity() {
     private fun showCountdownAnimation() {
         Glide.with(this)
             .asGif()
-            .load(R.drawable.cargarutina)  // Tu GIF de cuenta atrás
+            .load(R.drawable.cargarutina)
+            .placeholder(R.drawable.placeholder)
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .skipMemoryCache(true)// Tu GIF de cuenta atrás
             .into(binding.ivExercise)
 
         // Configurar un timer para esperar antes de empezar la rutina
@@ -99,7 +103,10 @@ class RoutineExerciseActivity : AppCompatActivity() {
             // Cargar el GIF en el ImageView si el GIF está disponible
             if (exercise.gifResId != null) {
                 Glide.with(this)
-                    .load(exercise.gifResId)  // Cargar el GIF del ejercicio
+                    .load(exercise.gifResId)
+                    .placeholder(R.drawable.placeholder)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                    .skipMemoryCache(true)
                     .into(binding.ivExercise)  // Establecer en el ImageView
             } else {
                 // Si no hay GIF, puedes colocar una imagen predeterminada o dejar el ImageView vacío

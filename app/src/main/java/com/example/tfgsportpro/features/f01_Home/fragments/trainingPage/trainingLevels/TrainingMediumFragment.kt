@@ -45,10 +45,9 @@ class TrainingMediumFragment : Fragment() {
             }
 
             button?.setOnClickListener {
-                // Crear el intent para abrir la actividad de resumen con el día y nivel
                 val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
-                intent.putExtra("level", "medium")  // Nivel "medium"
-                intent.putExtra("day", i)          // Día seleccionado
+                intent.putExtra("level", "medium")
+                intent.putExtra("day", i)
                 startActivity(intent)
             }
         }
