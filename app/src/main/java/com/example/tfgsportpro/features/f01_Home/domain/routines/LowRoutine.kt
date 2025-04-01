@@ -1,7 +1,7 @@
-package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines
+package com.example.tfgsportpro.features.f01_Home.domain.routines
 
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.Exercise
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.LowIntensityExercises
+import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
+import com.example.tfgsportpro.features.f01_Home.domain.model.LowIntensityExercises
 
 class LowRoutine {
 
@@ -11,6 +11,7 @@ class LowRoutine {
                 LowIntensityExercises.highKnees,
                 LowIntensityExercises.jumpingJacks,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
@@ -35,6 +36,7 @@ class LowRoutine {
                 LowIntensityExercises.jumpingSquats,
                 LowIntensityExercises.highKnees,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.elbowPlank,
@@ -59,6 +61,7 @@ class LowRoutine {
                 LowIntensityExercises.lowSkipping,
                 LowIntensityExercises.jumpingSquats,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.lyingLegExtension,
@@ -83,6 +86,7 @@ class LowRoutine {
                 LowIntensityExercises.plyoJacks,
                 LowIntensityExercises.lowSkipping,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.catLegRaises,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.sidePlank,
@@ -107,6 +111,7 @@ class LowRoutine {
                 LowIntensityExercises.highKnees,
                 LowIntensityExercises.plyoJacks,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.jumpingLunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.plank,
@@ -131,6 +136,7 @@ class LowRoutine {
                 LowIntensityExercises.jumpingJacks,
                 LowIntensityExercises.highKnees,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.superman,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
@@ -155,6 +161,7 @@ class LowRoutine {
                 LowIntensityExercises.jumpingSquats,
                 LowIntensityExercises.jumpingJacks,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
@@ -179,6 +186,7 @@ class LowRoutine {
                 LowIntensityExercises.lowSkipping,
                 LowIntensityExercises.jumpingSquats,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.reverseLunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
@@ -203,6 +211,7 @@ class LowRoutine {
                 LowIntensityExercises.plyoJacks,
                 LowIntensityExercises.lowSkipping,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
@@ -227,6 +236,7 @@ class LowRoutine {
                 LowIntensityExercises.jumpingSquats,
                 LowIntensityExercises.plyoJacks,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.reverseLunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
@@ -251,6 +261,7 @@ class LowRoutine {
                 LowIntensityExercises.highKnees,
                 LowIntensityExercises.jumpingJacks,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.lunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaises,
@@ -275,6 +286,7 @@ class LowRoutine {
                 LowIntensityExercises.jumpingSquats,
                 LowIntensityExercises.plyoJacks,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.reverseLunges,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
@@ -299,6 +311,7 @@ class LowRoutine {
                 LowIntensityExercises.lowSkipping,
                 LowIntensityExercises.jumpingSquats,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.lyingLegExtension,
@@ -323,6 +336,7 @@ class LowRoutine {
                 LowIntensityExercises.plyoJacks,
                 LowIntensityExercises.lowSkipping,
 
+                LowIntensityExercises.BREAK,
                 LowIntensityExercises.catLegRaises,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.sidePlank,

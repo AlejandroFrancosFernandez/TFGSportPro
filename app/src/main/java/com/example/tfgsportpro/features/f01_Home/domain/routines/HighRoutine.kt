@@ -1,7 +1,7 @@
-package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines
+package com.example.tfgsportpro.features.f01_Home.domain.routines
 
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.Exercise
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.HighIntensityExercises
+import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
+import com.example.tfgsportpro.features.f01_Home.domain.model.HighIntensityExercises
 
 class HighRoutine {
 

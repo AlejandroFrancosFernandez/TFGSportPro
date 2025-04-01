@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises
+package com.example.tfgsportpro.features.f01_Home.domain.model
 
 import com.example.tfgsportpro.R
 

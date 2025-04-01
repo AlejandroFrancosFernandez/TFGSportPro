@@ -1,16 +1,15 @@
-package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels
+package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingSession
 
-import MediumRoutine
+import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineSummaryBinding
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.HighRoutine
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.LowRoutine
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.Exercise
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.HighIntensityExercises
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.LowIntensityExercises
+import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
+import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
+import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
+import com.example.tfgsportpro.features.f01_Home.domain.model.HighIntensityExercises
+import com.example.tfgsportpro.features.f01_Home.domain.model.LowIntensityExercises
 
 class RoutineSummaryActivity : AppCompatActivity() {
 

@@ -1,6 +1,6 @@
-package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels
+package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingSession
 
-import MediumRoutine
+import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -10,10 +10,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineExerciseBinding
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.LowRoutine
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.HighRoutine
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.Exercise
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingLevels.routines.exercises.LowIntensityExercises
+import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
+import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
+import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
 
 class RoutineExerciseActivity : AppCompatActivity() {
 
