@@ -27,7 +27,7 @@ class TrainingLowFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val daysList = List(30) { it + 1 }
+        val daysList = List(15) { it + 1 }
         val adapter = DaysAdapter(daysList, R.layout.btn_low_day) { day ->
             val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
             intent.putExtra("level", "low")

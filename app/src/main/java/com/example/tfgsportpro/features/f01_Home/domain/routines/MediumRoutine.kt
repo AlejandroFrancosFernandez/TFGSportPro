@@ -82,7 +82,7 @@ class MediumRoutine {
                 LowIntensityExercises.stepUps
             )
             4 -> listOf(
-                HighIntensityExercises.dynamicSquatsHigh,
+                HighIntensityExercises.verticalMountainClimberHigh,
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.plyoJacksHigh,
@@ -178,7 +178,7 @@ class MediumRoutine {
                 LowIntensityExercises.stepUps
             )
             8 -> listOf(
-                HighIntensityExercises.dynamicSquatsHigh,
+                HighIntensityExercises.verticalMountainClimberHigh,
                 LowIntensityExercises.jumpingSquats,
 
                 HighIntensityExercises.plyoJacksHigh,

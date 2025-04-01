@@ -24,7 +24,8 @@ class DaysAdapter(
 
     override fun onBindViewHolder(holder: DayViewHolder, position: Int) {
         val day = daysList[position]
-        holder.btnDay.text = "Día $day"
+        holder.btnDay.text = holder.itemView.context.getString(R.string.day, day)
+
 
         holder.btnDay.setOnClickListener {
             onClick(day)

@@ -143,6 +143,18 @@
             android:text="Facebook"
             android:textAlignment="center"
             android:textColor="@color/colorLetra" />
+
+        <Button
+            android:id="@+id/b_forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/colorBoton"
+            android:drawablePadding="100dp"
+            android:text="@string/b_forgotPassword"
+            android:textAlignment="center"
+            android:textColor="@color/colorLetra" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,8 @@ import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineSummaryBinding
 import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
@@ -64,12 +66,13 @@ class RoutineSummaryActivity : AppCompatActivity() {
         val minutes = totalTime / 60
         val seconds = totalTime % 60
 
-        binding.tvInfoday.text = "Día $day"
-        binding.tvRoutineDetails.text = "Nivel: $level\nEjercicios: $totalExercises\nTiempo total: $minutes min $seconds seg"
-        binding.tvExerciseList.text = "Total de ejercicios: $totalExercises"
+        binding.tvInfoday.text = binding.root.context.getString(R.string.day, day)
+        binding.tvRoutineDetails.text = binding.root.context.getString(R.string.routine_details, level, minutes, seconds)
+        binding.tvExerciseList.text = binding.root.context.getString(R.string.totalExercises, totalExercises)
 
         binding.tvWarmUpDetails.text = warmUpList.joinToString(separator = "\n") { "• $it" }
         binding.tvOtherExerciseDetails.text = mainList.joinToString(separator = "\n") { "• $it" }
+
 
     }
 }

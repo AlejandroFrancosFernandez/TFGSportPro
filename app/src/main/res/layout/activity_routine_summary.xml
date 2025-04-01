@@ -74,32 +74,27 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+
+                <TextView
+                    android:id="@+id/rotutineResume"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <Space
-                        android:layout_width="8dp"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+                    android:text="Routine Resume"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvRoutineDetails"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Aquí irá la info de la rutina"
+                    android:text="Info routine"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/tvExerciseList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Total de ejercicios: 0"
+                    android:text="Total Exercises: 0"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -116,7 +111,7 @@
                     android:id="@+id/tvWarmUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ejercicios de Calentamiento"
+                    android:text="@string/warmUpExercises"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -125,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="(Warm Up dinámico)"
+                    android:textColor="@color/colorLetra"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -142,7 +137,7 @@
                     android:id="@+id/tvOtherExercises"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ejercicios siguientes"
+                    android:text="@string/mainExercises"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -151,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="(Main Exercises dinámico)"
+                    android:textColor="@color/colorLetra"
                     android:textSize="14sp" />
             </LinearLayout>
 

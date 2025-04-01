@@ -10,6 +10,7 @@
     <string name="password">Contraseña</string>
     <string name="b_login">Iniciar Sesión</string>
     <string name="b_register">Registrarse</string>
+    <string name="b_forgotPassword">Olvidaste la contraseña?</string>
 
     <!--Traducciones de la página registro (activity-register)-->
     <string name="confirmPassword">Confirma Contraseña</string>
@@ -25,21 +26,8 @@
     <string name="Error_creating_user">Error al crear el usuario.</string>
 
     <!--Traducciones de la página training (fragment-training)-->
-    <string name="Day1">Día 1</string>
-    <string name="Day2">Día 2</string>
-    <string name="Day3">Día 3</string>
-    <string name="Day4">Día 4</string>
-    <string name="Day5">Día 5</string>
-    <string name="Day6">Día 6</string>
-    <string name="Day7">Día 7</string>
-    <string name="Day8">Día 8</string>
-    <string name="Day9">Día 9</string>
-    <string name="Day10">Día 10</string>
-    <string name="Day11">Día 11</string>
-    <string name="Day12">Día 12</string>
-    <string name="Day13">Día 13</string>
-    <string name="Day14">Día 14</string>
-    <string name="Day15">Día 15</string>
+    <string name="day">Día %1$d</string>
+
     <!--Traducciones del menu de navegacion (activity-home)-->
     <string name="Training">Entrenamiento</string>
     <string name="Resume">Resumen</string>
@@ -72,6 +60,10 @@
 
     <!--Traducciones RoutineSummary-->
     <string name="b_start">Iniciar</string>
+    <string name="routine_details">Nivel: %1$s\nTiempo total: %2$d min %3$d seg</string>
+    <string name="totalExercises">Total Ejercicios: %1$d</string>
+    <string name="warmUpExercises">Calentamiento</string>
+    <string name="mainExercises">Parte Principal</string>
 
     <!--Traducciones de los ejercicios RoutineExercise-->
     <string name="b_previous">Anterior</string>
@@ -88,10 +80,11 @@
     <string name="jumping_In_Place">Saltos en el Sitio (Calentamiento)</string>
     <string name="intense_Jumping_Jacks">Saltos Tijera Intensos (Calentamiento)</string>
     <string name="high_Skipping">Skipping Elevado (Calentamiento)</string>
-    <string name="dynamic_Squats">Sentadilla Dinámica (Calentamiento)</string>
     <string name="plyo_Jacks">Sentadilla Elevando Brazos (Calentamiento)</string>
     <string name="boxing">Boxeo al aire (Calentamiento)</string>
-    <string name="bearCrawl">Caminata de Oso (Calentamiento)</string>
+    <string name="bear_Crawl">Caminata de Oso (Calentamiento)</string>
+    <string name="push_Ups_Toe_Touch">Flexiones con toque de pie (Calentamiento)</string>
+    <string name="vertical_Mountain_Climbers">Escalador Vertical (Calentamiento)</string>
 
     <!--Ejercicios-->
     <string name="lunges">Zancadas</string>
@@ -112,7 +105,7 @@
     <string name="controlled_Pushups_Slow">Flexiones controladas (Lentas)</string>
     <string name="clap_Push_Ups">Flexion con Palmada</string>
     <string name="explosive_Push_Ups">Flexion con Subida Explosiva</string>
-    <string name="push_Ups_Toe_Touch">Flexiones con toque de pie"</string>
+    <string name="archer_Push_Ups">Flexiones Arquero</string>
 
     <string name="plank">Plancha</string>
     <string name="elbow_Plank">Plancha de Codos</string>
@@ -122,6 +115,7 @@
     <string name="plank_Alternate_Knee_Taps">Plancha con Toque de Rodillas</string>
     <string name="lateral_Plank_Walk">Plancha con Desplazamiento Lateral</string>
     <string name="plank_Leg_Raises">Elevaciones de pierna en plancha</string>
+    <string name="plank_One_Arm_Leg">Plancha un brazo-pierna</string>
 
     <string name="crunches">Abdominales</string>
     <string name="bicycle_Crunches">Abdominales Bicicleta</string>

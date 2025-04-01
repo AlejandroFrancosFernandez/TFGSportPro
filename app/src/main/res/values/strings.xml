@@ -10,6 +10,7 @@
     <string name="password">Password</string>
     <string name="b_login">Login</string>
     <string name="b_register">Register</string>
+    <string name="b_forgotPassword">Forgot Password?</string>
 
     <!--Traducciones de la página registro (activity-register)-->
     <string name="confirmPassword">Confirm Password</string>
@@ -23,22 +24,10 @@
     <string name="Error_name_cannot_be_empty">Name cannot be empty.</string>
     <string name="Error_age_cannot_be_empty">Age cannot be empty.</string>
     <string name="Error_creating_user">Error creating user.</string>
+
     <!--Traducciones de la página training (fragment-training)-->
-    <string name="Day1">Day 1</string>
-    <string name="Day2">Day 2</string>
-    <string name="Day3">Day 3</string>
-    <string name="Day4">Day 4</string>
-    <string name="Day5">Day 5</string>
-    <string name="Day6">Day 6</string>
-    <string name="Day7">Day 7</string>
-    <string name="Day8">Day 8</string>
-    <string name="Day9">Day 9</string>
-    <string name="Day10">Day 10</string>
-    <string name="Day11">Day 11</string>
-    <string name="Day12">Day 12</string>
-    <string name="Day13">Day 13</string>
-    <string name="Day14">Day 14</string>
-    <string name="Day15">Day 15</string>
+    <string name="day">Day %1$d</string>
+
     <!--Traducciones del menu de navegacion (activity-home)-->
     <string name="Training">Training</string>
     <string name="Resume">Resume</string>
@@ -72,6 +61,10 @@
 
     <!--Traducciones RoutineSummary-->
     <string name="b_start">Start</string>
+    <string name="routine_details">Level: %1$s\nTotal time: %2$d min %3$d sec</string>
+    <string name="totalExercises">Total Exercises: %1$d</string>
+    <string name="warmUpExercises">Warm-Up</string>
+    <string name="mainExercises">Main Exercises</string>
 
     <!--Traducciones de los ejercicios RoutineExercise-->
     <string name="b_previous">Back</string>
@@ -88,10 +81,11 @@
     <string name="jumping_In_Place">Jumping in Place (Warm-up)</string>
     <string name="intense_Jumping_Jacks">Intense Jumping Jacks (Warm-up)</string>
     <string name="high_Skipping">High Skipping (Warm-up)</string>
-    <string name="dynamic_Squats">Dynamic Squats (Warm-up)</string>
     <string name="plyo_Jacks">Plyo Jacks (Warm-up)</string>
     <string name="boxing">Boxing (Warm-up)</string>
-    <string name="bearCrawl">Bear Crawl (Warm-up)</string>
+    <string name="bear_Crawl">Bear Crawl (Warm-up)</string>
+    <string name="push_Ups_Toe_Touch">Push-Ups with toe-touch (Warm-up)</string>
+    <string name="vertical_Mountain_Climbers">Vertical Mountain Climbers (Warm-up)</string>
 
     <!--Ejercicios-->
     <string name="lunges">Lunges</string>
@@ -112,7 +106,7 @@
     <string name="controlled_Pushups_Slow">Controlled Push-ups (Slow)</string>
     <string name="clap_Push_Ups">Clap Push-Ups</string>
     <string name="explosive_Push_Ups">Explosive Push-Ups</string>
-    <string name="push_Ups_Toe_Touch">Push-Ups with toe-touch</string>
+    <string name="archer_Push_Ups">Archer Push Ups</string>
 
     <string name="plank">Plank</string>
     <string name="elbow_Plank">Elbow Plank</string>
@@ -122,6 +116,7 @@
     <string name="plank_Alternate_Knee_Taps">Plank with Alternate Knee Taps</string>
     <string name="lateral_Plank_Walk">Lateral Plank Walk</string>
     <string name="plank_Leg_Raises">Plank Leg Raises</string>
+    <string name="plank_One_Arm_Leg">Plank One Arm-Leg</string>
 
     <string name="crunches">Crunches</string>
     <string name="bicycle_Crunches">Bicycle Crunches</string>
