@@ -8,8 +8,8 @@ class HighRoutine {
     fun getRoutineForDayHigh(day: Int): List<Exercise> {
         return when (day) {
             1 -> listOf(
-                HighIntensityExercises.jumpingInPlaceHigh,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.highKneesHigh,
+                HighIntensityExercises.pushUpToeTouchHigh,
 
                 HighIntensityExercises.controlledPushupsSlowHigh,
                 HighIntensityExercises.BREAK,
@@ -32,8 +32,8 @@ class HighRoutine {
                 HighIntensityExercises.gluteBridgeHigh
             )
             2 -> listOf(
-                HighIntensityExercises.jumpingJacksHigh,
-                HighIntensityExercises.jumpingSquatsHigh,
+                HighIntensityExercises.pushUpToeTouchHigh,
+                HighIntensityExercises.plyoJacksHigh,
 
                 HighIntensityExercises.clapPushUpsHigh,
                 HighIntensityExercises.BREAK,
@@ -56,8 +56,8 @@ class HighRoutine {
                 HighIntensityExercises.lateralPlankWalkHigh
             )
             3 -> listOf(
-                HighIntensityExercises.highKneesHigh,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.plyoJacksHigh,
+                HighIntensityExercises.boxing,
 
                 HighIntensityExercises.explosivePushUpsHigh,
                 HighIntensityExercises.BREAK,
@@ -80,8 +80,8 @@ class HighRoutine {
                 HighIntensityExercises.plankAlternateKneeTapsHigh
             )
             4 -> listOf(
-                HighIntensityExercises.jumpingJacksHigh,
-                HighIntensityExercises.dynamicSquatsHigh,
+                HighIntensityExercises.boxing,
+                HighIntensityExercises.bearCrawl,
 
                 HighIntensityExercises.clapPushUpsHigh,
                 HighIntensityExercises.BREAK,
@@ -104,7 +104,7 @@ class HighRoutine {
                 HighIntensityExercises.plankWithShoulderTapHigh
             )
             5 -> listOf(
-                HighIntensityExercises.highKneesHigh,
+                HighIntensityExercises.bearCrawl,
                 HighIntensityExercises.jumpingJacksHigh,
 
                 HighIntensityExercises.controlledPushupsSlowHigh,
@@ -128,8 +128,8 @@ class HighRoutine {
                 HighIntensityExercises.plankAlternateKneeTapsHigh
             )
             6 -> listOf(
-                HighIntensityExercises.highKneesHigh,
                 HighIntensityExercises.jumpingJacksHigh,
+                HighIntensityExercises.dynamicSquatsHigh,
 
                 HighIntensityExercises.explosivePushUpsHigh,
                 HighIntensityExercises.BREAK,
@@ -152,8 +152,8 @@ class HighRoutine {
                 HighIntensityExercises.isometricSquatHigh
             )
             7 -> listOf(
-                HighIntensityExercises.highSkippingHigh,
-                HighIntensityExercises.jumpingInPlaceHigh,
+                HighIntensityExercises.dynamicSquatsHigh,
+                HighIntensityExercises.highKneesHigh,
 
                 HighIntensityExercises.controlledPushupsSlowHigh,
                 HighIntensityExercises.BREAK,
@@ -177,7 +177,7 @@ class HighRoutine {
             )
             8 -> listOf(
                 HighIntensityExercises.highKneesHigh,
-                HighIntensityExercises.jumpingJacksHigh,
+                HighIntensityExercises.pushUpToeTouchHigh,
 
                 HighIntensityExercises.controlledPushupsSlowHigh,
                 HighIntensityExercises.BREAK,
@@ -200,8 +200,8 @@ class HighRoutine {
                 HighIntensityExercises.plankAlternateKneeTapsHigh
             )
             9 -> listOf(
-                HighIntensityExercises.jumpingJacksHigh,
-                HighIntensityExercises.highSkippingHigh,
+                HighIntensityExercises.pushUpToeTouchHigh,
+                HighIntensityExercises.plyoJacksHigh,
 
                 HighIntensityExercises.explosivePushUpsHigh,
                 HighIntensityExercises.BREAK,
@@ -224,8 +224,8 @@ class HighRoutine {
                 HighIntensityExercises.lateralPlankWalkHigh
             )
             10 -> listOf(
-                HighIntensityExercises.highKneesHigh,
-                HighIntensityExercises.jumpingSquatsHigh,
+                HighIntensityExercises.plyoJacksHigh,
+                HighIntensityExercises.boxing,
 
                 HighIntensityExercises.clapPushUpsHigh,
                 HighIntensityExercises.BREAK,
@@ -246,6 +246,36 @@ class HighRoutine {
                 HighIntensityExercises.fastLungesHigh,
                 HighIntensityExercises.BREAK,
                 HighIntensityExercises.plankAlternateKneeTapsHigh
+            )
+            11 -> listOf(
+                HighIntensityExercises.boxing,
+                HighIntensityExercises.bearCrawl,
+
+
+            )
+            12 -> listOf(
+                HighIntensityExercises.bearCrawl,
+                HighIntensityExercises.jumpingJacksHigh,
+
+
+            )
+            13 -> listOf(
+                HighIntensityExercises.jumpingJacksHigh,
+                HighIntensityExercises.dynamicSquatsHigh,
+
+
+            )
+            14 -> listOf(
+                HighIntensityExercises.bearCrawl,
+                HighIntensityExercises.boxing,
+
+
+            )
+            15 -> listOf(
+                HighIntensityExercises.plyoJacksHigh,
+                HighIntensityExercises.pushUpToeTouchHigh,
+
+
             )
             else -> emptyList()
         }

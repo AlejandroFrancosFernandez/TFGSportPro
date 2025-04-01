@@ -20,8 +20,7 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Configuración directamente en onCreate
-        val levels = listOf("Low (<2.5 Hours)", "Medium (2.5-5 Hours)", "High (>5 Hours)")
+        val levels = listOf("Low (<3 Hours)", "Medium (3-6 Hours)", "High (>6 Hours)")
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, levels)
         binding.PhysicalActivityLevel.adapter = adapter
 

@@ -15,7 +15,7 @@
     <string name="confirmPassword">Confirma Contraseña</string>
     <string name="name">Nombre</string>
     <string name="age">Edad</string>
-    <string name="infoPhysicalLevel">Selecciona tu nivel de actividad física :</string>
+    <string name="infoPhysicalLevel">Selecciona tu nivel de actividad física (semanal):</string>
     <!--Errores-->
     <string name="Error_invalid_Email">Email inválido</string>
     <string name="Error_at_Least_6_Characters">Debe tener al menos 6 caracteres.</string>
@@ -90,6 +90,8 @@
     <string name="high_Skipping">Skipping Elevado (Calentamiento)</string>
     <string name="dynamic_Squats">Sentadilla Dinámica (Calentamiento)</string>
     <string name="plyo_Jacks">Sentadilla Elevando Brazos (Calentamiento)</string>
+    <string name="boxing">Boxeo al aire (Calentamiento)</string>
+    <string name="bearCrawl">Caminata de Oso (Calentamiento)</string>
 
     <!--Ejercicios-->
     <string name="lunges">Zancadas</string>
@@ -110,6 +112,7 @@
     <string name="controlled_Pushups_Slow">Flexiones controladas (Lentas)</string>
     <string name="clap_Push_Ups">Flexion con Palmada</string>
     <string name="explosive_Push_Ups">Flexion con Subida Explosiva</string>
+    <string name="push_Ups_Toe_Touch">Flexiones con toque de pie"</string>
 
     <string name="plank">Plancha</string>
     <string name="elbow_Plank">Plancha de Codos</string>

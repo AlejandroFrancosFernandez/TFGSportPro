@@ -18,39 +18,17 @@ class TrainingLowFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentTrainingLowFragmnetBinding.inflate(inflater, container, false)
-
-        // Llamamos a setupButtons para configurar los botones
         setupButtons()
 
-        // Devolvemos la vista inflada
         return binding.root
     }
 
-    private fun setupButtons() {
-        for (i in 1..15) {
-            val button = when (i) {
-                1 -> binding.bDay1
-                2 -> binding.bDay2
-                3 -> binding.bDay3
-                4 -> binding.bDay4
-                5 -> binding.bDay5
-                6 -> binding.bDay6
-                7 -> binding.bDay7
-                8 -> binding.bDay8
-                9 -> binding.bDay9
-                10 -> binding.bDay10
-                11 -> binding.bDay11
-                12 -> binding.bDay12
-                13 -> binding.bDay13
-                14 -> binding.bDay14
-                15 -> binding.bDay15
-                else -> null
-            }
-
-            button?.setOnClickListener {
+    private fun setupButtons() = with(binding){
+        listOf(bDay1,bDay2,bDay3,bDay4,bDay5,bDay6,bDay7,bDay8,bDay9,bDay10,bDay11,bDay12,bDay13,bDay14,bDay15).forEachIndexed { i, button ->
+            button.setOnClickListener{
                 val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
                 intent.putExtra("level", "low")
-                intent.putExtra("day", i)
+                intent.putExtra("day", i+1)
                 startActivity(intent)
             }
         }

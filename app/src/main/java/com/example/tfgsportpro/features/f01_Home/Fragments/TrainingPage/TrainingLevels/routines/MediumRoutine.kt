@@ -57,7 +57,7 @@ class MediumRoutine {
             )
             3 -> listOf(
                 LowIntensityExercises.plyoJacks,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.boxing,
 
                 HighIntensityExercises.jumpingJacksHigh,
                 LowIntensityExercises.BREAK,
@@ -83,7 +83,7 @@ class MediumRoutine {
                 HighIntensityExercises.dynamicSquatsHigh,
                 LowIntensityExercises.jumpingSquats,
 
-                HighIntensityExercises.jumpingInPlaceHigh,
+                HighIntensityExercises.plyoJacksHigh,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
                 LowIntensityExercises.BREAK,
@@ -105,7 +105,7 @@ class MediumRoutine {
             )
             5 -> listOf(
                 LowIntensityExercises.plyoJacks,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.boxing,
 
                 HighIntensityExercises.burpeesHigh,
                 LowIntensityExercises.BREAK,
@@ -123,7 +123,7 @@ class MediumRoutine {
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.boxing,////////
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats
             )
@@ -153,7 +153,7 @@ class MediumRoutine {
             )
             7 -> listOf(
                 LowIntensityExercises.plyoJacks,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.boxing,
 
                 HighIntensityExercises.jumpingJacksHigh,
                 LowIntensityExercises.BREAK,
@@ -179,7 +179,7 @@ class MediumRoutine {
                 HighIntensityExercises.dynamicSquatsHigh,
                 LowIntensityExercises.jumpingSquats,
 
-                HighIntensityExercises.jumpingInPlaceHigh,
+                HighIntensityExercises.plyoJacksHigh,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.pushUps,
                 LowIntensityExercises.BREAK,
@@ -201,7 +201,7 @@ class MediumRoutine {
             )
             9 -> listOf(
                 LowIntensityExercises.plyoJacks,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.boxing,
 
                 HighIntensityExercises.burpeesHigh,
                 LowIntensityExercises.BREAK,
@@ -219,7 +219,7 @@ class MediumRoutine {
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
-                HighIntensityExercises.intenseJumpingJacksHigh,
+                HighIntensityExercises.boxing,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.squats
             )

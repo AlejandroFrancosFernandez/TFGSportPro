@@ -15,7 +15,7 @@
     <string name="confirmPassword">Confirm Password</string>
     <string name="name">Name</string>
     <string name="age">Age</string>
-    <string name="infoPhysicalLevel">Select your physical activity :</string>
+    <string name="infoPhysicalLevel">Select your physical activity (week):</string>
     <!--Errores-->
     <string name="Error_invalid_Email">Invalid email</string>
     <string name="Error_at_Least_6_Characters">Password must be at least 6 characters long.</string>
@@ -90,6 +90,8 @@
     <string name="high_Skipping">High Skipping (Warm-up)</string>
     <string name="dynamic_Squats">Dynamic Squats (Warm-up)</string>
     <string name="plyo_Jacks">Plyo Jacks (Warm-up)</string>
+    <string name="boxing">Boxing (Warm-up)</string>
+    <string name="bearCrawl">Bear Crawl (Warm-up)</string>
 
     <!--Ejercicios-->
     <string name="lunges">Lunges</string>
@@ -110,6 +112,7 @@
     <string name="controlled_Pushups_Slow">Controlled Push-ups (Slow)</string>
     <string name="clap_Push_Ups">Clap Push-Ups</string>
     <string name="explosive_Push_Ups">Explosive Push-Ups</string>
+    <string name="push_Ups_Toe_Touch">Push-Ups with toe-touch</string>
 
     <string name="plank">Plank</string>
     <string name="elbow_Plank">Elbow Plank</string>

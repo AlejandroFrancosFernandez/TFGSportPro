@@ -69,9 +69,8 @@ class RoutineExerciseActivity : AppCompatActivity() {
         Glide.with(this)
             .asGif()
             .load(R.drawable.cargarutina)
-            .placeholder(R.drawable.placeholder)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .skipMemoryCache(true)// Tu GIF de cuenta atrás
+            .skipMemoryCache(true)
             .into(binding.ivExercise)
 
         // Configurar un timer para esperar antes de empezar la rutina
@@ -104,7 +103,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
             if (exercise.gifResId != null) {
                 Glide.with(this)
                     .load(exercise.gifResId)
-                    .placeholder(R.drawable.placeholder)
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true)
                     .into(binding.ivExercise)  // Establecer en el ImageView

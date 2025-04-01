@@ -25,7 +25,6 @@ class TrainingHighFragment : Fragment() {
     ): View {
         binding = FragmentTrainingHighBinding.inflate(inflater, container, false)
 
-        // Configuramos los botones para cada día
         for (i in 1..15) {
             val button = when (i) {
                 1 -> binding.bDay1
