@@ -10,6 +10,7 @@
     <!-- Colores de modo oscuro -->
     <color name="DarkGrey">#181818</color>
     <color name="plata">#C0C0C0</color>
+    <color name="azulnavigation">#5F9EA0</color>
 
     <!-- Otros colores -->
     <color name="text_primary">#FFFFFF</color>

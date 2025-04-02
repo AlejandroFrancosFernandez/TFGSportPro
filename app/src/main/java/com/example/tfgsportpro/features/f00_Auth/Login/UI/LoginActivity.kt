@@ -11,6 +11,7 @@ import com.example.tfgsportpro.features.f01_Home.HomeActivity
 import com.example.tfgsportpro.features.f00_Auth.Register.UI.RegisterActivity
 import com.example.tfgsportpro.features.f00_Auth.Login.UseCase.LoginManager
 import com.example.tfgsportpro.databinding.ActivityLoginBinding
+import com.example.tfgsportpro.features.f00_Auth.ForgotPassword.UI.ForgotPasswordActivity
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.material.snackbar.Snackbar
 
@@ -77,6 +78,12 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+
+        binding.bForgetPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun showHomeActivity() {

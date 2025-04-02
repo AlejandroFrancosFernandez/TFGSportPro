@@ -10,13 +10,17 @@
     <string name="password">Contraseña</string>
     <string name="b_login">Iniciar Sesión</string>
     <string name="b_register">Registrarse</string>
-    <string name="b_forgotPassword">Olvidaste la contraseña?</string>
+    <string name="infoForgotPassword">Olvidaste la contraseña?</string>
+    <string name="b_forgotPassword">Click aquí.</string>
 
     <!--Traducciones de la página registro (activity-register)-->
     <string name="confirmPassword">Confirma Contraseña</string>
     <string name="name">Nombre</string>
     <string name="age">Edad</string>
     <string name="infoPhysicalLevel">Selecciona tu nivel de actividad física (semanal):</string>
+    <string name="low">Bajo (&lt;3 Hours)</string>
+    <string name="medium">Medio (3-6 Hours)</string>
+    <string name="high">Alto (&gt;6 Hours)</string>
     <!--Errores-->
     <string name="Error_invalid_Email">Email inválido</string>
     <string name="Error_at_Least_6_Characters">Debe tener al menos 6 caracteres.</string>
@@ -24,6 +28,12 @@
     <string name="Error_name_cannot_be_empty">Nombre no puede estar vacío.</string>
     <string name="Error_age_cannot_be_empty">Edad no puede estar vacía.</string>
     <string name="Error_creating_user">Error al crear el usuario.</string>
+
+    <!--Traducciones de la página Forgot Password-->
+    <string name="b_recover">Recover</string>
+    <string name="introduceEmail">Introduce tu email</string>
+    <string name="emailSent">Se ha enviado un correo para restablecer tu contraseña.</string>
+    <string name="emailCouldNotSent">No se pudo enviar el correo. Verifica si el correo es correcto.</string>
 
     <!--Traducciones de la página training (fragment-training)-->
     <string name="day">Día %1$d</string>

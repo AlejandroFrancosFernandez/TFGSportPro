@@ -7,10 +7,9 @@
 
     <!-- Varias tonalidades claras (sustituyendo tus grises oscuros) -->
     <color name="DarkGrey">#F3F3F3</color>
-
     <color name="plata">#C0C0C0</color>
+    <color name="azulnavigation">#5F9EA0</color>
 
-    <!-- Textos en modo claro, típicamente oscuros para buen contraste -->
     <color name="text_primary">#000000</color>
     <color name="text_secondary">#4F8AA1</color>
 
@@ -18,7 +17,6 @@
     <color name="button_bg">#EEEEEE</color>
     <color name="sesionButton_bg">#F5F5F5</color>
     <color name="button_border">#4F8AA1</color>
-    <!-- Por ejemplo, usas el mismo azul que en text_secondary para el borde -->
 
     <!-- Iconos no seleccionados (puedes mantenerlo gris) -->
     <color name="icon_unselected">#808080</color>
