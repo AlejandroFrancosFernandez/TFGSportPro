@@ -5,5 +5,5 @@
     android:viewportWidth="200"
     android:viewportHeight="50">
 
-    <path android:fillColor="#D24D2A" android:pathData="M170,0 L185,0 L160,50 L145,50 Z"/>
+    <path android:fillColor="@color/btn_line_high" android:pathData="M170,0 L185,0 L160,50 L145,50 Z"/>
 </vector>

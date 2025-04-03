@@ -29,6 +29,7 @@
     <color name="firstColorButtonOddLow">#7AB4D3</color>
     <color name="firstColorButtonEvenLow">#92C8E2</color>
     <color name="secondColorButtonLow">#003D59</color>
+    <color name="btn_line_low">#6B9DAF</color>
 
 
     <!-- Colores MEDIUM Level -->
@@ -37,6 +38,7 @@
     <color name="firstColorButtonOddMedium">#F39C12</color>
     <color name="firstColorButtonEvenMedium">#F49B2A</color>
     <color name="secondColorButtonMedium">#4A2C00</color>
+    <color name="btn_line_medium">#F39C12</color>
 
 
     <!-- Colores HIGH Level -->
@@ -45,6 +47,7 @@
     <color name="firstColorButtonOddHigh">#FF5733</color>
     <color name="firstColorButtonEvenHigh">#FF6F4D </color>
     <color name="secondColorButtonHigh">#5D0000</color>
+    <color name="btn_line_high">#D24D2A</color>
 
 
 

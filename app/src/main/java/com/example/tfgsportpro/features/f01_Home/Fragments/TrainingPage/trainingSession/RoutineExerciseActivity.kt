@@ -13,6 +13,7 @@ import com.example.tfgsportpro.databinding.ActivityRoutineExerciseBinding
 import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
+import com.google.firebase.auth.FirebaseAuth
 
 class RoutineExerciseActivity : AppCompatActivity() {
 
@@ -154,9 +155,16 @@ class RoutineExerciseActivity : AppCompatActivity() {
             startExercise(currentExerciseIndex)
         } else {
             Toast.makeText(this, "¡Rutina completada!", Toast.LENGTH_SHORT).show()
+            val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+            val day = intent.getIntExtra("day", 1)
+            val level = intent.getStringExtra("level") ?: "low"
+            val key = "${currentUserUid}_${level}_day_$day"
+            val sharedPreferences = getSharedPreferences("CompletedDays", MODE_PRIVATE)
+            sharedPreferences.edit().putBoolean(key, true).apply()
             finish()
         }
     }
+
 
     private fun previousExercise() {
         if (currentExerciseIndex > 0) {
