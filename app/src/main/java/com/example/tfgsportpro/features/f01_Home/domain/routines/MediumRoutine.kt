@@ -371,7 +371,7 @@ class MediumRoutine {
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.sidePlank,
                 LowIntensityExercises.BREAK,
-                HighIntensityExercises.heelToGluteHigh,
+                HighIntensityExercises.splitSquat,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps
             )

@@ -137,7 +137,6 @@
 
     <string name="glute_Bridge">Puente de Glúteos</string>
     <string name="single_Leg_Glute_Bridge">Puente de Glúteos una Pierna</string>
-    <string name="heel_To_Glute">Talones al Glúteo</string>
 
     <string name="squats">Sentadillas</string>
     <string name="lateral_Squat">Sentadilla Lateral</string>
@@ -148,7 +147,8 @@
     <string name="squat_with_pause">Sentadilla con Pausa</string>
     <string name="single_leg_squat">Sentadilla a un Pie</string>
     <string name="explosive_jump_squat">Sentadilla con Salto Explosivo</string>
-    <string name="intense_Jumping_Squats">Sentadilla</string>
+    <string name="intense_Jumping_Squats">Sentadilla intensa</string>
+    <string name="split_Squat">Split Squat</string>
 
     <string name="russian_Twists">Giros Rusos</string>
     <string name="weighted_Russian_Twists">Giros Rusos con Peso</string>

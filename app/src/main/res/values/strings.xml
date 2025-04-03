@@ -139,7 +139,6 @@
 
     <string name="glute_Bridge">Glute Bridge</string>
     <string name="single_Leg_Glute_Bridge">Single-leg Glute Bridge</string>
-    <string name="heel_To_Glute">Heel to Glute</string>
 
     <string name="squats">Squats</string>
     <string name="lateral_Squat">Lateral Squat</string>
@@ -151,6 +150,7 @@
     <string name="single_leg_squat">Single-leg squat</string>
     <string name="explosive_jump_squat">Explosive jump squat</string>
     <string name="intense_Jumping_Squats">Intense Jumping Squats</string>
+    <string name="split_Squat">Split Squat</string>
 
     <string name="russian_Twists">Russian Twists</string>
     <string name="weighted_Russian_Twists">Weighted Russian Twists</string>
