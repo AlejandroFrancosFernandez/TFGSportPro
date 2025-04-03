@@ -16,6 +16,11 @@ class TrainingLowFragment : Fragment() {
 
     lateinit var binding: FragmentTrainingLowFragmnetBinding
 
+    override fun onResume() {
+        super.onResume()
+        binding.recyclerDays.adapter?.notifyDataSetChanged()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +33,7 @@ class TrainingLowFragment : Fragment() {
 
     private fun setupRecyclerView() {
         val daysList = List(15) { it + 1 }
-        val adapter = DaysAdapter(daysList, R.layout.btn_low_day) { day ->
+        val adapter = DaysAdapter(daysList, R.layout.btn_low_day, "low") { day ->
             val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
             intent.putExtra("level", "low")
             intent.putExtra("day", day)

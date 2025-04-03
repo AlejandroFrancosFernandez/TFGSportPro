@@ -16,6 +16,11 @@ class TrainingMediumFragment : Fragment() {
 
     lateinit var binding: FragmentTrainingMediumBinding
 
+    override fun onResume() {
+        super.onResume()
+        binding.recyclerDays.adapter?.notifyDataSetChanged()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +34,7 @@ class TrainingMediumFragment : Fragment() {
 
     private fun setupRecyclerView() {
         val daysList = List(15) { it + 1 }
-        val adapter = DaysAdapter(daysList, R.layout.btn_medium_day) { day ->
+        val adapter = DaysAdapter(daysList, R.layout.btn_medium_day, "medium" ) { day ->
             val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
             intent.putExtra("level", "medium")
             intent.putExtra("day", day)
