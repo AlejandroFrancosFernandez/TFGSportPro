@@ -317,11 +317,11 @@ class MediumRoutine {
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.basicCrunches,
                 LowIntensityExercises.BREAK,
-                HighIntensityExercises.fastLungesHigh,
+                HighIntensityExercises.hawaiianSquatHigh,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.gluteBridge,
                 LowIntensityExercises.BREAK,
-                HighIntensityExercises.explosivePushUpsHigh,
+                HighIntensityExercises.crossBodyPushUpHigh,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.heelRaisesOnStep
             )
@@ -371,7 +371,7 @@ class MediumRoutine {
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.sidePlank,
                 LowIntensityExercises.BREAK,
-                HighIntensityExercises.splitSquat,
+                HighIntensityExercises.splitSquatHigh,
                 LowIntensityExercises.BREAK,
                 LowIntensityExercises.stepUps
             )

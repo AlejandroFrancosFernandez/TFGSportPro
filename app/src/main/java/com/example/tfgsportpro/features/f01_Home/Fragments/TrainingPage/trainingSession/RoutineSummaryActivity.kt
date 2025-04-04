@@ -23,6 +23,7 @@ class RoutineSummaryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bBack.setOnClickListener {
+            binding.bBack.isEnabled = false
             onBackPressedDispatcher.onBackPressed()
         }
 
@@ -35,10 +36,12 @@ class RoutineSummaryActivity : AppCompatActivity() {
         }
 
         binding.bStartRoutine.setOnClickListener {
+            binding.bStartRoutine.isEnabled = false
             val intent = Intent(this, RoutineExerciseActivity::class.java)
             intent.putExtra("level", level)
             intent.putExtra("day", day)
             startActivity(intent)
+
         }
     }
 
@@ -73,6 +76,14 @@ class RoutineSummaryActivity : AppCompatActivity() {
         binding.tvWarmUpDetails.text = warmUpList.joinToString(separator = "\n") { "• $it" }
         binding.tvOtherExerciseDetails.text = mainList.joinToString(separator = "\n") { "• $it" }
 
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.bStartRoutine.isEnabled = true  // Reactivar el botón
     }
 }

@@ -62,6 +62,15 @@ class RoutineExerciseActivity : AppCompatActivity() {
         binding.bPrevious.setOnClickListener {
             previousExercise()
         }
+
+        binding.bBackroutine.setOnClickListener {
+            binding.bBackroutine.isEnabled = false
+
+            binding.bBackroutine.postDelayed({
+                countDownTimer?.cancel()
+                finish()
+            }, 1000)
+        }
     }
 
     // Método para mostrar la animación de cuenta atrás
@@ -76,14 +85,12 @@ class RoutineExerciseActivity : AppCompatActivity() {
         // Configurar un timer para esperar antes de empezar la rutina
         object : CountDownTimer(6000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                // Aquí podrías mostrar los segundos restantes si lo deseas
             }
 
             override fun onFinish() {
                 // Después de 5 segundos, ocultar la animación de cuenta atrás
                 binding.ivExercise.visibility = View.GONE  // Ocultar el ImageView con el GIF
 
-                // Iniciar el primer ejercicio
                 startExercise(currentExerciseIndex)
             }
         }.start()
@@ -165,7 +172,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
         }
     }
 
-
     private fun previousExercise() {
         if (currentExerciseIndex > 0) {
             currentExerciseIndex--
@@ -175,6 +181,12 @@ class RoutineExerciseActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         countDownTimer?.cancel()
+        countDownTimer = null
+        try {
+            Glide.with(this).clear(binding.ivExercise)
+        } catch (e: Exception) {
+        }
         super.onDestroy()
     }
+
 }

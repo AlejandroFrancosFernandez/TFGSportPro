@@ -33,7 +33,6 @@ class DaysAdapter(
         val context = holder.itemView.context
         holder.btnDay.text = context.getString(R.string.day, day)
 
-        // Define el color base según el nivel
         val baseColorRes = when (level) {
             "low" -> R.color.btn_line_low
             "medium" -> R.color.btn_line_medium
@@ -53,11 +52,11 @@ class DaysAdapter(
         val finalColorRes = if (isCompleted) R.color.diaRealizado else baseColorRes
         holder.imgLine.setColorFilter(ContextCompat.getColor(context, finalColorRes))
 
-        // Asignar el click listener
         holder.btnDay.setOnClickListener {
             onClick(day)
         }
     }
 
     override fun getItemCount(): Int = daysList.size
+
 }

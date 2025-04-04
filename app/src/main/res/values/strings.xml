@@ -35,6 +35,7 @@
     <string name="introduceEmail">Introduce email</string>
     <string name="emailSent">An email has been sent to reset your password.</string>
     <string name="emailCouldNotSent">The email could not be sent. Please check if the email is correct.</string>
+    <string name="emailNotRegistered">The email is not registered.</string>
 
     <!--Traducciones de la página training (fragment-training)-->
     <string name="day">Day %1$d</string>
@@ -103,7 +104,6 @@
     <string name="lateral_Lunges">Lateral Lunges</string>
     <string name="jumping_Lunges">Jumping Lunges</string>
     <string name="crossover_Lunges">Crossover Lunges</string>
-    <string name="fast_Lunges">Fast Lunges</string>
     <string name="reverse_Lunges">Reverse lunges</string>
 
     <string name="heel_Raises">Heel Raises</string>
@@ -116,7 +116,7 @@
     <string name="knee_Push_Ups">Knee Push-Ups</string>
     <string name="controlled_Pushups_Slow">Controlled Push-ups (Slow)</string>
     <string name="clap_Push_Ups">Clap Push-Ups</string>
-    <string name="explosive_Push_Ups">Explosive Push-Ups</string>
+    <string name="cross_body_Push_Ups">Cross-body Push-Ups</string>
     <string name="archer_Push_Ups">Archer Push Ups</string>
 
     <string name="plank">Plank</string>
@@ -124,7 +124,7 @@
     <string name="side_Plank">Side Plank</string>
     <string name="plank_With_Shoulder_Tap">Plank with Shoulder Tap</string>
     <string name="single_Leg_Plank">Single Leg Plank</string>
-    <string name="plank_Alternate_Knee_Taps">Plank with Alternate Knee Taps</string>
+    <string name="reverse_Plank">Reverse Plank</string>
     <string name="lateral_Plank_Walk">Lateral Plank Walk</string>
     <string name="plank_Leg_Raises">Plank Leg Raises</string>
     <string name="plank_One_Arm_Leg">Plank One Arm-Leg</string>
@@ -144,13 +144,14 @@
     <string name="lateral_Squat">Lateral Squat</string>
     <string name="jump_squats">Jump squats</string>
     <string name="bulgarian_split_squat">Bulgarian split squat</string>
-    <string name="isometric_squat">Isometric squat</string>
+    <string name="skater_squat">Skater squat</string>
     <string name="sumo_squat">Sumo squat</string>
     <string name="squat_with_pause">Squat with pause</string>
     <string name="single_leg_squat">Single-leg squat</string>
     <string name="explosive_jump_squat">Explosive jump squat</string>
     <string name="intense_Jumping_Squats">Intense Jumping Squats</string>
     <string name="split_Squat">Split Squat</string>
+    <string name="hawaiian_Squat">Hawaiian Squat</string>
 
     <string name="russian_Twists">Russian Twists</string>
     <string name="weighted_Russian_Twists">Weighted Russian Twists</string>

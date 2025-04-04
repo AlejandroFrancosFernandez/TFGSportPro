@@ -17,6 +17,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Switch
 import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
+import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.adapters.DaysAdapter
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
@@ -108,5 +109,9 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.bNavigation.setOnItemSelectedListener(null)
     }
 }

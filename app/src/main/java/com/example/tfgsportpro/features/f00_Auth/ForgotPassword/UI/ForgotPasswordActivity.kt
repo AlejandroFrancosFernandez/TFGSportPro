@@ -39,16 +39,27 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun recoverPassword(email: String) {
-        firebaseAuth.sendPasswordResetEmail(email)
-            .addOnCompleteListener { task ->
+        firebaseAuth.fetchSignInMethodsForEmail(email).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    // Si se envió con éxito el correo, mostrar mensaje de éxito
-                    showSnackbar(getString(R.string.emailSent))
+                    val signInMethods = task.result?.signInMethods
+                    if (signInMethods.isNullOrEmpty()) {
+                        showSnackbar(getString(R.string.emailNotRegistered))
+                    } else {
+                        firebaseAuth.sendPasswordResetEmail(email)
+                            .addOnCompleteListener { resetTask ->
+                                if (resetTask.isSuccessful) {
+                                    showSnackbar(getString(R.string.emailSent))
+                                } else {
+                                    showSnackbar(getString(R.string.emailCouldNotSent))
+                                }
+                            }
+                    }
                 } else {
                     showSnackbar(getString(R.string.emailCouldNotSent))
                 }
             }
     }
+
 
     private fun showSnackbar(message: String) {
         Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()

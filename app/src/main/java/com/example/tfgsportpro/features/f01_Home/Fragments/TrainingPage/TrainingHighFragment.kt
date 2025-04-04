@@ -12,11 +12,6 @@ import com.example.tfgsportpro.databinding.FragmentTrainingHighBinding
 import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.adapters.DaysAdapter
 import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingSession.RoutineSummaryActivity
 
-/**
- * A simple [Fragment] subclass.
- * Use the [TrainingHighFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TrainingHighFragment : Fragment() {
 
     lateinit var binding: FragmentTrainingHighBinding
