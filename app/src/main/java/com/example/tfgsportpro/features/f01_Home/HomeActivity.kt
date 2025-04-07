@@ -35,17 +35,25 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPref = getSharedPreferences("preferences", Context.MODE_PRIVATE)
-
         loginManager = LoginManager(this)
 
-        //AL cambiat al modo oscuro, se guarda en la página que estás para q no vaya al home automaticamente
         val lastFragmentTag = sharedPref.getString("last_fragment", "TrainingFragment")
         val fragmentToShow = when (lastFragmentTag) {
             "MeFragment" -> MeFragment()
             "ResumeFragment" -> ResumeFragment()
             else -> TrainingFragment()
         }
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, fragmentToShow).commit()
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerView, fragmentToShow)
+            .commit()
+
+        val selectedItemId = when (lastFragmentTag) {
+            "MeFragment" -> R.id.navMe
+            "ResumeFragment" -> R.id.navResume
+            else -> R.id.navTraining
+        }
+        binding.bNavigation.selectedItemId = selectedItemId
 
         val darkMode = sharedPref.getBoolean("dark_mode", false)
         if (darkMode) {
@@ -60,11 +68,20 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bNavigation.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.navTraining -> supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, TrainingFragment()).commit()
-                R.id.navMe -> supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, MeFragment()).commit()
-                R.id.navResume -> supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, ResumeFragment()).commit()
+                R.id.navTraining -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, TrainingFragment()).commit()
+                    true
+                }
+                R.id.navMe -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, MeFragment()).commit()
+                    true
+                }
+                R.id.navResume -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, ResumeFragment()).commit()
+                    true
+                }
+                else -> false
             }
-            true
         }
 
         binding.bFinish.setOnClickListener {
