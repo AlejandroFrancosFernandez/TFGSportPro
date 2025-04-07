@@ -32,7 +32,7 @@ class TrainingMediumFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val daysList = List(15) { it + 1 }
+        val daysList = List(30) { it + 1 }
         val adapter = DaysAdapter(daysList, R.layout.btn_medium_day, "medium" ) { day ->
             val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
             intent.putExtra("level", "medium")

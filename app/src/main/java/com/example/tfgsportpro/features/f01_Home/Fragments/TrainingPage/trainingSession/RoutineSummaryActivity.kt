@@ -30,7 +30,7 @@ class RoutineSummaryActivity : AppCompatActivity() {
         val level = intent.getStringExtra("level") ?: "low"
         val day = intent.getIntExtra("day", -1)
 
-        if (day in 1..15) {
+        if (day in 1..30) {
             loadRoutineDetails(level, day)
         } else {
         }
@@ -84,6 +84,6 @@ class RoutineSummaryActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        binding.bStartRoutine.isEnabled = true  // Reactivar el botón
+        binding.bStartRoutine.isEnabled = true
     }
 }

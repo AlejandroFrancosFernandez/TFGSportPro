@@ -38,7 +38,14 @@ class HomeActivity : AppCompatActivity() {
 
         loginManager = LoginManager(this)
 
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, TrainingFragment()).commit()
+        //AL cambiat al modo oscuro, se guarda en la página que estás para q no vaya al home automaticamente
+        val lastFragmentTag = sharedPref.getString("last_fragment", "TrainingFragment")
+        val fragmentToShow = when (lastFragmentTag) {
+            "MeFragment" -> MeFragment()
+            "ResumeFragment" -> ResumeFragment()
+            else -> TrainingFragment()
+        }
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, fragmentToShow).commit()
 
         val darkMode = sharedPref.getBoolean("dark_mode", false)
         if (darkMode) {
@@ -101,6 +108,16 @@ class HomeActivity : AppCompatActivity() {
         val currentMode = AppCompatDelegate.getDefaultNightMode()
         val editor = sharedPref.edit()
 
+        // Detectar el fragmento actual y guardar una etiqueta
+        val currentFragmentTag = when (supportFragmentManager.findFragmentById(R.id.fragmentContainerView)) {
+            is TrainingFragment -> "TrainingFragment"
+            is MeFragment -> "MeFragment"
+            is ResumeFragment -> "ResumeFragment"
+            else -> "TrainingFragment"
+        }
+        editor.putString("last_fragment", currentFragmentTag)
+
+        // Cambiar el modo
         if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             editor.putBoolean("dark_mode", false)
@@ -111,6 +128,7 @@ class HomeActivity : AppCompatActivity() {
 
         editor.apply()
     }
+
 
     private fun navigateToProfile() {
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, MeFragment()).addToBackStack(null).commit()

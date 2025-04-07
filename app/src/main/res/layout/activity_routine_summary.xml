@@ -79,7 +79,7 @@
                     android:id="@+id/rotutineResume"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Routine Resume"
+                    android:text="@string/routineResume"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 

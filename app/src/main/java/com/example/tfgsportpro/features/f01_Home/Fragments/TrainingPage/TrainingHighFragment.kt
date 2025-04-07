@@ -32,7 +32,7 @@ class TrainingHighFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val daysList = List(15) { it + 1 }
+        val daysList = List(30) { it + 1 }
         val adapter = DaysAdapter(daysList, R.layout.btn_high_day, "high") { day ->
             val intent = Intent(requireContext(), RoutineSummaryActivity::class.java)
             intent.putExtra("level", "high")

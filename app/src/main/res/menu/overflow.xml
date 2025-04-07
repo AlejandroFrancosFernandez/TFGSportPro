@@ -4,16 +4,16 @@
 
     <item
         android:id="@+id/b_profile"
-        android:title="Profile"
+        android:title="@string/b_profile"
         android:icon="@drawable/meicon" />
 
     <item
         android:id="@+id/switchTheme"
-        android:title="Modo Oscuro"
+        android:title="@string/darkMode"
         app:actionViewClass="android.widget.Switch" />
 
     <item
         android:id="@+id/b_logOut"
-        android:title="Log Out"
+        android:title="@string/b_logOut"
         android:icon="@drawable/log_out" />
 </menu>

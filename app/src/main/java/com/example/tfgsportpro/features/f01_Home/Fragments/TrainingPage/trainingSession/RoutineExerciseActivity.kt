@@ -1,11 +1,13 @@
 package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingSession
 
+import android.content.Intent
 import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.tfgsportpro.R
@@ -14,6 +16,7 @@ import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class RoutineExerciseActivity : AppCompatActivity() {
 
@@ -162,15 +165,43 @@ class RoutineExerciseActivity : AppCompatActivity() {
             startExercise(currentExerciseIndex)
         } else {
             Toast.makeText(this, "¡Rutina completada!", Toast.LENGTH_SHORT).show()
+
+            // Obtener UID del usuario actual
             val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
             val day = intent.getIntExtra("day", 1)
             val level = intent.getStringExtra("level") ?: "low"
-            val key = "${currentUserUid}_${level}_day_$day"
+            val completedDate = System.currentTimeMillis() // Fecha y hora actual (timestamp)
+
+            // Crear el objeto de datos de la rutina completada
+            val routineData = hashMapOf(
+                "day" to day,
+                "level" to level,
+                "timestamp" to completedDate
+            )
+
+            // Guardar la rutina completada en Firestore
+            val firestore = FirebaseFirestore.getInstance()
+            firestore.collection("users")
+                .document(currentUserUid)
+                .collection("routines")
+                .add(routineData)
+                .addOnSuccessListener {
+                    // Rutina guardada correctamente en Firestore
+                    println("Rutina completada guardada exitosamente en Firestore.")
+                }
+                .addOnFailureListener { e ->
+                    // Error al guardar la rutina
+                    println("Error al guardar rutina en Firestore: ${e.message}")
+                }
+
+            // Guardar en SharedPreferences
             val sharedPreferences = getSharedPreferences("CompletedDays", MODE_PRIVATE)
+            val key = "${currentUserUid}_${level}_day_$day"
             sharedPreferences.edit().putBoolean(key, true).apply()
             finish()
         }
     }
+
 
     private fun previousExercise() {
         if (currentExerciseIndex > 0) {

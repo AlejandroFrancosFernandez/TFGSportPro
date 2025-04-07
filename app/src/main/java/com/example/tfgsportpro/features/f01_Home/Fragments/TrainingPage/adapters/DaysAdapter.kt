@@ -58,5 +58,4 @@ class DaysAdapter(
     }
 
     override fun getItemCount(): Int = daysList.size
-
 }

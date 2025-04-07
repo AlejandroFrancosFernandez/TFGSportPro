@@ -28,6 +28,8 @@
     <string name="Error_name_cannot_be_empty">Nombre no puede estar vacío.</string>
     <string name="Error_age_cannot_be_empty">Edad no puede estar vacía.</string>
     <string name="Error_creating_user">Error al crear el usuario.</string>
+    <string name="Error_email_not_with_password_provider">Email no registrado con proveedor de contraseña.</string>
+    <string name="Error_verifying_email">Error al verificar el email.</string>
 
     <!--Traducciones de la página Forgot Password-->
     <string name="b_recover">Recuperar</string>
@@ -35,6 +37,11 @@
     <string name="emailSent">Se ha enviado un correo para restablecer tu contraseña.</string>
     <string name="emailCouldNotSent">No se pudo enviar el correo. Verifica si el correo es correcto.</string>
     <string name="emailNotRegistered">El email no está registrado.</string>
+
+    <!--Traducciones del menú overflow-->
+    <string name="b_profile">Perfil</string>"
+    <string name="b_logOut">Cerrar Sesión</string>
+    <string name="switchTheme">Modo Oscuro</string>
 
     <!--Traducciones de la página training (fragment-training)-->
     <string name="day">Día %1$d</string>
@@ -75,6 +82,7 @@
     <string name="totalExercises">Total Ejercicios: %1$d</string>
     <string name="warmUpExercises">Calentamiento</string>
     <string name="mainExercises">Parte Principal</string>
+    <string name="routineResume">Resumen Rutina</string>
 
     <!--Traducciones de los ejercicios RoutineExercise-->
     <string name="b_previous">Anterior</string>
@@ -123,7 +131,6 @@
     <string name="plank_With_Shoulder_Tap">Plancha con toque de hombros</string>
     <string name="single_Leg_Plank">Plancha un Pie</string>
     <string name="reverse_Plank">Plancha Invertida</string>
-    <string name="lateral_Plank_Walk">Plancha con Desplazamiento Lateral</string>
     <string name="plank_Leg_Raises">Elevaciones de pierna en plancha</string>
     <string name="plank_One_Arm_Leg">Plancha un brazo-pierna</string>
 
@@ -144,7 +151,7 @@
     <string name="bulgarian_split_squat">Sentadilla Búlgara</string>
     <string name="skater_squat">Sentadilla Skater</string>
     <string name="sumo_squat">Sentadilla Sumo</string>
-    <string name="squat_with_pause">Sentadilla con Pausa</string>
+    <string name="shrimp_Squat">Sentadilla Talon Elevado</string>
     <string name="single_leg_squat">Sentadilla a un Pie</string>
     <string name="explosive_jump_squat">Sentadilla con Salto Explosivo</string>
     <string name="intense_Jumping_Squats">Sentadilla intensa</string>
@@ -155,6 +162,8 @@
     <string name="weighted_Russian_Twists">Giros Rusos con Peso</string>
 
     <string name="burpees">Burpees</string>
+    <string name="navy_Seal_Burpee">Navy Seal Burpee</string>
+
     <string name="climbers">Escalador</string>
     <string name="dead_Bug">Insecto Muerto</string>
     <string name="sprint_In_Place">Sprint en el Sitio</string>

@@ -29,6 +29,8 @@
     <string name="Error_name_cannot_be_empty">Name cannot be empty.</string>
     <string name="Error_age_cannot_be_empty">Age cannot be empty.</string>
     <string name="Error_creating_user">Error creating user.</string>
+    <string name="Error_email_not_with_password_provider">Email not registered with password provider.</string>
+    <string name="Error_verifying_email">Error verifying email.</string>
 
     <!--Traducciones de la página Forgot Password-->
     <string name="b_recover">Recover</string>
@@ -36,6 +38,11 @@
     <string name="emailSent">An email has been sent to reset your password.</string>
     <string name="emailCouldNotSent">The email could not be sent. Please check if the email is correct.</string>
     <string name="emailNotRegistered">The email is not registered.</string>
+
+    <!--Traducciones del menú overflow-->
+    <string name="b_profile">Profile</string>"
+    <string name="b_logOut">Log Out</string>
+    <string name="switchTheme">Dark Mode</string>
 
     <!--Traducciones de la página training (fragment-training)-->
     <string name="day">Day %1$d</string>
@@ -77,6 +84,7 @@
     <string name="totalExercises">Total Exercises: %1$d</string>
     <string name="warmUpExercises">Warm-Up</string>
     <string name="mainExercises">Main Exercises</string>
+    <string name="routineResume">Routine Resume</string>
 
     <!--Traducciones de los ejercicios RoutineExercise-->
     <string name="b_previous">Back</string>
@@ -125,7 +133,6 @@
     <string name="plank_With_Shoulder_Tap">Plank with Shoulder Tap</string>
     <string name="single_Leg_Plank">Single Leg Plank</string>
     <string name="reverse_Plank">Reverse Plank</string>
-    <string name="lateral_Plank_Walk">Lateral Plank Walk</string>
     <string name="plank_Leg_Raises">Plank Leg Raises</string>
     <string name="plank_One_Arm_Leg">Plank One Arm-Leg</string>
 
@@ -146,7 +153,7 @@
     <string name="bulgarian_split_squat">Bulgarian split squat</string>
     <string name="skater_squat">Skater squat</string>
     <string name="sumo_squat">Sumo squat</string>
-    <string name="squat_with_pause">Squat with pause</string>
+    <string name="shrimp_Squat">Shrimp Squat</string>
     <string name="single_leg_squat">Single-leg squat</string>
     <string name="explosive_jump_squat">Explosive jump squat</string>
     <string name="intense_Jumping_Squats">Intense Jumping Squats</string>
@@ -157,6 +164,8 @@
     <string name="weighted_Russian_Twists">Weighted Russian Twists</string>
 
     <string name="burpees">Burpees</string>
+    <string name="navy_Seal_Burpee">Navy Seal Burpee</string>
+
     <string name="climbers">Climbers</string>
     <string name="dead_Bug">Dead Bug</string>
     <string name="sprint_In_Place">Sprint in Place</string>

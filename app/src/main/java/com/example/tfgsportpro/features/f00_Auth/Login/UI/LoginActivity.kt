@@ -35,10 +35,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Inicializar el LoginManager
         loginManager = LoginManager(this)
 
-        // Verificar si el usuario ya está autenticado
         loginManager.checkIfUserLoggedIn { isLoggedIn ->
             if (isLoggedIn) {
                 showHomeActivity()
@@ -46,17 +44,22 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.bRegisterenviar.setOnClickListener {
+            binding.bRegisterenviar.isEnabled = false
+
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         binding.bLogin.setOnClickListener {
+            binding.bLogin.isEnabled = false
+
             val email = binding.tietEmail.text.toString()
             val password = binding.tietPassword.text.toString()
             loginManager.loginWithEmailAndPassword(email, password) { success ->
                 if (success) {
                     showHomeActivity()
                 } else {
+                    binding.bLogin.isEnabled = true
                     val message = getString(R.string.errorloginmessage)
                     showAlert(message)
                 }
@@ -64,6 +67,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.bGoogle.setOnClickListener {
+            binding.bGoogle.isEnabled = false
+
             val credentialManager = CredentialManager.create(this)
             val signInOption = GetSignInWithGoogleOption.Builder(getString(R.string.web_client))
                 .setNonce("nonce")
@@ -73,6 +78,7 @@ class LoginActivity : AppCompatActivity() {
                 if (success) {
                     showHomeActivity()
                 } else {
+                    binding.bGoogle.isEnabled = true
                     val message = getString(R.string.errorloginGooglemessage)
                     showAlert(message)
                 }
