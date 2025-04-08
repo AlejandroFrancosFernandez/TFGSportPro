@@ -103,26 +103,22 @@ class RoutineExerciseActivity : AppCompatActivity() {
         if (index in routine.indices) {
             val exercise = routine[index]
 
-            // Actualizar el nombre del ejercicio en el TextView
             binding.tvExerciseName.text = getString(exercise.nombreResId)
 
-            // Asegurarse de que el ImageView sea visible antes de cargar el GIF del ejercicio
             binding.ivExercise.visibility = View.VISIBLE
 
-            // Cargar el GIF en el ImageView si el GIF está disponible
             if (exercise.gifResId != null) {
                 Glide.with(this)
                     .load(exercise.gifResId)
                     .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .skipMemoryCache(true)
-                    .into(binding.ivExercise)  // Establecer en el ImageView
+                    .into(binding.ivExercise)
             } else {
                 // Si no hay GIF, puedes colocar una imagen predeterminada o dejar el ImageView vacío
                 Glide.with(this)
                     .clear(binding.ivExercise)  // Limpiar la imagen si no hay GIF
             }
 
-            // Configurar la duración del ejercicio (convertir segundos a milisegundos)
             timeLeft = exercise.duracion * 1000L
             updateTimerText()
             startTimer()
@@ -181,7 +177,7 @@ class RoutineExerciseActivity : AppCompatActivity() {
 
             // Guardar la rutina completada en Firestore
             val firestore = FirebaseFirestore.getInstance()
-            firestore.collection("users")
+            firestore.collection("User")
                 .document(currentUserUid)
                 .collection("routines")
                 .add(routineData)
