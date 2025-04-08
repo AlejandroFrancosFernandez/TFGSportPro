@@ -21,6 +21,10 @@
     <string name="low">Low (&lt;3 Hours)</string>
     <string name="medium">Medium (3-6 Hours)</string>
     <string name="high">High (&gt;6 Hours)</string>
+    <string name="verification_Completed">Verification Completed</string>
+    <string name="verification_Email">Your email has been verified. You can now log in.</string>
+    <string name="verification_Required">Verification required</string>
+    <string name="email_Sent">We have sent a verification email. Please check your inbox and confirm your email before logging in.</string>
 
     <!--Errores-->
     <string name="Error_invalid_Email">Invalid email</string>
@@ -177,4 +181,8 @@
     <string name="knee_Raises_Plank">Knee Raises Plank</string>
     <string name="waist_Rotation">Waist Rotation</string>
 
+    <!--Pagina RoutineSummary-->
+    <string name="routines_completed">Routines Completed: </string>
+    <string name="day_level">Day %1$d \nLevel %2$s</string>
+    <string name="date">\nDate: %1$s</string>
 </resources>

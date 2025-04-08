@@ -6,8 +6,9 @@
 
     <!-- Tema para el Splash -->
     <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash</item>  <!-- Fondo del Splash -->
-        <item name="android:statusBarColor">@android:color/transparent</item> <!-- Barra de estado transparente -->
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowSplashScreenBackground">#1D1D1D</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <!-- Tema para MainActivity -->

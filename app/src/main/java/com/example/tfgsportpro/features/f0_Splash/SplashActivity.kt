@@ -13,10 +13,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        //Poner 2 segundos de SplashScreen
+        //Poner la SplashScreen
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-        }, 2000)
+        }, 1500)
     }
 }

@@ -91,10 +91,11 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
     }
 
+    //Items del menú 3 puntos de arriba
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.overflow, menu)
 
-        val textColor = ContextCompat.getColor(this, R.color.colorLetra) // Obtener el color correcto
+        val textColor = ContextCompat.getColor(this, R.color.colorLetra)
 
         for (i in 0 until (menu?.size() ?: 0)) {
             val menuItem = menu?.getItem(i)
@@ -125,7 +126,6 @@ class HomeActivity : AppCompatActivity() {
         val currentMode = AppCompatDelegate.getDefaultNightMode()
         val editor = sharedPref.edit()
 
-        // Detectar el fragmento actual y guardar una etiqueta
         val currentFragmentTag = when (supportFragmentManager.findFragmentById(R.id.fragmentContainerView)) {
             is TrainingFragment -> "TrainingFragment"
             is MeFragment -> "MeFragment"
@@ -134,7 +134,6 @@ class HomeActivity : AppCompatActivity() {
         }
         editor.putString("last_fragment", currentFragmentTag)
 
-        // Cambiar el modo
         if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             editor.putBoolean("dark_mode", false)

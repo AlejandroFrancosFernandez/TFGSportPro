@@ -21,6 +21,11 @@
     <string name="low">Bajo (&lt;3 Hours)</string>
     <string name="medium">Medio (3-6 Hours)</string>
     <string name="high">Alto (&gt;6 Hours)</string>
+    <string name="verification_Completed">Verificación completada</string>
+    <string name="verification_Email">Tu correo ha sido verificado. Ahora puedes iniciar sesión.</string>
+    <string name="verification_Required">Verificación requerida</string>
+    <string name="email_Sent">Hemos enviado un correo de verificación. Por favor, revisa tu bandeja de entrada y confirma tu email antes de iniciar sesión.</string>
+
     <!--Errores-->
     <string name="Error_invalid_Email">Email inválido</string>
     <string name="Error_at_Least_6_Characters">Debe tener al menos 6 caracteres.</string>
@@ -176,4 +181,7 @@
     <string name="waist_Rotation">Rotación de Cintura</string>
 
     <!--Pagina RoutineSummary-->
+    <string name="routines_completed">Rutinas completada: </string>
+    <string name="day_level">Día %1$d \nNivel %2$s</string>
+    <string name="date">\nFecha: %1$s</string>
 </resources>

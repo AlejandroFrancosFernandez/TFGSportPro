@@ -3,7 +3,7 @@ package com.example.tfgsportpro.features.f00_Auth.Register.UseCase
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
-import android.util.Log
+import com.example.tfgsportpro.R
 import com.example.tfgsportpro.features.f00_Auth.Register.Data.UserPreferences
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -46,16 +46,14 @@ class RegisterManager(private val context: Context) {
                                 if (verifyTask.isSuccessful) {
                                     insertUserIntoFirestore(user.uid, email, name, age, physicalLevel)
                                     notifyUserToCheckEmail()
-                                    waitForEmailVerification(user, onComplete) // Esperar verificación
+                                    waitForEmailVerification(user, onComplete)
                                 } else {
-                                    Log.e("FirebaseError", "Error al enviar email", verifyTask.exception)
                                     onComplete(false)
                                 }
                             }
                     }
                 } else {
                     hideLoading()
-                    Log.e("FirebaseError", "Error en el registro", task.exception)
                     onComplete(false)
                 }
             }
@@ -71,21 +69,14 @@ class RegisterManager(private val context: Context) {
                     if (user.isEmailVerified) {
                         db.collection("User").document(user.uid)
                             .update("verified", true)
-                            .addOnSuccessListener {
-                                Log.d("Firestore", "Usuario actualizado como verificado en Firestore ✅")
-                            }
-                            .addOnFailureListener {
-                                Log.e("Firestore", "Error al actualizar usuario", it)
-                            }
 
                         AlertDialog.Builder(context)
-                            .setTitle("Verificación completada")
-                            .setMessage("Tu correo ha sido verificado. Ahora puedes iniciar sesión.")
+                            .setTitle(R.string.verification_Completed)
+                            .setMessage(R.string.verification_Email)
                             .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
                             .show()
                         onComplete(true)
                     } else {
-                        Log.d("FirebaseDebug", "Correo aún no verificado. Reintentando...")
                         handler.postDelayed(this, checkInterval)
                     }
                 }
@@ -110,18 +101,12 @@ class RegisterManager(private val context: Context) {
 
         db.collection("User").document(uid)
             .set(userData)
-            .addOnSuccessListener {
-                Log.d("Firestore", "Usuario guardado en Firestore correctamente ✅")
-            }
-            .addOnFailureListener {
-                Log.e("Firestore", "Error al guardar usuario", it)
-            }
     }
 
     private fun notifyUserToCheckEmail() {
         AlertDialog.Builder(context)
-            .setTitle("Verificación requerida")
-            .setMessage("Hemos enviado un correo de verificación. Por favor, revisa tu bandeja de entrada y confirma tu email antes de iniciar sesión.")
+            .setTitle(R.string.verification_Required)
+            .setMessage(R.string.email_Sent)
             .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
             .show()
     }
