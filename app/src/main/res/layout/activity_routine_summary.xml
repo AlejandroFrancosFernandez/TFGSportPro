@@ -160,7 +160,8 @@
                 android:text="@string/b_start"
                 android:textAllCaps="false"
                 android:textColor="@color/colorLetra"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:stateListAnimator="@animator/animator_btn_days"/>
         </LinearLayout>
     </ScrollView>
 

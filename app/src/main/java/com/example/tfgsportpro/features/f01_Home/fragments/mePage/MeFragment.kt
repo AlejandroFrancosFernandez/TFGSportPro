@@ -37,27 +37,25 @@ class MeFragment : Fragment() {
                     if (age != null) {
                         binding.tvAge.text = age
                     } else {
-                        binding.tvAge.text = "Edad no disponible"
+                        binding.tvAge.text = getString(R.string.age_not_available)
                     }
 
                     val physicalLevel = document.getString("PhysicalLevel")
                     if (physicalLevel != null) {
                         binding.tvPhysicallevel.text = physicalLevel
                     } else {
-                        binding.tvPhysicallevel.text = "Nivel físico no disponible"
+                        binding.tvPhysicallevel.text = getString(R.string.physical_activity_not_available)
                     }
 
                     val streak = document.getLong("streak") ?: 0
-                    binding.RachaDias.text = "Racha de días consecutivos: $streak"
+                    val streakText = binding.root.context.getString(R.string.consecutive_daysStreak, streak)
+
+                    binding.RachaDias.text = streakText
                 } else {
                     binding.tvAge.text = "Not found"
                     binding.tvPhysicallevel.text = "Not found"
                 }
-            }.addOnFailureListener { exception ->
-                binding.tvAge.text = "Error loading data"
-                binding.tvPhysicallevel.text = "Error loading data"
             }
-
         } else {
             binding.tvName.text = getString(R.string.infoNotauthenticated)
             binding.tvEmail.text = getString(R.string.infoNotauthenticated)

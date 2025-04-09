@@ -18,37 +18,29 @@
     <color name="button_bg">#222222</color>
     <color name="sesionButton_bg">#2C2C2C</color>
     <color name="button_border">#A7D8FF</color>
-    <color name="icon_unselected">#808080</color>
     <color name="dark_blue">#4F8AA1</color>
-
 
     <!--Colores diferentes niveles-->
     <!-- Colores Low Level -->
     <color name="card_low">#4F8AA1</color>
-    <!--Degradado colores botones-->
     <color name="firstColorButtonOddLow">#7AB4D3</color>
     <color name="firstColorButtonEvenLow">#92C8E2</color>
     <color name="secondColorButtonLow">#003D59</color>
     <color name="btn_line_low">#6B9DAF</color>
 
-
     <!-- Colores MEDIUM Level -->
     <color name="card_medium">#D77C10</color>
-    <!--Degradado colores botones-->
     <color name="firstColorButtonOddMedium">#F39C12</color>
     <color name="firstColorButtonEvenMedium">#F49B2A</color>
     <color name="secondColorButtonMedium">#4A2C00</color>
     <color name="btn_line_medium">#F39C12</color>
 
-
     <!-- Colores HIGH Level -->
     <color name="card_high">#D24D2A</color>
-    <!--Degradado colores botones-->
     <color name="firstColorButtonOddHigh">#FF5733</color>
     <color name="firstColorButtonEvenHigh">#FF6F4D </color>
     <color name="secondColorButtonHigh">#5D0000</color>
     <color name="btn_line_high">#D24D2A</color>
-
 
 
     <color name="fondoAplicacion">#1D1D1D</color>

@@ -5,7 +5,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_dark">#FFFFFF</color>
 
-    <!-- Varias tonalidades claras (sustituyendo tus grises oscuros) -->
+    <!-- Varias tonalidades claras -->
     <color name="DarkGrey">#F3F3F3</color>
     <color name="plata">#C0C0C0</color>
     <color name="azulnavigation">#5F9EA0</color>
@@ -13,14 +13,11 @@
     <color name="text_primary">#000000</color>
     <color name="text_secondary">#4F8AA1</color>
 
-    <!-- Colores de botones en modo claro (fondo claro, bordes oscuros o de acento) -->
+    <!-- Colores de botones en modo claro -->
     <color name="button_bg">#EEEEEE</color>
     <color name="sesionButton_bg">#F5F5F5</color>
     <color name="button_border">#4F8AA1</color>
     <color name="diaRealizado">#4C9C6F</color>
-
-    <!-- Iconos no seleccionados (puedes mantenerlo gris) -->
-    <color name="icon_unselected">#808080</color>
 
     <!-- Un azul de acento, si lo usas en modo claro -->
     <color name="dark_blue">#4F8AA1</color>
@@ -40,14 +37,12 @@
     <color name="secondColorButtonMedium">#4A2C00</color>
     <color name="btn_line_medium">#F39C12</color>
 
-
     <!-- High Level -->
     <color name="card_high">#D24D2A</color>
     <color name="firstColorButtonOddHigh">#FF5733</color>
     <color name="firstColorButtonEvenHigh">#FF6F4D</color>
     <color name="secondColorButtonHigh">#5D0000</color>
     <color name="btn_line_high">#D24D2A</color>
-
 
 
     <color name="fondoAplicacion">#F1F1F1</color>

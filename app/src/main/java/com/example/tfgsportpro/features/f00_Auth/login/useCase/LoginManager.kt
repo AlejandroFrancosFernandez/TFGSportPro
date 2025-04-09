@@ -79,8 +79,39 @@ class LoginManager(private val context: Context) {
                 val authCredential = GoogleAuthProvider.getCredential(googleIdTokenCredential.idToken, null)
 
                 FirebaseAuth.getInstance().signInWithCredential(authCredential)
-                    .addOnCompleteListener {
-                        onComplete(it.isSuccessful)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val user = FirebaseAuth.getInstance().currentUser
+                            user?.let {
+                                val email = it.email
+                                val name = it.displayName
+
+                                val db = FirebaseFirestore.getInstance()
+                                val userDocRef = db.collection("User").document(it.uid)
+
+                                userDocRef.get().addOnSuccessListener { document ->
+                                    if (!document.exists()) {
+                                        val userData = hashMapOf(
+                                            "Email" to email,
+                                            "Name" to name,
+                                            "registrationDate" to Calendar.getInstance().time,
+                                            "lastLoginDate" to Calendar.getInstance().time,
+                                            "streak" to 0L
+                                        )
+                                        // Insertar datos del usuario en Firestore
+                                        userDocRef.set(userData).addOnSuccessListener {
+                                            onComplete(true)
+                                        }.addOnFailureListener {
+                                            onComplete(false)
+                                        }
+                                    } else {
+                                        onComplete(true)
+                                    }
+                                }
+                            }
+                        } else {
+                            onComplete(false)
+                        }
                     }
             } catch (e: GoogleIdTokenParsingException) {
                 onComplete(false)

@@ -72,6 +72,9 @@
     <string name="infoProfile">Profile</string>
     <string name="infoNotauthenticated">Not authenticated</string>
     <string name="darkMode">Dark Mode</string>
+    <string name="consecutive_daysStreak">Consecutive days streak: %1$d</string>
+    <string name="age_not_available">Age not available</string>
+    <string name="physical_activity_not_available">Physical activity not available</string>
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Loading Email… </string>
     <string name="loadingName">Loading Name… </string>

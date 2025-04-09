@@ -72,6 +72,10 @@
     <string name="infoProfile">Perfil</string>
     <string name="infoNotauthenticated">No autentificado</string>
     <string name="darkMode">Modo Oscuro</string>
+    <string name="consecutive_daysStreak">Racha de días consecutivos: %1$d</string>
+    <string name="age_not_available">Edad no disponible</string>
+    <string name="physical_activity_not_available">Actividad física no disponible</string>
+
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Cargando Email… </string>
     <string name="loadingName">Cargando Name… </string>
