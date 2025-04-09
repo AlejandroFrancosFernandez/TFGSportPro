@@ -21,12 +21,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 class RoutineExerciseActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRoutineExerciseBinding
-
-    // Lista de ejercicios para la rutina actual
+    private var countdownAnimationTimer: CountDownTimer? = null
     private lateinit var routine: List<Exercise>
     private var currentExerciseIndex = 0
-
-    // Timer para el ejercicio actual
     private var countDownTimer: CountDownTimer? = null
     private var timeLeft: Long = 0L
 
@@ -78,23 +75,23 @@ class RoutineExerciseActivity : AppCompatActivity() {
 
     // Método para mostrar la animación de cuenta atrás
     private fun showCountdownAnimation() {
-        Glide.with(this)
-            .asGif()
-            .load(R.drawable.cargarutina)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .skipMemoryCache(true)
-            .into(binding.ivExercise)
+        if (!isDestroyed && !isFinishing) {
+            Glide.with(this)
+                .asGif()
+                .load(R.drawable.cargarutina)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(binding.ivExercise)
+        }
 
-        // Configurar un timer para esperar antes de empezar la rutina
-        object : CountDownTimer(6000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-            }
+        countdownAnimationTimer = object : CountDownTimer(5000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {}
 
             override fun onFinish() {
-                // Después de 5 segundos, ocultar la animación de cuenta atrás
-                binding.ivExercise.visibility = View.GONE  // Ocultar el ImageView con el GIF
-
-                startExercise(currentExerciseIndex)
+                if (!isDestroyed && !isFinishing) {
+                    binding.ivExercise.visibility = View.GONE
+                    startExercise(currentExerciseIndex)
+                }
             }
         }.start()
     }
@@ -181,16 +178,7 @@ class RoutineExerciseActivity : AppCompatActivity() {
                 .document(currentUserUid)
                 .collection("routines")
                 .add(routineData)
-                .addOnSuccessListener {
-                    // Rutina guardada correctamente en Firestore
-                    println("Rutina completada guardada exitosamente en Firestore.")
-                }
-                .addOnFailureListener { e ->
-                    // Error al guardar la rutina
-                    println("Error al guardar rutina en Firestore: ${e.message}")
-                }
 
-            // Guardar en SharedPreferences
             val sharedPreferences = getSharedPreferences("CompletedDays", MODE_PRIVATE)
             val key = "${currentUserUid}_${level}_day_$day"
             sharedPreferences.edit().putBoolean(key, true).apply()
@@ -209,11 +197,13 @@ class RoutineExerciseActivity : AppCompatActivity() {
     override fun onDestroy() {
         countDownTimer?.cancel()
         countDownTimer = null
+
+        countdownAnimationTimer?.cancel()
+        countdownAnimationTimer = null
+
         try {
             Glide.with(this).clear(binding.ivExercise)
-        } catch (e: Exception) {
-        }
+        } catch (e: Exception) {}
         super.onDestroy()
     }
-
 }
