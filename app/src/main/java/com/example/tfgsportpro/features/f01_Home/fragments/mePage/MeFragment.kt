@@ -1,16 +1,12 @@
 package com.example.tfgsportpro.features.f01_Home.fragments.mePage
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.FragmentMeBinding
-import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

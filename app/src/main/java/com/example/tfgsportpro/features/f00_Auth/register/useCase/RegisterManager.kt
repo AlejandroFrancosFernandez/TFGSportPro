@@ -1,10 +1,10 @@
-package com.example.tfgsportpro.features.f00_Auth.Register.UseCase
+package com.example.tfgsportpro.features.f00_Auth.register.useCase
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
 import com.example.tfgsportpro.R
-import com.example.tfgsportpro.features.f00_Auth.Register.Data.UserPreferences
+import com.example.tfgsportpro.features.f00_Auth.register.data.UserPreferences
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.ktx.firestore

@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +17,7 @@
         android:theme="@style/Theme.TFGSportPro"
         tools:targetApi="31" >
         <activity
-            android:name=".features.f00_Auth.ForgotPassword.UI.ForgotPasswordActivity"
+            android:name=".features.f00_Auth.forgotPassword.ui.ForgotPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".features.f01_Home.fragments.trainingPage.trainingSession.RoutineExerciseActivity"
@@ -29,7 +29,7 @@
             android:name=".features.f01_Home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".features.f00_Auth.Register.UI.RegisterActivity"
+            android:name=".features.f00_Auth.register.ui.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".features.f0_Splash.SplashActivity"
@@ -40,9 +40,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- MainActivity después del Splash -->
+        </activity>
         <activity
-            android:name=".features.f00_Auth.Login.UI.LoginActivity"
+            android:name=".features.f00_Auth.login.ui.LoginActivity"
             android:theme="@style/Theme.TFGSportPro" />
     </application>
 

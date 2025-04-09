@@ -3,7 +3,6 @@ package com.example.tfgsportpro.features.f01_Home
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -14,15 +13,12 @@ import com.example.tfgsportpro.databinding.ActivityHomeBinding
 import com.example.tfgsportpro.features.f01_Home.fragments.resumePage.ResumeFragment
 import com.example.tfgsportpro.features.f01_Home.fragments.mePage.MeFragment
 import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.TrainingFragment
-import com.example.tfgsportpro.features.f00_Auth.Login.UseCase.LoginManager
+import com.example.tfgsportpro.features.f00_Auth.login.useCase.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Switch
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.toColor
-import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
-import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.adapters.DaysAdapter
+import com.example.tfgsportpro.features.f00_Auth.login.ui.LoginActivity
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding

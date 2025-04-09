@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f00_Auth.Login.UI
+package com.example.tfgsportpro.features.f00_Auth.login.ui
 
 import android.content.Context
 import android.content.Intent
@@ -7,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.credentials.CredentialManager
 import com.example.tfgsportpro.R
-import com.example.tfgsportpro.features.f01_Home.HomeActivity
-import com.example.tfgsportpro.features.f00_Auth.Register.UI.RegisterActivity
-import com.example.tfgsportpro.features.f00_Auth.Login.UseCase.LoginManager
 import com.example.tfgsportpro.databinding.ActivityLoginBinding
-import com.example.tfgsportpro.features.f00_Auth.ForgotPassword.UI.ForgotPasswordActivity
+import com.example.tfgsportpro.features.f00_Auth.forgotPassword.ui.ForgotPasswordActivity
+import com.example.tfgsportpro.features.f00_Auth.login.useCase.LoginManager
+import com.example.tfgsportpro.features.f00_Auth.register.ui.RegisterActivity
+import com.example.tfgsportpro.features.f01_Home.HomeActivity
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.material.snackbar.Snackbar
 
@@ -21,10 +21,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginManager: LoginManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         val sharedPref = getSharedPreferences("preferences", Context.MODE_PRIVATE)
         val isDarkMode = sharedPref.getBoolean("dark_mode", false)
-
         if (isDarkMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else {
@@ -45,16 +43,15 @@ class LoginActivity : AppCompatActivity() {
 
         binding.bRegisterenviar.setOnClickListener {
             binding.bRegisterenviar.isEnabled = false
-
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         binding.bLogin.setOnClickListener {
             binding.bLogin.isEnabled = false
-
             val email = binding.tietEmail.text.toString()
             val password = binding.tietPassword.text.toString()
+
             loginManager.loginWithEmailAndPassword(email, password) { success ->
                 if (success) {
                     showHomeActivity()
@@ -85,11 +82,11 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        // Botón de "¿Olvidaste tu contraseña?"
         binding.bForgetPassword.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     private fun showHomeActivity() {

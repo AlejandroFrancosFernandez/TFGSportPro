@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f00_Auth.Register.UI
+package com.example.tfgsportpro.features.f00_Auth.register.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tfgsportpro.R
-import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
-import com.example.tfgsportpro.features.f00_Auth.Register.UseCase.RegisterManager
+import com.example.tfgsportpro.features.f00_Auth.login.ui.LoginActivity
+import com.example.tfgsportpro.features.f00_Auth.register.useCase.RegisterManager
 import com.example.tfgsportpro.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.tfgsportpro.features.f00_Auth.Login.Data
+package com.example.tfgsportpro.features.f00_Auth.login.data
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -8,7 +8,7 @@
     <!--Traducciones de la página inicio sesion (activity-main)-->
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
-    <string name="b_login">Iniciar Sesión</string>
+    <string name="b_login">Iniciar\nSesión</string>
     <string name="b_register">Registrarse</string>
     <string name="infoForgotPassword">Olvidaste la contraseña?</string>
     <string name="b_forgotPassword">Click aquí.</string>
@@ -19,7 +19,7 @@
     <string name="age">Edad</string>
     <string name="infoPhysicalLevel">Selecciona tu nivel de actividad física (semanal):</string>
     <string name="low">Bajo (&lt;3 Hours)</string>
-    <string name="medium">Medio (3-6 Hours)</string>
+    <string name="medium">Medio (3–6 Hours)</string>
     <string name="high">Alto (&gt;6 Hours)</string>
     <string name="verification_Completed">Verificación completada</string>
     <string name="verification_Email">Tu correo ha sido verificado. Ahora puedes iniciar sesión.</string>
@@ -38,10 +38,12 @@
 
     <!--Traducciones de la página Forgot Password-->
     <string name="b_recover">Recuperar</string>
-    <string name="introduceEmail">Introduce tu email</string>
+    <string name="introduceEmail">Dirección Email</string>
     <string name="emailSent">Se ha enviado un correo para restablecer tu contraseña.</string>
     <string name="emailCouldNotSent">No se pudo enviar el correo. Verifica si el correo es correcto.</string>
     <string name="emailNotRegistered">El email no está registrado.</string>
+    <string name="reset_Password"> Restablecer Contraseña</string>
+    <string name="info_resetPassword">Introduce tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</string>
 
     <!--Traducciones del menú overflow-->
     <string name="b_profile">Perfil</string>"
@@ -71,12 +73,13 @@
     <string name="infoNotauthenticated">No autentificado</string>
     <string name="darkMode">Modo Oscuro</string>
     <!--Cargandos pagina Me-->
-    <string name="loadingEmail">Cargando Email... </string>
-    <string name="loadingName">Cargando Name... </string>
-    <string name="loadingAge">Cargando Age...</string>
-    <string name="loadingPhysicalActivity">Cargando Physical Activity...</string>
+    <string name="loadingEmail">Cargando Email… </string>
+    <string name="loadingName">Cargando Name… </string>
+    <string name="loadingAge">Cargando Age…</string>
+    <string name="loadingPhysicalActivity">Cargando Physical Activity…</string>
 
-    <string name="web_client">822139675954-mrsfojbrgg27u5sgtvvh6enic2u3hoo8.apps.googleusercontent.com</string>
+    <!--Token Google para el login-->
+    <string name="web_client">147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com</string>
 
     <string name="errorloginmessage">Credenciales invalidas</string>
     <string name="errorloginGooglemessage">Error al logear con Google.</string>

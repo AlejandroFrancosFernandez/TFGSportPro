@@ -19,7 +19,7 @@
     <string name="age">Age</string>
     <string name="infoPhysicalLevel">Select your physical activity (week):</string>
     <string name="low">Low (&lt;3 Hours)</string>
-    <string name="medium">Medium (3-6 Hours)</string>
+    <string name="medium">Medium (3–6 Hours)</string>
     <string name="high">High (&gt;6 Hours)</string>
     <string name="verification_Completed">Verification Completed</string>
     <string name="verification_Email">Your email has been verified. You can now log in.</string>
@@ -38,10 +38,12 @@
 
     <!--Traducciones de la página Forgot Password-->
     <string name="b_recover">Recover</string>
-    <string name="introduceEmail">Introduce email</string>
+    <string name="introduceEmail">Email address</string>
     <string name="emailSent">An email has been sent to reset your password.</string>
     <string name="emailCouldNotSent">The email could not be sent. Please check if the email is correct.</string>
     <string name="emailNotRegistered">The email is not registered.</string>
+    <string name="reset_Password">Reset Password</string>
+    <string name="info_resetPassword">Enter your email address and we´ll send you a link to reset your password</string>
 
     <!--Traducciones del menú overflow-->
     <string name="b_profile">Profile</string>"
@@ -71,10 +73,10 @@
     <string name="infoNotauthenticated">Not authenticated</string>
     <string name="darkMode">Dark Mode</string>
     <!--Cargandos pagina Me-->
-    <string name="loadingEmail">Loading Email... </string>
-    <string name="loadingName">Loading Name... </string>
-    <string name="loadingAge">Loading Age...</string>
-    <string name="loadingPhysicalActivity">Loading Physical Activity...</string>
+    <string name="loadingEmail">Loading Email… </string>
+    <string name="loadingName">Loading Name… </string>
+    <string name="loadingAge">Loading Age…</string>
+    <string name="loadingPhysicalActivity">Loading Physical Activity…</string>
 
     <!--Token Google para el login-->
     <string name="web_client">147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com</string>

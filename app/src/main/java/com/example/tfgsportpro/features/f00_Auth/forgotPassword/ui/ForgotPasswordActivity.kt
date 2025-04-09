@@ -1,14 +1,9 @@
-package com.example.tfgsportpro.features.f00_Auth.ForgotPassword.UI
+package com.example.tfgsportpro.features.f00_Auth.forgotPassword.ui
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityForgotPasswordBinding
-import com.example.tfgsportpro.features.f00_Auth.Login.UI.LoginActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 

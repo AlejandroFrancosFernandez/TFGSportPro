@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="30dp"
@@ -26,12 +27,13 @@
         android:id="@+id/btnDay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="false"
         android:text="Day X"
         android:textAlignment="textStart"
         android:textColor="@color/colorLetra"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@android:color/transparent"
-        android:clickable="false" />
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

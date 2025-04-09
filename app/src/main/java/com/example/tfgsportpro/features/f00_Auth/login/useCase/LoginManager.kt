@@ -1,11 +1,11 @@
-package com.example.tfgsportpro.features.f00_Auth.Login.UseCase
+package com.example.tfgsportpro.features.f00_Auth.login.useCase
 
 import android.content.Context
 import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.GetCredentialResponse
-import com.example.tfgsportpro.features.f00_Auth.Login.Data.UserPreferences
+import com.example.tfgsportpro.features.f00_Auth.login.data.UserPreferences
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
@@ -23,27 +23,21 @@ class LoginManager(private val context: Context) {
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private val sharedPreferences: UserPreferences = UserPreferences(context)
 
-    // Verificar si el usuario ya está autenticado
     fun checkIfUserLoggedIn(onLoggedIn: (Boolean) -> Unit) {
         val currentUser = auth.currentUser
         onLoggedIn(currentUser != null)
     }
 
-    // Iniciar sesión con correo y contraseña
     fun loginWithEmailAndPassword(email: String, password: String, onComplete: (Boolean) -> Unit) {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        // Guardamos el email en SharedPreferences
                         saveEmailInPreferences(email)
-
-                        // Actualizamos la racha de días consecutivos conectados
                         val user = FirebaseAuth.getInstance().currentUser
                         user?.uid?.let { uid ->
                             updateStreak(uid)
                         }
-
                         onComplete(true)
                     } else {
                         onComplete(false)
@@ -69,9 +63,7 @@ class LoginManager(private val context: Context) {
 
         CoroutineScope(Dispatchers.Main).launch {
             try {
-                // Intentar obtener las credenciales
-                val result: GetCredentialResponse =
-                    credentialManager.getCredential(context, request)
+                val result: GetCredentialResponse = credentialManager.getCredential(context, request)
                 handleGoogleSignIn(result, onComplete)
             } catch (e: androidx.credentials.exceptions.GetCredentialException) {
                 onComplete(false)
@@ -81,12 +73,10 @@ class LoginManager(private val context: Context) {
 
     private fun handleGoogleSignIn(result: GetCredentialResponse, onComplete: (Boolean) -> Unit) {
         val credential = result.credential
-
         if (credential is CustomCredential && credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {
             try {
                 val googleIdTokenCredential = GoogleIdTokenCredential.createFrom(credential.data)
-                val authCredential =
-                    GoogleAuthProvider.getCredential(googleIdTokenCredential.idToken, null)
+                val authCredential = GoogleAuthProvider.getCredential(googleIdTokenCredential.idToken, null)
 
                 FirebaseAuth.getInstance().signInWithCredential(authCredential)
                     .addOnCompleteListener {
@@ -134,27 +124,25 @@ class LoginManager(private val context: Context) {
                 )
 
                 userDocRef.update(updates)
-                    .addOnSuccessListener {
-                    }
-                    .addOnFailureListener { e ->
-                    }
+                    .addOnSuccessListener { }
+                    .addOnFailureListener { e -> }
             }
         }
     }
 
-    //Verifica si es el mismo dia (no suma al streak)
+    // Verifica si es el mismo día (no suma al streak)
     private fun isSameDay(date1: Date, date2: Date): Boolean {
         val calendar1 = Calendar.getInstance().apply { time = date1 }
         val calendar2 = Calendar.getInstance().apply { time = date2 }
         return calendar1.get(Calendar.YEAR) == calendar2.get(Calendar.YEAR) &&
                 calendar1.get(Calendar.DAY_OF_YEAR) == calendar2.get(Calendar.DAY_OF_YEAR)
     }
-    //Verifica si es otro dia (suma +1 al streak)
+
+    // Verifica si es el día siguiente (suma +1 al streak)
     private fun isNextDay(date1: Date, date2: Date): Boolean {
         val calendar1 = Calendar.getInstance().apply { time = date1 }
         val calendar2 = Calendar.getInstance().apply { time = date2 }
         return calendar2.get(Calendar.DAY_OF_YEAR) == calendar1.get(Calendar.DAY_OF_YEAR) + 1 &&
                 calendar2.get(Calendar.YEAR) == calendar1.get(Calendar.YEAR)
     }
-
 }
