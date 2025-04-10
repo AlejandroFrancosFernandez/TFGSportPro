@@ -21,7 +21,8 @@
         app:layout_constraintHorizontal_bias="0.90"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:clickable="false"/>
+        android:clickable="false"
+        android:importantForAccessibility="no" />
 
     <Button
         android:id="@+id/btnDay"
@@ -29,7 +30,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         android:clickable="false"
-        android:text="Day X"
         android:textAlignment="textStart"
         android:textColor="@color/colorLetra"
         android:textStyle="bold"

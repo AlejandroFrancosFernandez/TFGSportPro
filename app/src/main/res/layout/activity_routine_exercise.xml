@@ -16,7 +16,8 @@
         android:src="@drawable/comebackicon"
         android:textColor="@color/colorLetra"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
 
     <ImageView
         android:id="@+id/ivExercise"
@@ -27,7 +28,8 @@
         app:layout_constraintBottom_toTopOf="@id/tvExerciseName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_backroutine" />
+        app:layout_constraintTop_toBottomOf="@+id/b_backroutine"
+        android:importantForAccessibility="no"/>
 
     <TextView
         android:id="@+id/tvExerciseName"

@@ -10,14 +10,14 @@
 
     <ImageButton
         android:id="@+id/b_comeback"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/colorBoton"
-        android:contentDescription="TODO"
+        android:importantForAccessibility="no"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/comebackicon" />
+        app:srcCompat="@drawable/comebackicon"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/InputEmail"

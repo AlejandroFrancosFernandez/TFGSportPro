@@ -25,7 +25,8 @@
             android:layout_gravity="center_vertical"
             android:padding="5dp"
             android:src="@drawable/comebackicon"
-            android:textColor="@color/colorLetra" />
+            android:textColor="@color/colorLetra"
+            android:importantForAccessibility="no"/>
 
         <TextView
             android:id="@+id/tv_name"

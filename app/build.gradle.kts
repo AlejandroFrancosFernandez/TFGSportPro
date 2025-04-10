@@ -60,6 +60,8 @@ dependencies {
     implementation ("androidx.viewpager2:viewpager2:1.1.0")
     //Para meter gifs
     implementation ("com.github.bumptech.glide:glide:4.15.0")
+    //Notificaciones
+    implementation (libs.firebase.messaging)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

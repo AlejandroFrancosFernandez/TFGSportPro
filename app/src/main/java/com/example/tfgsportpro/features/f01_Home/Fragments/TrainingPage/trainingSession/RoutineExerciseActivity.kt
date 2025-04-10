@@ -73,7 +73,7 @@ class RoutineExerciseActivity : AppCompatActivity() {
         }
     }
 
-    // Método para mostrar la animación de cuenta atrás
+    // Para mostrar la animación de cuenta atrás
     private fun showCountdownAnimation() {
         if (!isDestroyed && !isFinishing) {
             Glide.with(this)
@@ -111,7 +111,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
                     .skipMemoryCache(true)
                     .into(binding.ivExercise)
             } else {
-                // Si no hay GIF, puedes colocar una imagen predeterminada o dejar el ImageView vacío
                 Glide.with(this)
                     .clear(binding.ivExercise)  // Limpiar la imagen si no hay GIF
             }

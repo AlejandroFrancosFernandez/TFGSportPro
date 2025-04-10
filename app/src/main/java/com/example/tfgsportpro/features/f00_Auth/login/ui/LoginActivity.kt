@@ -2,10 +2,15 @@ package com.example.tfgsportpro.features.f00_Auth.login.ui
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.credentials.CredentialManager
+import android.Manifest
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityLoginBinding
 import com.example.tfgsportpro.features.f00_Auth.forgotPassword.ui.ForgotPasswordActivity
@@ -21,6 +26,12 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginManager: LoginManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        askNotificationPermission()
+
         val sharedPref = getSharedPreferences("preferences", Context.MODE_PRIVATE)
         val isDarkMode = sharedPref.getBoolean("dark_mode", false)
         if (isDarkMode) {
@@ -28,10 +39,6 @@ class LoginActivity : AppCompatActivity() {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
-
-        super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         loginManager = LoginManager(this)
 
@@ -82,7 +89,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // Botón de "¿Olvidaste tu contraseña?"
         binding.bForgetPassword.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
@@ -98,4 +104,34 @@ class LoginActivity : AppCompatActivity() {
     private fun showAlert(message: String) {
         Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
     }
+
+    // Pedir el permiso para el envio de notificaciones
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        val sharedPref = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+
+        if (isGranted) {
+            editor.putBoolean("notifications_granted", true)
+        } else {
+            editor.putBoolean("notifications_granted", false)
+        }
+        editor.apply()
+    }
+
+    private fun askNotificationPermission() {
+        val sharedPref = getSharedPreferences("preferences", Context.MODE_PRIVATE)
+        val notificationsGranted = sharedPref.getBoolean("notifications_granted", false)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !notificationsGranted) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+                return
+            }
+            requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
+    }
 }
+
+
+
