@@ -37,10 +37,8 @@ class ResumeFragment : Fragment() {
 
         val levels = listOf("low", "medium", "high")
 
-        // Iterar sobre los niveles y los días completados
         for (level in levels) {
-            for (day in 1..30) {  // Asumiendo que la rutina tiene un máximo de 30 días
-                // Obtener las rutinas completadas desde Firestore
+            for (day in 1..30) {
                 firestore.collection("User")
                     .document(currentUserUid)
                     .collection("routines")
@@ -63,7 +61,7 @@ class ResumeFragment : Fragment() {
                                             ViewGroup.LayoutParams.MATCH_PARENT,
                                             ViewGroup.LayoutParams.WRAP_CONTENT
                                         )
-                                        layoutParams.setMargins(0, 0, 0, 20)  // Margen de 5dp entre cards
+                                        layoutParams.setMargins(0, 0, 0, 20)
                                         cardView.layoutParams = layoutParams
                                         val cardColor = when (level) {
                                             "low" -> ContextCompat.getColor(context, R.color.btn_line_low)

@@ -29,8 +29,10 @@ class MeFragment : Fragment() {
             val db = FirebaseFirestore.getInstance()
             val userDocRef = db.collection("User").document(user.uid)
             userDocRef.get().addOnSuccessListener { document ->
+                if (!isAdded || context == null) return@addOnSuccessListener
+
                 if (document.exists()) {
-                    val displayName = document.getString("Name") ?: document.getString("name") ?: "Nombre no disponible"
+                    val displayName = document.getString("Name") ?: document.getString("name")
                     binding.tvName.text = displayName
 
                     val age = document.getString("Age")
@@ -48,14 +50,15 @@ class MeFragment : Fragment() {
                     }
 
                     val streak = document.getLong("streak") ?: 0
-                    val streakText = binding.root.context.getString(R.string.consecutive_daysStreak, streak)
-
+                    val streakText = getString(R.string.consecutive_daysStreak, streak)
                     binding.RachaDias.text = streakText
+
                 } else {
                     binding.tvAge.text = "Not found"
                     binding.tvPhysicallevel.text = "Not found"
                 }
             }
+
         } else {
             binding.tvName.text = getString(R.string.infoNotauthenticated)
             binding.tvEmail.text = getString(R.string.infoNotauthenticated)
