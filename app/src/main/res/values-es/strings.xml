@@ -9,7 +9,7 @@
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="b_login">Iniciar\nSesión</string>
-    <string name="b_register">Registrarse</string>
+    <string name="b_register">Registrar</string>
     <string name="infoForgotPassword">Olvidaste la contraseña?</string>
     <string name="b_forgotPassword">Click aquí.</string>
 

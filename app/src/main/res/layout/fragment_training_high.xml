@@ -37,12 +37,14 @@
                     android:layout_height="20dp"
                     android:contentDescription="Ícono de dificultad"
                     android:src="@drawable/difficultyicon" />
+
                 <ImageView
                     android:id="@+id/difficultyIcon2"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:contentDescription="Ícono de dificultad"
                     android:src="@drawable/difficultyicon" />
+
                 <ImageView
                     android:id="@+id/difficultyIcon3"
                     android:layout_width="20dp"
@@ -61,6 +63,7 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -72,4 +75,5 @@
             android:scrollbars="vertical" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

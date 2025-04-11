@@ -46,6 +46,7 @@
             android:name=".features.f00_Auth.login.ui.LoginActivity"
             android:theme="@style/Theme.TFGSportPro" />
 
+        <!--Para las notificaciones-->
         <service
             android:name=".features.MyFirebaseMessagingService"
             android:exported="false">

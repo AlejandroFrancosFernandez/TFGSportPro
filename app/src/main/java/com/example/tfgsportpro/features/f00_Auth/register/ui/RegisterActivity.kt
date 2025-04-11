@@ -27,7 +27,6 @@ class RegisterActivity : AppCompatActivity() {
         binding.bRegister.setOnClickListener { handleRegister() }
         binding.bComeback.setOnClickListener { navigateToLogin() }
 
-        // Inicializar RegisterManager
         registerManager = RegisterManager(this)
     }
 

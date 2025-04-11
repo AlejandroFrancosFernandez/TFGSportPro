@@ -32,7 +32,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
         binding = ActivityRoutineExerciseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Mostrar la animación de cuenta atrás antes de empezar la rutina
         showCountdownAnimation()
 
         // Recuperar el nivel y el día desde el Intent
@@ -162,9 +161,9 @@ class RoutineExerciseActivity : AppCompatActivity() {
             val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
             val day = intent.getIntExtra("day", 1)
             val level = intent.getStringExtra("level") ?: "low"
-            val completedDate = System.currentTimeMillis() // Fecha y hora actual (timestamp)
+            val completedDate = System.currentTimeMillis()
 
-            // Crear el objeto de datos de la rutina completada
+            // Crear la rutina completada
             val routineData = hashMapOf(
                 "day" to day,
                 "level" to level,

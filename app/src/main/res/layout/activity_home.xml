@@ -43,7 +43,9 @@
                 android:textStyle="bold"
                 android:gravity="center"
                 android:layout_weight="1" />
+
         </LinearLayout>
+
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView

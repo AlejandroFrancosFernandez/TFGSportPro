@@ -56,6 +56,7 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -67,4 +68,5 @@
             android:scrollbars="vertical" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
