@@ -10,24 +10,26 @@ import com.example.tfgsportpro.databinding.FragmentResumeBinding
 
 class ResumeFragment : Fragment() {
 
-    private var _binding: FragmentResumeBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentResumeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentResumeBinding.inflate(inflater, container, false)
+        binding = FragmentResumeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Reemplazar fragmento por defecto
         childFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerResume, RoutinesCompletedFragment())
             .commit()
 
+        // Listener para el menú de navegación
         binding.bNavigationResume.setOnItemSelectedListener { item ->
             val fragment = when (item.itemId) {
                 R.id.navRoutinesCompleted -> RoutinesCompletedFragment()
@@ -41,11 +43,5 @@ class ResumeFragment : Fragment() {
                 true
             } else false
         }
-    }
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
