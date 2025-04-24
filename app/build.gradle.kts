@@ -74,4 +74,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Para las graficas del progeso del usuario
+    implementation(libs.mpandroidchart)
 }
