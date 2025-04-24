@@ -20,15 +20,14 @@ import java.util.*
 
 class GraphicFragment : Fragment() {
 
-    private var _binding: FragmentGraphicBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentGraphicBinding
     private val firestore = FirebaseFirestore.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentGraphicBinding.inflate(inflater, container, false)
+        binding = FragmentGraphicBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -129,10 +128,5 @@ class GraphicFragment : Fragment() {
                     invalidate()
                 }
             }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
