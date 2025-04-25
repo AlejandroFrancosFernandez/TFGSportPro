@@ -37,11 +37,6 @@ class GraphicFragment : Fragment() {
         setupChartAppearance()
         loadChartData()
 
-        // Regresa a la vista anterior
-        binding.bComeback.setOnClickListener {
-            it.isEnabled = false
-            parentFragmentManager.popBackStack()
-        }
     }
 
     private fun setupChartAppearance() {

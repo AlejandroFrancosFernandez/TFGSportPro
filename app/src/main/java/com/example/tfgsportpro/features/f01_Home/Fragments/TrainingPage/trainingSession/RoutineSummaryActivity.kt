@@ -1,17 +1,17 @@
+// RoutineSummaryActivity.kt
 package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingSession
 
-import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tfgsportpro.R
 import com.example.tfgsportpro.databinding.ActivityRoutineSummaryBinding
+import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
 import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
-import com.example.tfgsportpro.features.f01_Home.domain.model.Exercise
-import com.example.tfgsportpro.features.f01_Home.domain.model.HighIntensityExercises
-import com.example.tfgsportpro.features.f01_Home.domain.model.LowIntensityExercises
+import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
+import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.adapters.ExerciseAdapter
 
 class RoutineSummaryActivity : AppCompatActivity() {
 
@@ -22,64 +22,63 @@ class RoutineSummaryActivity : AppCompatActivity() {
         binding = ActivityRoutineSummaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Botón de volver atrás
         binding.bBack.setOnClickListener {
             binding.bBack.isEnabled = false
             onBackPressedDispatcher.onBackPressed()
         }
 
+        // Recogemos nivel y día
         val level = intent.getStringExtra("level") ?: "low"
         val day = intent.getIntExtra("day", -1)
 
         if (day in 1..30) {
             loadRoutineDetails(level, day)
-        } else {
         }
 
+        // Iniciar rutina
         binding.bStartRoutine.setOnClickListener {
             binding.bStartRoutine.isEnabled = false
-            val intent = Intent(this, RoutineExerciseActivity::class.java)
-            intent.putExtra("level", level)
-            intent.putExtra("day", day)
-            startActivity(intent)
-
+            Intent(this, RoutineExerciseActivity::class.java).apply {
+                putExtra("level", level)
+                putExtra("day", day)
+                startActivity(this)
+            }
         }
     }
 
     private fun loadRoutineDetails(level: String, day: Int) {
-        val routineLow = LowRoutine().getRoutineForDayLow(day)
-        val routineHigh = HighRoutine().getRoutineForDayHigh(day)
-        val routineMedium = MediumRoutine().getRoutineForDayMedium(day)
-
+        // 1) Lista completa de ejercicios (incluye BREAK)
         val routine: List<Exercise> = when (level) {
-            "low" -> routineLow
-            "high" -> routineHigh
-            "medium" -> routineMedium
-            else -> routineLow
+            "low"    -> LowRoutine().getRoutineForDayLow(day)
+            "medium" -> MediumRoutine().getRoutineForDayMedium(day)
+            "high"   -> HighRoutine().getRoutineForDayHigh(day)
+            else     -> emptyList()
         }
 
-        // Incluir los descansos en el cálculo de tiempo total, pero no en la lista de ejercicios mostrados
-        val exercisesWithoutBreak = routine.filter {
-            it != LowIntensityExercises.BREAK && it != HighIntensityExercises.BREAK
-        }
+        // 2) Datos generales
         val totalTime = routine.sumOf { it.duracion }
-        val routineStrings: List<String> = exercisesWithoutBreak.map { getString(it.nombreResId) }
-        val totalExercises = routineStrings.size
-        val warmUpList = routineStrings.take(2)
-        val mainList = routineStrings.drop(2)
         val minutes = totalTime / 60
         val seconds = totalTime % 60
+        val exercisesCount = routine.count { it.nombreResId != R.string.BREAK }
 
-        binding.tvInfoday.text = binding.root.context.getString(R.string.day, day)
-        binding.tvRoutineDetails.text = binding.root.context.getString(R.string.routine_details, level, minutes, seconds)
-        binding.tvExerciseList.text = binding.root.context.getString(R.string.totalExercises, totalExercises)
+        binding.tvInfoday.text = getString(R.string.day, day)
+        binding.tvRoutineDetails.text =
+            getString(R.string.routine_details, level, minutes, seconds)
+        binding.tvExerciseList.text =
+            getString(R.string.totalExercises, exercisesCount)
 
-        binding.tvWarmUpDetails.text = warmUpList.joinToString(separator = "\n") { "• $it" }
-        binding.tvOtherExerciseDetails.text = mainList.joinToString(separator = "\n") { "• $it" }
-
+        // 3) Configurar RecyclerView
+        val adapter = ExerciseAdapter(routine)
+        binding.rvExercises.apply {
+            layoutManager = LinearLayoutManager(this@RoutineSummaryActivity)
+            this.adapter = adapter
+        }
     }
 
     override fun onResume() {
         super.onResume()
+        // Habilitamos de nuevo el botón para evitar dobles clicks
         binding.bStartRoutine.isEnabled = true
     }
 }

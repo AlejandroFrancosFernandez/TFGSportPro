@@ -82,6 +82,10 @@
     <string name="loadingAge">Cargando Age…</string>
     <string name="loadingPhysicalActivity">Cargando Physical Activity…</string>
 
+    <!--Traducciones de la página Resume (fragment-resume)-->
+    <string name="completed">Completed</string>
+    <string name="graphic">Gráfico</string>
+
     <!--Token Google para el login-->
     <string name="web_client">147450873098-gr8v9abfq0asor3emim7t8v608i1utd6.apps.googleusercontent.com</string>
 
@@ -101,6 +105,7 @@
     <string name="b_next">Siguiente</string>
     <string name="b_pause">Pausar</string>
     <string name="b_resume">Reanudar</string>
+    <string name="routine_Completed">Rutina Completada!!</string>
     <!--Descanso-->
     <string name="BREAK">DESCANSO</string>
     <!--Calentamientos-->
@@ -191,4 +196,5 @@
     <string name="routines_completed">Rutinas completada: </string>
     <string name="day_level">Día %1$d \nNivel %2$s</string>
     <string name="date">\nFecha: %1$s</string>
+
 </resources>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/Resume"
+    <item android:title="@string/completed"
         android:id="@+id/navRoutinesCompleted"
         android:icon="@drawable/completedroutinesicon"/>
 
-    <item android:title="graficos"
+    <item android:title="@string/graphic"
         android:id="@+id/navGraphic"
         android:icon="@drawable/resumeicon"/>
 

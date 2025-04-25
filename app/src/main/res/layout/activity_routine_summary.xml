@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1D1D1D"
-    tools:context=".features.f01_Home.fragments.trainingPage.trainingSession.RoutineSummaryActivity">
+    android:background="#1D1D1D">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,25 +13,20 @@
         android:background="@color/navigationgrey"
         android:orientation="horizontal"
         android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/b_back"
+            android:id="@+id/bBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
             android:padding="5dp"
-            android:src="@drawable/comebackicon"
-            android:textColor="@color/colorLetra"
-            android:importantForAccessibility="no"/>
+            android:src="@drawable/comebackicon" />
 
         <TextView
-            android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="center"
             android:text="SportPro"
@@ -41,132 +35,75 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_infoday"
+            android:id="@+id/tvInfoday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:text="Day X"
             android:textColor="@color/colorLetra"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/fondoAplicacion"
+    <LinearLayout
+        android:id="@+id/generalInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_border"
+        android:orientation="vertical"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/rotutineResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/routineResume"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRoutineDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Info routine"
+            android:textSize="14sp" />
 
-            <LinearLayout
-                android:id="@+id/generalInfo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_border"
-                android:orientation="vertical"
-                android:padding="10dp">
+        <TextView
+            android:id="@+id/tvExerciseList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Exercises: 0"
+            android:textSize="14sp" />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/rotutineResume"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/routineResume"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExercises"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/generalInfo"
+        app:layout_constraintBottom_toTopOf="@id/bStartRoutine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvRoutineDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Info routine"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvExerciseList"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total Exercises: 0"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/warmUpExercises"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_border"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/tvWarmUp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/warmUpExercises"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvWarmUpDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/colorLetra"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/otherExercises"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_border"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/tvOtherExercises"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mainExercises"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvOtherExerciseDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/colorLetra"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/b_startRoutine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="@color/colorBoton"
-                android:text="@string/b_start"
-                android:textAllCaps="false"
-                android:textColor="@color/colorLetra"
-                android:textSize="16sp"
-                android:stateListAnimator="@animator/animator_btn_days"/>
-
-        </LinearLayout>
-
-    </ScrollView>
+    <Button
+        android:id="@+id/bStartRoutine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorBoton"
+        android:text="@string/b_start"
+        android:textAllCaps="false"
+        android:textColor="@color/colorLetra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stateListAnimator="@animator/animator_btn_days"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
