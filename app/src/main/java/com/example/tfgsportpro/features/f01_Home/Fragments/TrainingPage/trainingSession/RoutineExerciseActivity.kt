@@ -157,7 +157,6 @@ class RoutineExerciseActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, R.string.routine_Completed, Toast.LENGTH_SHORT).show()
 
-            // Obtener UID del usuario actual
             val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
             val day = intent.getIntExtra("day", 1)
             val level = intent.getStringExtra("level") ?: "low"

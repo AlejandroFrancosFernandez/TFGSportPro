@@ -20,7 +20,7 @@ class RegisterManager(private val context: Context) {
 
     private fun showLoading() {
         progressDialog = ProgressDialog(context).apply {
-            setMessage("Registrando usuario...")
+            setMessage(R.string.registering_user.toString())
             setCancelable(false)
             show()
         }

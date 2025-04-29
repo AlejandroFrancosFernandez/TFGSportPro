@@ -25,6 +25,9 @@
     <string name="verification_Email">Your email has been verified. You can now log in.</string>
     <string name="verification_Required">Verification required</string>
     <string name="email_Sent">We have sent a verification email. Please check your inbox and confirm your email before logging in.</string>
+    <string name="error_title">Error</string>
+    <string name="accept">Accept</string>
+    <string name="registering_user">Registering user...</string>
 
     <!--Errores-->
     <string name="Error_invalid_Email">Invalid email</string>
@@ -46,7 +49,7 @@
     <string name="info_resetPassword">Enter your email address and we´ll send you a link to reset your password</string>
 
     <!--Traducciones del menú overflow-->
-    <string name="b_profile">Profile</string>"
+    <string name="b_profile">Profile</string>
     <string name="b_logOut">Log Out</string>
     <string name="switchTheme">Dark Mode</string>
 
@@ -75,6 +78,7 @@
     <string name="consecutive_daysStreak">Consecutive days streak: %1$d</string>
     <string name="age_not_available">Age not available</string>
     <string name="physical_activity_not_available">Physical activity not available</string>
+    <string name="not_found">Not found</string>
 
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Loading Email… </string>

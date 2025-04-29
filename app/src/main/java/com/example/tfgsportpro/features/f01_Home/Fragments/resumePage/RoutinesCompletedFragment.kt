@@ -33,63 +33,63 @@ class RoutinesCompletedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Obtiene el UID del usuario actual
         val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
 
-        val levels = listOf("low", "medium", "high")
+        firestore.collection("User")
+            .document(currentUserUid)
+            .collection("routines")
+            .orderBy("timestamp")
+            .get()
+            .addOnSuccessListener { result ->
+                val completedRoutines = mutableListOf<Triple<String, Int, Long>>()
 
-        // Recorre los niveles y días (1-30)
-        for (level in levels) {
-            for (day in 1..30) {
-                firestore.collection("User")
-                    .document(currentUserUid)
-                    .collection("routines")
-                    .whereEqualTo("level", level)
-                    .whereEqualTo("day", day)
-                    .get()
-                    .addOnSuccessListener { result ->
-                        if (!result.isEmpty) {
-                            result.documents.forEach { document ->
-                                val completedDate = document.getLong("timestamp")
-                                if (completedDate != null) {
-                                    val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
-                                    sdf.timeZone = TimeZone.getTimeZone("Europe/Madrid")
-                                    val dateString = sdf.format(Date(completedDate))
+                if (!result.isEmpty) {
+                    result.documents.forEach { document ->
+                        val level = document.getString("level") ?: return@forEach
+                        val day = document.getLong("day")?.toInt() ?: return@forEach
+                        val completedDate = document.getLong("timestamp") ?: return@forEach
 
-                                    context?.let { context ->
-
-                                        // Crear CardView
-                                        val cardView = CardView(context)
-                                        val layoutParams = ViewGroup.MarginLayoutParams(
-                                            ViewGroup.LayoutParams.MATCH_PARENT,
-                                            ViewGroup.LayoutParams.WRAP_CONTENT
-                                        )
-                                        layoutParams.setMargins(0, 0, 0, 20)
-                                        cardView.layoutParams = layoutParams
-
-                                        val cardColor = when (level) {
-                                            "low" -> ContextCompat.getColor(context, R.color.btn_line_low)
-                                            "medium" -> ContextCompat.getColor(context, R.color.btn_line_medium)
-                                            "high" -> ContextCompat.getColor(context, R.color.btn_line_high)
-                                            else -> ContextCompat.getColor(context, R.color.btn_line_low)
-                                        }
-                                        cardView.setCardBackgroundColor(cardColor)
-                                        cardView.radius = 16f
-
-                                        val textView = TextView(context)
-                                        val routineText = getString(R.string.day_level, day, level) + getString(R.string.date, dateString)
-                                        textView.text = routineText
-                                        textView.setPadding(16, 16, 16, 16)
-                                        textView.setTextColor(ContextCompat.getColor(context, R.color.colorLetra))
-
-                                        cardView.addView(textView)
-
-                                        binding.containerResume.addView(cardView)
-                                    }
-                                }
-                            }
-                        }
+                        completedRoutines.add(Triple(level, day, completedDate))
                     }
+                }
+
+                drawCompletedRoutines(completedRoutines)
+            }
+    }
+
+    private fun drawCompletedRoutines(routines: List<Triple<String, Int, Long>>) {
+        for ((level, day, timestamp) in routines) {
+            context?.let { context ->
+                val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
+                sdf.timeZone = TimeZone.getTimeZone("Europe/Madrid")
+                val dateString = sdf.format(Date(timestamp))
+
+                val cardView = CardView(context)
+                val layoutParams = ViewGroup.MarginLayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                layoutParams.setMargins(0, 0, 0, 20)
+                cardView.layoutParams = layoutParams
+
+                val cardColor = when (level) {
+                    "low" -> ContextCompat.getColor(context, R.color.btn_line_low)
+                    "medium" -> ContextCompat.getColor(context, R.color.btn_line_medium)
+                    "high" -> ContextCompat.getColor(context, R.color.btn_line_high)
+                    else -> ContextCompat.getColor(context, R.color.btn_line_low)
+                }
+                cardView.setCardBackgroundColor(cardColor)
+                cardView.radius = 16f
+
+                val textView = TextView(context)
+                val routineText = getString(R.string.day_level, day, level) + getString(R.string.date, dateString)
+                textView.text = routineText
+                textView.setPadding(16, 16, 16, 16)
+                textView.setTextColor(ContextCompat.getColor(context, R.color.colorLetra))
+
+                cardView.addView(textView)
+
+                binding.containerResume.addView(cardView)
             }
         }
     }

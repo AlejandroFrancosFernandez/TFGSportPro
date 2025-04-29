@@ -25,6 +25,9 @@
     <string name="verification_Email">Tu correo ha sido verificado. Ahora puedes iniciar sesión.</string>
     <string name="verification_Required">Verificación requerida</string>
     <string name="email_Sent">Hemos enviado un correo de verificación. Por favor, revisa tu bandeja de entrada y confirma tu email antes de iniciar sesión.</string>
+    <string name="error_title">Error</string>
+    <string name="accept">Aceptar</string>
+    <string name="registering_user">Registrando usuario...</string>
 
     <!--Errores-->
     <string name="Error_invalid_Email">Email inválido</string>
@@ -46,7 +49,7 @@
     <string name="info_resetPassword">Introduce tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</string>
 
     <!--Traducciones del menú overflow-->
-    <string name="b_profile">Perfil</string>"
+    <string name="b_profile">Perfil</string>
     <string name="b_logOut">Cerrar Sesión</string>
     <string name="switchTheme">Modo Oscuro</string>
 
@@ -75,6 +78,7 @@
     <string name="consecutive_daysStreak">Racha de días consecutivos: %1$d</string>
     <string name="age_not_available">Edad no disponible</string>
     <string name="physical_activity_not_available">Actividad física no disponible</string>
+    <string name="not_found">No encontrado</string>
 
     <!--Cargandos pagina Me-->
     <string name="loadingEmail">Cargando Email… </string>

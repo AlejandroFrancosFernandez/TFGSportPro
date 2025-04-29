@@ -87,9 +87,9 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun showAlert(message: String) {
         AlertDialog.Builder(this)
-            .setTitle("Error")
+            .setTitle(R.string.error_title)
             .setMessage(message)
-            .setPositiveButton("Aceptar", null)
+            .setPositiveButton(R.string.accept, null)
             .create()
             .show()
     }

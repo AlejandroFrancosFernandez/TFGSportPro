@@ -37,7 +37,6 @@ class DaysAdapter(
                 val sharedPreferences = context.getSharedPreferences("CompletedDays", Context.MODE_PRIVATE)
                 val isCompleted = sharedPreferences.getBoolean(key, false)
 
-                // Determinar el color final: verde si completado, o el color base según el nivel
                 val finalColorRes = if (isCompleted) R.color.diaRealizado else baseColorRes
                 imgLine.setColorFilter(ContextCompat.getColor(context, finalColorRes))
 
