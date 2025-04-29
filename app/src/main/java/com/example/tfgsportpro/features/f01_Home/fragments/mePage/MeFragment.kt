@@ -23,8 +23,8 @@ class MeFragment : Fragment() {
         val user = FirebaseAuth.getInstance().currentUser
 
         if (user != null) {
-            binding.tvEmail.text = user.email ?: "Email Not Found"
-            binding.tvName.text = user.displayName ?: "Nombre Not Found"
+            binding.tvEmail.text = user.email ?: R.string.not_found.toString()
+            binding.tvName.text = user.displayName ?: R.string.not_found.toString()
 
             val db = FirebaseFirestore.getInstance()
             val userDocRef = db.collection("User").document(user.uid)
@@ -54,8 +54,8 @@ class MeFragment : Fragment() {
                     binding.RachaDias.text = streakText
 
                 } else {
-                    binding.tvAge.text = "Not found"
-                    binding.tvPhysicallevel.text = "Not found"
+                    binding.tvAge.text = R.string.not_found.toString()
+                    binding.tvPhysicallevel.text = R.string.not_found.toString()
                 }
             }
 
