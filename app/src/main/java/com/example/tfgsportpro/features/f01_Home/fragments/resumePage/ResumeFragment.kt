@@ -24,12 +24,10 @@ class ResumeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Reemplazar fragmento por defecto
         childFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerResume, RoutinesCompletedFragment())
             .commit()
 
-        // Listener para el menú de navegación
         binding.bNavigationResume.setOnItemSelectedListener { item ->
             val fragment = when (item.itemId) {
                 R.id.navRoutinesCompleted -> RoutinesCompletedFragment()

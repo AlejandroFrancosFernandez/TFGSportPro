@@ -198,7 +198,16 @@
 
     <!--Pagina RoutineSummary-->
     <string name="routines_completed">Routines Completed: </string>
+    <!--%1$d El argumento ha de ser un entero decimal; %2$s El argumento ha de ser un string.-->
     <string name="day_level">Day %1$d \nLevel %2$s</string>
     <string name="date">\nDate: %1$s</string>
+    <string name="Lows">Low</string>
+    <string name="Mediums">Medium</string>
+    <string name="Highs">High</string>
+    <string name="everything">Everything</string>
+
+    <!--Pagina Graphic-->
+    <string name="days">Days</string>
+    <string name="routines_Finished">Routines Completed</string>
 
 </resources>

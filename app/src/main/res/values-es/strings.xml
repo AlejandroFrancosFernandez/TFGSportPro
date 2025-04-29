@@ -87,7 +87,7 @@
     <string name="loadingPhysicalActivity">Cargando Physical Activity…</string>
 
     <!--Traducciones de la página Resume (fragment-resume)-->
-    <string name="completed">Completed</string>
+    <string name="completed">Completado</string>
     <string name="graphic">Gráfico</string>
 
     <!--Token Google para el login-->
@@ -197,8 +197,17 @@
     <string name="waist_Rotation">Rotación de Cintura</string>
 
     <!--Pagina RoutineSummary-->
-    <string name="routines_completed">Rutinas completada: </string>
+    <string name="routines_completed">Rutinas completadas: </string>
+    <!--%1$d El argumento ha de ser un entero decimal; %2$s El argumento ha de ser un string.-->
     <string name="day_level">Día %1$d \nNivel %2$s</string>
     <string name="date">\nFecha: %1$s</string>
+    <string name="Lows">Basico</string>
+    <string name="Mediums">Medio</string>
+    <string name="Highs">Alto</string>
+    <string name="everything">Todas</string>
+
+    <!--Pagina Graphic-->
+    <string name="days">Días</string>
+    <string name="routines_Finished">Rutinas Completadas</string>
 
 </resources>

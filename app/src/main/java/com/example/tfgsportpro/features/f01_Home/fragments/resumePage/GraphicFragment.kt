@@ -50,21 +50,27 @@ class GraphicFragment : Fragment() {
             setDrawGridLines(false)
             granularity = 1f
             isGranularityEnabled = true
+            axisLineColor = resources.getColor(R.color.colorLetra)
+            textColor = resources.getColor(R.color.colorLetra)
+            textSize = 12f
             valueFormatter = object : ValueFormatter() {
                 override fun getFormattedValue(value: Float): String =
-                    value.toInt().toString()
+                    (value.toInt() + 1).toString() //+1 para que no empiece en 0
             }
         }
         lineChart.axisLeft.apply {
             setDrawGridLines(false)
             granularity = 1f
             isGranularityEnabled = true
+            axisLineColor = resources.getColor(R.color.colorLetra)
+            textColor = resources.getColor(R.color.colorLetra)
+            textSize = 12f
             valueFormatter = object : ValueFormatter() {
                 override fun getFormattedValue(value: Float): String =
                     value.toInt().toString()
             }
         }
-        lineChart.animateX(600)
+        lineChart.animateX(700)
     }
 
     private fun loadChartData() {

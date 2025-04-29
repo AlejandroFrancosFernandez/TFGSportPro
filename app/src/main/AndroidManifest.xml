@@ -19,7 +19,7 @@
         android:theme="@style/Theme.TFGSportPro"
         tools:targetApi="31">
         <activity
-            android:name=".features.f01_Home.Fragments.resumePage.GraphicActivity"
+            android:name=".features.f01_Home.fragments.resumePage.GraphicActivity"
             android:exported="false" />
         <activity
             android:name=".features.f00_Auth.forgotPassword.ui.ForgotPasswordActivity"

@@ -20,6 +20,7 @@ class MeFragment : Fragment() {
     ): View {
         binding = FragmentMeBinding.inflate(layoutInflater)
 
+        //Cargar los datos desde firestore en el fragment, cogiendo el UID del usuario logeado
         val user = FirebaseAuth.getInstance().currentUser
 
         if (user != null) {

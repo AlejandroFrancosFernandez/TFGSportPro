@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
@@ -33,28 +35,21 @@ class RoutinesCompletedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+        val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
-        firestore.collection("User")
-            .document(currentUserUid)
-            .collection("routines")
-            .orderBy("timestamp")
-            .get()
-            .addOnSuccessListener { result ->
-                val completedRoutines = mutableListOf<Triple<String, Int, Long>>()
+        val spinnerOptions = listOf("Everything", "Low", "Medium", "High")
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, spinnerOptions)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.levelSpinner.adapter = adapter
 
-                if (!result.isEmpty) {
-                    result.documents.forEach { document ->
-                        val level = document.getString("level") ?: return@forEach
-                        val day = document.getLong("day")?.toInt() ?: return@forEach
-                        val completedDate = document.getLong("timestamp") ?: return@forEach
-
-                        completedRoutines.add(Triple(level, day, completedDate))
-                    }
-                }
-
-                drawCompletedRoutines(completedRoutines)
+        binding.levelSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                val selectedLevel = spinnerOptions[position]
+                loadRoutines(currentUserUid, selectedLevel)
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
     }
 
     private fun drawCompletedRoutines(routines: List<Triple<String, Int, Long>>) {
@@ -92,5 +87,30 @@ class RoutinesCompletedFragment : Fragment() {
                 binding.containerResume.addView(cardView)
             }
         }
+    }
+    private fun loadRoutines(currentUserUid: String, filterLevel: String) {
+        firestore.collection("User")
+            .document(currentUserUid)
+            .collection("routines")
+            .orderBy("timestamp")
+            .get()
+            .addOnSuccessListener { result ->
+                val completedRoutines = mutableListOf<Triple<String, Int, Long>>()
+
+                if (!result.isEmpty) {
+                    result.documents.forEach { document ->
+                        val level = document.getString("level") ?: return@forEach
+                        val day = document.getLong("day")?.toInt() ?: return@forEach
+                        val completedDate = document.getLong("timestamp") ?: return@forEach
+
+                        if (filterLevel == "Everything" || level.equals(filterLevel, ignoreCase = true)) {
+                            completedRoutines.add(Triple(level, day, completedDate))
+                        }
+                    }
+                }
+
+                binding.containerResume.removeAllViews()
+                drawCompletedRoutines(completedRoutines)
+            }
     }
 }
