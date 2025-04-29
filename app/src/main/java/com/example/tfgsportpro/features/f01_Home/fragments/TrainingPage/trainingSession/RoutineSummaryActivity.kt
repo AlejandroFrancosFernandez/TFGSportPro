@@ -12,7 +12,6 @@ import com.example.tfgsportpro.features.f01_Home.domain.routines.HighRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.routines.LowRoutine
 import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.adapters.ExerciseAdapter
-import kotlin.time.Duration.Companion.seconds
 
 class RoutineSummaryActivity : AppCompatActivity() {
 

@@ -1,13 +1,11 @@
 package com.example.tfgsportpro.features.f01_Home.fragments.trainingPage.trainingSession
 
-import android.content.Intent
 import com.example.tfgsportpro.features.f01_Home.domain.routines.MediumRoutine
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.tfgsportpro.R

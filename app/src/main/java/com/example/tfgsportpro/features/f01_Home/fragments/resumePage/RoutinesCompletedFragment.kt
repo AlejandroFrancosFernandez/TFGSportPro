@@ -37,7 +37,7 @@ class RoutinesCompletedFragment : Fragment() {
 
         val currentUserUid = FirebaseAuth.getInstance().currentUser?.uid ?: return
 
-        val spinnerOptions = listOf("Everything", "Low", "Medium", "High")
+        val spinnerOptions = listOf("All", "Low", "Medium", "High")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, spinnerOptions)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.levelSpinner.adapter = adapter
@@ -103,7 +103,7 @@ class RoutinesCompletedFragment : Fragment() {
                         val day = document.getLong("day")?.toInt() ?: return@forEach
                         val completedDate = document.getLong("timestamp") ?: return@forEach
 
-                        if (filterLevel == "Everything" || level.equals(filterLevel, ignoreCase = true)) {
+                        if (filterLevel == "All" || level.equals(filterLevel, ignoreCase = true)) {
                             completedRoutines.add(Triple(level, day, completedDate))
                         }
                     }
