@@ -93,6 +93,10 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
+
+        binding.bFacebook.setOnClickListener{
+            showAlert(R.string.b_facebook.toString())
+        }
     }
 
     private fun showHomeActivity() {
