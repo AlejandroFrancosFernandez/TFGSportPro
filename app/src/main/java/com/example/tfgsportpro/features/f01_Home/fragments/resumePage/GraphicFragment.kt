@@ -92,26 +92,35 @@ class GraphicFragment : Fragment() {
                     val key = sdf.format(Date(ts))
                     countByDate[key] = (countByDate[key] ?: 0) + 1
                 }
-                if (countByDate.isEmpty()) return@addOnSuccessListener
 
-                // 2) Rango de fechas completo
-                val dates = countByDate.keys.map { sdf.parse(it)!! }
-                val minDate = dates.minOrNull()!!
-                val maxDate = dates.maxOrNull()!!
-                val allDates = mutableListOf<Date>()
-                Calendar.getInstance().apply { time = minDate }.also { cal ->
-                    while (!cal.time.after(maxDate)) {
-                        allDates.add(cal.time)
-                        cal.add(Calendar.DATE, 1)
+                // 2) Preparar fechas y datos
+                val allDates: List<Date>
+                val entries: List<Entry>
+
+                if (countByDate.isEmpty()) {
+                    // No hay datos -> poner la fecha actual sin datos
+                    allDates = listOf(Date())
+                    entries = listOf()
+                } else {
+                    val dates = countByDate.keys.map { sdf.parse(it)!! }
+                    val minDate = dates.minOrNull()!!
+                    val maxDate = dates.maxOrNull()!!
+                    val datesList = mutableListOf<Date>()
+                    Calendar.getInstance().apply { time = minDate }.also { cal ->
+                        while (!cal.time.after(maxDate)) {
+                            datesList.add(cal.time)
+                            cal.add(Calendar.DATE, 1)
+                        }
+                    }
+                    allDates = datesList
+
+                    entries = allDates.mapIndexed { idx, date ->
+                        val cnt = countByDate[sdf.format(date)] ?: 0
+                        Entry(idx.toFloat(), cnt.toFloat())
                     }
                 }
 
-                // 3) Construir entries
-                val entries = allDates.mapIndexed { idx, date ->
-                    val cnt = countByDate[sdf.format(date)] ?: 0
-                    Entry(idx.toFloat(), cnt.toFloat())
-                }
-
+                // 3) Crear DataSet
                 val dataSet = LineDataSet(entries, "").apply {
                     mode = LineDataSet.Mode.LINEAR
                     setDrawCircles(true)
@@ -122,7 +131,7 @@ class GraphicFragment : Fragment() {
                     setDrawValues(false)
                 }
 
-                // 4) Asignar al chart
+                // 4) Asignar datos al Chart
                 binding.lineChart.apply {
                     xAxis.labelCount = allDates.size
                     data = LineData(dataSet)

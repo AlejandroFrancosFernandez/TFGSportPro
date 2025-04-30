@@ -73,6 +73,8 @@ class RoutineExerciseActivity : AppCompatActivity() {
     // Para mostrar la animación de cuenta atrás
     private fun showCountdownAnimation() {
         if (!isDestroyed && !isFinishing) {
+            binding.bPause.isEnabled = false
+
             Glide.with(this)
                 .asGif()
                 .load(R.drawable.cargarutina)
@@ -87,6 +89,7 @@ class RoutineExerciseActivity : AppCompatActivity() {
             override fun onFinish() {
                 if (!isDestroyed && !isFinishing) {
                     binding.ivExercise.visibility = View.GONE
+                    binding.bPause.isEnabled = true
                     startExercise(currentExerciseIndex)
                 }
             }
