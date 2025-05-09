@@ -74,6 +74,8 @@ class RoutineExerciseActivity : AppCompatActivity() {
     private fun showCountdownAnimation() {
         if (!isDestroyed && !isFinishing) {
             binding.bPause.isEnabled = false
+            binding.bNext.isEnabled = false
+            binding.bPrevious.isEnabled = false
 
             Glide.with(this)
                 .asGif()
@@ -90,6 +92,8 @@ class RoutineExerciseActivity : AppCompatActivity() {
                 if (!isDestroyed && !isFinishing) {
                     binding.ivExercise.visibility = View.GONE
                     binding.bPause.isEnabled = true
+                    binding.bNext.isEnabled = true
+                    binding.bPrevious.isEnabled = true
                     startExercise(currentExerciseIndex)
                 }
             }

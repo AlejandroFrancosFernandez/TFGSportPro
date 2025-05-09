@@ -12,7 +12,6 @@
     <string name="b_register">Register</string>
     <string name="infoForgotPassword">Forgot Password?</string>
     <string name="b_forgotPassword">Click here.</string>
-    <string name="b_facebook">Not implemented yet</string>
 
     <!--Traducciones de la página registro (activity-register)-->
     <string name="confirmPassword">Confirm Password</string>

@@ -94,9 +94,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.bFacebook.setOnClickListener{
-            showAlert(R.string.b_facebook.toString())
-        }
     }
 
     private fun showHomeActivity() {
