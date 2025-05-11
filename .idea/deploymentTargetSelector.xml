@@ -2,7 +2,7 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="SportPro">
+      <SelectionState runConfigName="TFGSportPro">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
