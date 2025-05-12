@@ -34,7 +34,7 @@ object LowIntensityExercises {
     val bicycleCrunches = Exercise(R.string.bicycle_Crunches, 30, R.drawable.e_bicycle_crunches_unscreen)
     val lateralLegRaise = Exercise(R.string.lateral_Leg_Raise, 30, R.drawable.e_lateral_leg_raise_unscreen)
     val lyingLegExtension = Exercise(R.string.lying_Leg_Extension, 30, R.drawable.e_lying_leg_extension_unscreen)
-    val heelRaisesOnStep = Exercise(R.string.heel_Raises_On_Step, 30)
+    val heelRaisesOnStep = Exercise(R.string.heel_Raises_On_Step, 30, R.drawable.e_hell_raises_on_a_step_unscreen)
     val lateralJumps = Exercise(R.string.lateral_Jumps, 30, R.drawable.e_lateral_jumps_unscreen)
     val lateralLunges = Exercise(R.string.lateral_Lunges, 30, R.drawable.e_lateral_lunges_unscreen)
     val plank = Exercise(R.string.plank, 30, R.drawable.e_plank_hands_unscreen)
